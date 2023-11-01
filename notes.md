@@ -2,6 +2,9 @@
 - I have content notes both in obsidian and github
 - [x] dump existing content and notes here
 
+- [ ] slide with embedded nim playground!
+  - [ ] also nice for a live demo!
+
 ### from obsidian
 
 slide 0: what is Nim?
