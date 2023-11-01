@@ -1,10 +1,10 @@
 import nimib, nimislides
 
 nbInit(theme = revealTheme)
-setSlidesTheme(Moon)
+setSlidesTheme(Solarized)
 
 template slideTitle =
-  nbText: "## Title"
+  nbText: "## Nim 👑 for Pythonistas 🐍"
 
 
 when isMainModule:

@@ -1,8 +1,9 @@
 - [x] minimal setup
 - [x] change vs code theme
-- [ ] pick a theme
-  - [ ] build a theme selector 
-
+- [x] pick a theme: solarized
+  - [ ] build a theme selector?
+    - [ ] open a PR for nimislides?
+      - not needed! pick the theme here: https://revealjs.com/themes/
 
 workflow improvements todo:
 - create a template for my slides
