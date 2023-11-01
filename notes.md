@@ -1,6 +1,7 @@
 - [x] minimal setup
 - [x] change vs code theme
 - [x] pick a theme: solarized
+  - I prefer a light theme for remote presentation
   - [ ] build a theme selector?
     - [ ] open a PR for nimislides?
       - not needed! pick the theme here: https://revealjs.com/themes/
