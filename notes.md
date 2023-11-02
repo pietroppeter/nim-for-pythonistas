@@ -1,6 +1,11 @@
+## slides
+
+- [x] slide title
+
 ## content
 - I have content notes both in obsidian and github
 - [x] dump existing content and notes here
+- [ ] review content
 
 - [ ] slide with embedded nim playground!
   - [ ] also nice for a live demo!
