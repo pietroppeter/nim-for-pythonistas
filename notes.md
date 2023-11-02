@@ -1,17 +1,35 @@
+## rushing it
+
+- [x] title
+- [x] what is nim
+- [x] syntax
+- [ ] performant
+- [ ] pragmatic: interop with Python + FFI
+- [ ] portable: compiles to js
+- (productive)
+- [ ] what next?
+
 ## slides
 
 - [x] 0 slide title
-- [ ] 1 what is Nim
-  - [ ] proglang description
+- [ ] 0.5 disclaimer slide 
+  (last, maybe I do not even need a slide, and maybe it should be a last slide)
+  - not happy with the leadership, especially recent facts, lead me to explore other languages
+  - struggled a lot whether or not to give this presentation and in general to promote Nim
+  - in the end I decided coding in Nim does give me Joy and I can make my "Happy place for Nim" here at RC
+  - _feedback_: on the fence how to approach this in PyCon SE next week
+- [x] 1 what is Nim
+  - [x] proglang description
     - a multi paradigm (imperative, functional, object-oriented)
       statically typed compiled programming language
       for everything      
   - pragmatic: super powerful FFI (some say best C++ FFI around, bindings to unreal)
   - [ ] efficient, expressive, elegant
-  - an alternative to Rust (different tradeoffs)
-    - talk about memory management
   - link to Programming Language Underdog (2018)
     - mention that references will not be discussed
+- [ ] 1.5 alternative to Rust
+  - an alternative to Rust (different tradeoffs)
+    - talk about memory management
 - [ ] 2 syntax as in Python (+ UFCS!)
   - beloved syntax from Python
   - Nim innovates on that with UFCS

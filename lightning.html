@@ -10,8 +10,44 @@
   <div class="reveal">
     <div class="slides">
       <section data-nimib-slide-number="1" >
-      <h2 class="r-fit-text"> <p>Nim 👑 for Pythonistas 🐍</p> </h2>
-      <p><a href="https://github.com/pietroppeter/nim-for-pythonistas">github.com/pietroppeter/nim-for-pythonistas</a></p>
+      <h3>Pythonic Syntax with Superpowers</h3>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
+  <span class="hljs-type">Grid</span> = <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-type">Cell</span>]]
+  <span class="hljs-type">Cell</span> = <span class="hljs-keyword">enum</span> <span class="hljs-type">X</span>, <span class="hljs-type">O</span>
+
+<span class="hljs-keyword">func</span> initGrid: <span class="hljs-type">Grid</span> =
+  [[<span class="hljs-type">X</span>,<span class="hljs-type">O</span>,<span class="hljs-type">X</span>],[<span class="hljs-type">O</span>,<span class="hljs-type">X</span>,<span class="hljs-type">O</span>],[<span class="hljs-type">X</span>,<span class="hljs-type">O</span>,<span class="hljs-type">X</span>]]
+
+<span class="hljs-keyword">proc</span> show(g: <span class="hljs-type">Grid</span>) =
+  <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> g:
+    <span class="hljs-keyword">echo</span> row
+
+<span class="hljs-keyword">proc</span> update(g: <span class="hljs-keyword">var</span> <span class="hljs-type">Grid</span>) =
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> g.<span class="hljs-keyword">low</span> .. g.<span class="hljs-keyword">high</span>:
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> g[i].<span class="hljs-keyword">low</span> .. g[i].<span class="hljs-keyword">high</span>:
+      g[i][j] = <span class="hljs-keyword">if</span> g[i][j] == <span class="hljs-type">X</span>: <span class="hljs-type">O</span> <span class="hljs-keyword">else</span>: <span class="hljs-type">X</span></code></pre>
+      </div>
+      <div>
+      <p>⠀</p>
+      </div>
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">var</span> g = initGrid()
+show g</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
+[O, X, O]
+[X, O, X]</samp></pre>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers>g.update
+g.show</code></pre><pre style="width: 100%;"><samp class="hljs">[O, X, O]
+[X, O, X]
+[O, X, O]</samp></pre>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers>update(g)
+show g</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
+[O, X, O]
+[X, O, X]</samp></pre>
+      </div>
+      </div>
+      <p><a href="https://nim-lang.org/blog/2021/11/15/zen-of-nim.html">Zen of Nim (2021)</a></p>
       </section>
     </div>
   </div>
