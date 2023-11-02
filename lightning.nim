@@ -74,9 +74,36 @@ template slideSyntax =
           show g
     reference "[Zen of Nim (2021)](https://nim-lang.org/blog/2021/11/15/zen-of-nim.html)"
 
+template slidePerformant =
+  slide:
+    nbText: "### Nim is Performant"
+
+template slidePragmatic =
+  slide:
+    nbText: "### Nim is Pragmatic"
+
+template slidePortable =
+  slide:
+    nbText: "### Nim is Portable"
+
+template slideProductive =
+  slide:
+    nbText: "### Nim is Productive"
+
+template slideSource =
+  slide:
+    nbText: "### Slides source"
+    nbText: "```nim\n" & nb.source & "\n```\n"
+    reference "[nimislides by Hugo]()"
+
 when isMainModule:
   when false:
     slideTitle
     slideWhatIsNim 
-  slideSyntax
+    slideSyntax
+  slidePerformant
+  slidePragmatic
+  slidePortable
+  slideProductive
+  slideSource
   nbSave
