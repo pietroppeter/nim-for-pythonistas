@@ -10,31 +10,123 @@
   <div class="reveal">
     <div class="slides">
       <section data-nimib-slide-number="1" >
-      <h3>Nim is Performant</h3>
+      <h2 class="r-fit-text"> <p>Nim 👑 for Pythonistas 🐍</p> </h2>
+      <p><a href="https://github.com/pietroppeter/nim-for-pythonistas">github.com/pietroppeter/nim-for-pythonistas</a></p>
+      <p><em>WIP for PyCon🇸🇪 Nov 9-10</em></p>
       </section>
       <section data-nimib-slide-number="2" >
-      <h3>Nim is Pragmatic</h3>
+      <h2>What is Nim</h2>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> message = <span class="hljs-string">&quot;Hi_Recursers!&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; message.len:
+  <span class="hljs-keyword">echo</span> message[<span class="hljs-number">0</span> .. i]</code></pre><pre style="width: 100%;"><samp class="hljs">H
+Hi
+Hi_
+Hi_R
+Hi_Re
+Hi_Rec
+Hi_Recu
+Hi_Recur
+Hi_Recurs
+Hi_Recurse
+Hi_Recurser
+Hi_Recursers
+Hi_Recursers!</samp></pre>
+      </div>
+      <div>
+      <p>Nim is a<br>multi-paradigm<br>(imperative,<br>functional,<br>object-oriented)<br>statically typed<br>compiled<br>programming language<br>for everything</p>
+      </div>
+      </div>
+      <small><p><a href="url.info">A Programming Language Underdog (2018)</a></p></small>
       </section>
       <section data-nimib-slide-number="3" >
-      <h3>Nim is Portable</h3>
+      <p><em>(an alternative to Rust)</em></p>
       </section>
       <section data-nimib-slide-number="4" >
-      <h3>Nim is Productive</h3>
+      <h3>Pythonic Syntax with Superpowers</h3>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
+  <span class="hljs-type">Grid</span> = <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-type">Cell</span>]]
+  <span class="hljs-type">Cell</span> = <span class="hljs-keyword">enum</span> <span class="hljs-type">X</span>, <span class="hljs-type">O</span>
+
+<span class="hljs-keyword">func</span> initGrid: <span class="hljs-type">Grid</span> =
+  [[<span class="hljs-type">X</span>,<span class="hljs-type">O</span>,<span class="hljs-type">X</span>],[<span class="hljs-type">O</span>,<span class="hljs-type">X</span>,<span class="hljs-type">O</span>],[<span class="hljs-type">X</span>,<span class="hljs-type">O</span>,<span class="hljs-type">X</span>]]
+
+<span class="hljs-keyword">proc</span> show(g: <span class="hljs-type">Grid</span>) =
+  <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> g:
+    <span class="hljs-keyword">echo</span> row
+
+<span class="hljs-keyword">proc</span> update(g: <span class="hljs-keyword">var</span> <span class="hljs-type">Grid</span>) =
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> g.<span class="hljs-keyword">low</span> .. g.<span class="hljs-keyword">high</span>:
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> g[i].<span class="hljs-keyword">low</span> .. g[i].<span class="hljs-keyword">high</span>:
+      g[i][j] = <span class="hljs-keyword">if</span> g[i][j] == <span class="hljs-type">X</span>: <span class="hljs-type">O</span> <span class="hljs-keyword">else</span>: <span class="hljs-type">X</span></code></pre>
+      <small><ul>
+<li>syntax fits well with <strong>metaprogramming</strong></li>
+<li>UFCS (Uniform Function Call Syntax)</li>
+</ul></small>
+      <small><p><a href="https://nim-lang.org/blog/2021/11/15/zen-of-nim.html">Zen of Nim (2021)</a></p></small>
+      </div>
+      <div>
+      <p>⠀</p>
+      </div>
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">var</span> g = initGrid()
+show g <span class="hljs-comment"># command</span></code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
+[O, X, O]
+[X, O, X]</samp></pre>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers>g.update <span class="hljs-comment"># method</span>
+g.show</code></pre><pre style="width: 100%;"><samp class="hljs">[O, X, O]
+[X, O, X]
+[O, X, O]</samp></pre>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers>update(g) <span class="hljs-comment"># function</span>
+show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
+[O, X, O]
+[X, O, X]</samp></pre>
+      </div>
+      </div>
       </section>
       <section data-nimib-slide-number="5" >
+      <h3>Performant: compiles to C</h3>
+      <p><em>todo: matrix multiplications</em></p>
+      </section>
+      <section data-nimib-slide-number="6" >
+      <h3>Interop with Python</h3>
+      <small><p><a href="https://github.com/Pebaz/nimporter">nimporter (based on nimpy)</a></p></small>
+      </section>
+      <section data-nimib-slide-number="7" >
+      <h3>Compiles to Javascript</h3>
+      <p>nim produces small native executables and</p>
+      <small><p><a href="https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter">🌱✨ plant app</a></p></small>
+      </section>
+      <section data-nimib-slide-number="8" >
       <h3>Slides source</h3>
       <pre><code class="language-nim">import nimib, nimislides
 
-nbInit(theme = revealTheme)
-setSlidesTheme(Solarized)
+template slideIframe*(url: string) =
+  nbRawHtml: &quot;&lt;section data-background-iframe=\&quot;&quot; &amp; url &amp; &quot;\&quot; data-background-interactive&gt;&lt;/section&gt;&quot;
+
+template slideIframeFromNblog*(filename: string) =
+  slideIframe(&quot;https://pietroppeter.github.io/nblog/drafts/&quot; &amp; filename &amp; &quot;.html&quot;)
+
+# small text
+template addNbTextSmall* =
+  nb.partials[&quot;nbTextSmall&quot;] = &quot;&lt;small&gt;&quot; &amp; nb.partials[&quot;nbText&quot;] &amp; &quot;&lt;/small&gt;&quot;
+  nb.renderPlans[&quot;nbTextSmall&quot;] = nb.renderPlans[&quot;nbText&quot;]
+
+template nbTextSmall*(text: string) =
+  nbText: text
+  nb.blk.command = &quot;nbTextSmall&quot;
 
 template slideTitle =
   slide:
     bigText: &quot;Nim 👑 for Pythonistas 🐍&quot;
     nbText: &quot;[github.com/pietroppeter/nim-for-pythonistas](https://github.com/pietroppeter/nim-for-pythonistas)&quot;
+    nbText: &quot;_WIP for PyCon🇸🇪 Nov 9-10_&quot;
 
 template reference(text: string) =
-  nbText: text
+  nbTextSmall: text
 
 template slideWhatIsNim =
   slide:
@@ -83,6 +175,9 @@ template slideSyntax =
             for i in g.low .. g.high:
               for j in g[i].low .. g[i].high:
                 g[i][j] = if g[i][j] == X: O else: X
+        nbTextSmall: &quot;- syntax fits well with **metaprogramming**\n&quot; &amp;
+        &quot;- UFCS (Uniform Function Call Syntax)&quot;
+        nbTextSmall: &quot;[Zen of Nim (2021)](https://nim-lang.org/blog/2021/11/15/zen-of-nim.html)&quot;
 
       column:
         nbText: &quot;⠀&quot; # https://www.compart.com/en/unicode/U+2800
@@ -90,30 +185,43 @@ template slideSyntax =
         #nbText: &quot;Indentation based syntax that fits Nim's macro system&quot;
         nbCode:
           var g = initGrid()
-          show g
+          show g # command
         nbCode:          
-          g.update
+          g.update # method
           g.show
         nbCode:
-          update(g)
-          show g
-    reference &quot;[Zen of Nim (2021)](https://nim-lang.org/blog/2021/11/15/zen-of-nim.html)&quot;
+          update(g) # function
+          show(g)
+    
 
 template slidePerformant =
   slide:
-    nbText: &quot;### Nim is Performant&quot;
+    nbText: &quot;### Performant: compiles to C&quot;
+    nbText: &quot;_todo: matrix multiplications_&quot;
+    #nbText: &quot;_came for the performance, stayed for the ergonomics_&quot;
 
 template slidePragmatic =
   slide:
-    nbText: &quot;### Nim is Pragmatic&quot;
+    nbText: &quot;### Interop with Python&quot;
+    reference &quot;[nimporter (based on nimpy)](https://github.com/Pebaz/nimporter)&quot;
+    #slide:
+    #  slideIframe &quot;https://github.com/Pebaz/nimporter&quot;
 
 template slidePortable =
   slide:
-    nbText: &quot;### Nim is Portable&quot;
+    nbText: &quot;### Compiles to Javascript&quot;
+    nbText: &quot;nim produces small native executables and &quot;
+    reference &quot;[🌱✨ plant app](https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter)&quot;    
+    #slide:
+    #  nbText: &quot;&quot;
+    #  slideIframeFromNblog(&quot;plant_app&quot;)
 
-template slideProductive =
+template slideEverything =
   slide:
-    nbText: &quot;### Nim is Productive&quot;
+    nbText: &quot;### For everything&quot;
+    unorderedList:
+      listItem: nbText&quot;gamedev: nico, godot bindings (Turing Complete)&quot;
+      listItem: nbText&quot;langdev: arturo, min&quot;
 
 template slideSource =
   slide:
@@ -122,19 +230,26 @@ template slideSource =
     reference &quot;[nimislides by Hugo]()&quot;
 
 when isMainModule:
+  nbInit(theme = revealTheme)
+  setSlidesTheme(Solarized)
+  addNbTextSmall
+
   when false:
-    slideTitle
-    slideWhatIsNim 
-    slideSyntax
+    discard
+  slideTitle
+  slideWhatIsNim 
+  slideAlternativeToRust
+  slideSyntax
   slidePerformant
   slidePragmatic
   slidePortable
-  slideProductive
+  #slideEverything
+  #slideProductive
   slideSource
   nbSave
 
 </code></pre>
-      <p><a href="">nimislides by Hugo</a></p>
+      <small><p><a href="">nimislides by Hugo</a></p></small>
       </section>
     </div>
   </div>
