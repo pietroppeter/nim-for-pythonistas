@@ -1,10 +1,11 @@
 import nimib, nimislides
+import std / strformat
 
 template slideIframe*(url: string) =
   nbRawHtml: "<section data-background-iframe=\"" & url & "\" data-background-interactive></section>"
 
 template slideIframeFromNblog*(filename: string) =
-  slideIframe("https://pietroppeter.github.io/nblog/drafts/" & filename & ".html")
+  slideIframe("https://nimib-land.github.io/nblog/drafts/" & filename & ".html")
 
 # small text
 template addNbTextSmall* =
@@ -19,7 +20,7 @@ template slideTitle =
   slide:
     bigText: "Nim 👑 for Pythonistas 🐍"
     nbText: "[github.com/pietroppeter/nim-for-pythonistas](https://github.com/pietroppeter/nim-for-pythonistas)"
-    nbText: "_WIP for PyCon🇸🇪 Nov 9-10_"
+    nbText: "_⚡ PyCon🇸🇪 Nov 10_"
 
 template reference(text: string) =
   nbTextSmall: text
@@ -30,7 +31,7 @@ template slideWhatIsNim =
     columns:
       column:
         nbCode:
-          let message = "Hi_Recursers!"
+          let message = "Hi_PyConSE23!"
           for i in 0 ..< message.len:
             echo message[0 .. i]
       column:
@@ -93,25 +94,74 @@ template slideSyntax =
 template slidePerformant =
   slide:
     nbText: "### Performant: compiles to C"
-    nbText: "_todo: matrix multiplications_"
-    #nbText: "_came for the performance, stayed for the ergonomics_"
+    #nbText: "_todo: matrix multiplications_"
+    nbCode:
+      const N = 3
+      type Matrix = array[N, array[N, int]]
+
+      let
+        A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        B = [[1, 1, 1], [0, 1, 1], [0, 0, 1]]
+
+      func `*`(a, b: Matrix): Matrix =
+        for i in 0 ..< N:
+          for j in 0 ..< N:
+            for k in 0 ..< N:
+              result[i][j] += a[i][k]*b[k][j]
+
+      echo A*B
+
+    reference "[HPC from Python to Nim (Fosdem 2022)](https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/)"
+
+const
+  tripleBackticks = "```" # hack to avoid issues when showing source
+  bOpen = "{"
+  bClose = "}"
 
 template slidePragmatic =
+
   slide:
     nbText: "### Interop with Python"
-    reference "[nimporter (based on nimpy)](https://github.com/Pebaz/nimporter)"
-    #slide:
-    #  slideIframe "https://github.com/Pebaz/nimporter"
+    nbText: fmt"""
+
+`fibonacci.nim`
+{tripleBackticks}nim
+import nimpy
+
+func fib*(n: int): int {bOpen}. exportpy .{bClose} =
+  if n < 2: 1 else: fib(n - 1) + fib(n - 2)
+{tripleBackticks}
+
+`main.py`
+{tripleBackticks}python
+import nimporter
+from fibonacci import fib
+
+print(fib(10))
+{tripleBackticks}
+
+{tripleBackticks}
+python3 main.py
+{tripleBackticks}
+
+{tripleBackticks}
+89
+{tripleBackticks}
+
+"""
+
+    reference "[nimporter](https://github.com/Pebaz/nimporter)"
+    reference "[nimpy](https://github.com/yglukhov/nimpy)"
 
 template slidePortable =
   slide:
-    nbText: "### Compiles to Javascript"
-    nbText: "nim produces small native executables and "
-    reference "[🌱✨ plant app](https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter)"    
-    #slide:
-    #  nbText: ""
-    #  slideIframeFromNblog("plant_app")
+    slide:
+      nbText: "### Compiles to Javascript!"
+      reference "[🌱✨ plant app](https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter)"    
+  
+    slideIframeFromNblog("plant_app")
 
+# WIP
 template slideEverything =
   slide:
     nbText: "### For everything"
@@ -123,7 +173,7 @@ template slideSource =
   slide:
     nbText: "### Slides source"
     nbText: "```nim\n" & nb.source & "\n```\n"
-    reference "[nimislides by Hugo]()"
+    reference "[nimislides by Hugo Granström](https://github.com/HugoGranstrom/nimiSlides)"
 
 when isMainModule:
   nbInit(theme = revealTheme)
@@ -134,11 +184,11 @@ when isMainModule:
     discard
   slideTitle
   slideWhatIsNim 
-  slideAlternativeToRust
+  #slideAlternativeToRust
   slideSyntax
-  slidePerformant
-  slidePragmatic
-  slidePortable
+  slidePerformant # compiles to C
+  slidePragmatic # FFI: e.g. nimporter and nimpy
+  slidePortable # Compiles to Javascript!
   #slideEverything
   #slideProductive
   slideSource

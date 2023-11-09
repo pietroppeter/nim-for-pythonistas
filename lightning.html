@@ -12,27 +12,27 @@
       <section data-nimib-slide-number="1" >
       <h2 class="r-fit-text"> <p>Nim 👑 for Pythonistas 🐍</p> </h2>
       <p><a href="https://github.com/pietroppeter/nim-for-pythonistas">github.com/pietroppeter/nim-for-pythonistas</a></p>
-      <p><em>WIP for PyCon🇸🇪 Nov 9-10</em></p>
+      <p><em>⚡ PyCon🇸🇪 Nov 10</em></p>
       </section>
       <section data-nimib-slide-number="2" >
       <h2>What is Nim</h2>
       <div style="display: grid; grid-auto-flow: column;">
       <div>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> message = <span class="hljs-string">&quot;Hi_Recursers!&quot;</span>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> message = <span class="hljs-string">&quot;Hi_PyConSE23!&quot;</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; message.len:
   <span class="hljs-keyword">echo</span> message[<span class="hljs-number">0</span> .. i]</code></pre><pre style="width: 100%;"><samp class="hljs">H
 Hi
 Hi_
-Hi_R
-Hi_Re
-Hi_Rec
-Hi_Recu
-Hi_Recur
-Hi_Recurs
-Hi_Recurse
-Hi_Recurser
-Hi_Recursers
-Hi_Recursers!</samp></pre>
+Hi_P
+Hi_Py
+Hi_PyC
+Hi_PyCo
+Hi_PyCon
+Hi_PyConS
+Hi_PyConSE
+Hi_PyConSE2
+Hi_PyConSE23
+Hi_PyConSE23!</samp></pre>
       </div>
       <div>
       <p>Nim is a<br>multi-paradigm<br>(imperative,<br>functional,<br>object-oriented)<br>statically typed<br>compiled<br>programming language<br>for everything</p>
@@ -41,9 +41,6 @@ Hi_Recursers!</samp></pre>
       <small><p><a href="url.info">A Programming Language Underdog (2018)</a></p></small>
       </section>
       <section data-nimib-slide-number="3" >
-      <p><em>(an alternative to Rust)</em></p>
-      </section>
-      <section data-nimib-slide-number="4" >
       <h3>Pythonic Syntax with Superpowers</h3>
       <div style="display: grid; grid-auto-flow: column;">
       <div>
@@ -87,28 +84,62 @@ show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="5" >
+      <section data-nimib-slide-number="4" >
       <h3>Performant: compiles to C</h3>
-      <p><em>todo: matrix multiplications</em></p>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">const</span> <span class="hljs-type">N</span> = <span class="hljs-number">3</span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Matrix</span> = <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">int</span>]]
+
+<span class="hljs-keyword">let</span>
+  <span class="hljs-type">A</span> = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]]
+  <span class="hljs-type">B</span> = [[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]]
+
+<span class="hljs-keyword">func</span> `*`(a, b: <span class="hljs-type">Matrix</span>): <span class="hljs-type">Matrix</span> =
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; <span class="hljs-type">N</span>:
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; <span class="hljs-type">N</span>:
+      <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; <span class="hljs-type">N</span>:
+        <span class="hljs-literal">result</span>[i][j] += a[i][k]*b[k][j]
+
+<span class="hljs-keyword">echo</span> <span class="hljs-type">A</span>*<span class="hljs-type">B</span></code></pre><pre style="width: 100%;"><samp class="hljs">[[1, 3, 6], [4, 9, 15], [7, 15, 24]]</samp></pre>
+      <small><p><a href="https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/">HPC from Python to Nim (Fosdem 2022)</a></p></small>
+      </section>
+      <section data-nimib-slide-number="5" >
+      <h3>Interop with Python</h3>
+      <p><code>fibonacci.nim</code></p>
+<pre><code class="language-nim">import nimpy
+
+func fib*(n: int): int {. exportpy .} =
+  if n &lt; 2: 1 else: fib(n - 1) + fib(n - 2)
+</code></pre>
+<p><code>main.py</code></p>
+<pre><code class="language-python">import nimporter
+from fibonacci import fib
+
+print(fib(10))
+</code></pre>
+<pre><code>python3 main.py
+</code></pre>
+<pre><code>89
+</code></pre>
+      <small><p><a href="https://github.com/Pebaz/nimporter">nimporter</a></p></small>
+      <small><p><a href="https://github.com/yglukhov/nimpy">nimpy</a></p></small>
       </section>
       <section data-nimib-slide-number="6" >
-      <h3>Interop with Python</h3>
-      <small><p><a href="https://github.com/Pebaz/nimporter">nimporter (based on nimpy)</a></p></small>
-      </section>
       <section data-nimib-slide-number="7" >
-      <h3>Compiles to Javascript</h3>
-      <p>nim produces small native executables and</p>
+      <h3>Compiles to Javascript!</h3>
       <small><p><a href="https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter">🌱✨ plant app</a></p></small>
+      </section>
+      <section data-background-iframe="https://nimib-land.github.io/nblog/drafts/plant_app.html" data-background-interactive></section>
       </section>
       <section data-nimib-slide-number="8" >
       <h3>Slides source</h3>
       <pre><code class="language-nim">import nimib, nimislides
+import std / strformat
 
 template slideIframe*(url: string) =
   nbRawHtml: &quot;&lt;section data-background-iframe=\&quot;&quot; &amp; url &amp; &quot;\&quot; data-background-interactive&gt;&lt;/section&gt;&quot;
 
 template slideIframeFromNblog*(filename: string) =
-  slideIframe(&quot;https://pietroppeter.github.io/nblog/drafts/&quot; &amp; filename &amp; &quot;.html&quot;)
+  slideIframe(&quot;https://nimib-land.github.io/nblog/drafts/&quot; &amp; filename &amp; &quot;.html&quot;)
 
 # small text
 template addNbTextSmall* =
@@ -123,7 +154,7 @@ template slideTitle =
   slide:
     bigText: &quot;Nim 👑 for Pythonistas 🐍&quot;
     nbText: &quot;[github.com/pietroppeter/nim-for-pythonistas](https://github.com/pietroppeter/nim-for-pythonistas)&quot;
-    nbText: &quot;_WIP for PyCon🇸🇪 Nov 9-10_&quot;
+    nbText: &quot;_⚡ PyCon🇸🇪 Nov 10_&quot;
 
 template reference(text: string) =
   nbTextSmall: text
@@ -134,7 +165,7 @@ template slideWhatIsNim =
     columns:
       column:
         nbCode:
-          let message = &quot;Hi_Recursers!&quot;
+          let message = &quot;Hi_PyConSE23!&quot;
           for i in 0 ..&lt; message.len:
             echo message[0 .. i]
       column:
@@ -197,25 +228,74 @@ template slideSyntax =
 template slidePerformant =
   slide:
     nbText: &quot;### Performant: compiles to C&quot;
-    nbText: &quot;_todo: matrix multiplications_&quot;
-    #nbText: &quot;_came for the performance, stayed for the ergonomics_&quot;
+    #nbText: &quot;_todo: matrix multiplications_&quot;
+    nbCode:
+      const N = 3
+      type Matrix = array[N, array[N, int]]
+
+      let
+        A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        B = [[1, 1, 1], [0, 1, 1], [0, 0, 1]]
+
+      func `*`(a, b: Matrix): Matrix =
+        for i in 0 ..&lt; N:
+          for j in 0 ..&lt; N:
+            for k in 0 ..&lt; N:
+              result[i][j] += a[i][k]*b[k][j]
+
+      echo A*B
+
+    reference &quot;[HPC from Python to Nim (Fosdem 2022)](https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/)&quot;
+
+const
+  tripleBackticks = &quot;```&quot; # hack to avoid issues when showing source
+  bOpen = &quot;{&quot;
+  bClose = &quot;}&quot;
 
 template slidePragmatic =
+
   slide:
     nbText: &quot;### Interop with Python&quot;
-    reference &quot;[nimporter (based on nimpy)](https://github.com/Pebaz/nimporter)&quot;
-    #slide:
-    #  slideIframe &quot;https://github.com/Pebaz/nimporter&quot;
+    nbText: fmt&quot;&quot;&quot;
+
+`fibonacci.nim`
+{tripleBackticks}nim
+import nimpy
+
+func fib*(n: int): int {bOpen}. exportpy .{bClose} =
+  if n &lt; 2: 1 else: fib(n - 1) + fib(n - 2)
+{tripleBackticks}
+
+`main.py`
+{tripleBackticks}python
+import nimporter
+from fibonacci import fib
+
+print(fib(10))
+{tripleBackticks}
+
+{tripleBackticks}
+python3 main.py
+{tripleBackticks}
+
+{tripleBackticks}
+89
+{tripleBackticks}
+
+&quot;&quot;&quot;
+
+    reference &quot;[nimporter](https://github.com/Pebaz/nimporter)&quot;
+    reference &quot;[nimpy](https://github.com/yglukhov/nimpy)&quot;
 
 template slidePortable =
   slide:
-    nbText: &quot;### Compiles to Javascript&quot;
-    nbText: &quot;nim produces small native executables and &quot;
-    reference &quot;[🌱✨ plant app](https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter)&quot;    
-    #slide:
-    #  nbText: &quot;&quot;
-    #  slideIframeFromNblog(&quot;plant_app&quot;)
+    slide:
+      nbText: &quot;### Compiles to Javascript!&quot;
+      reference &quot;[🌱✨ plant app](https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter)&quot;    
+  
+    slideIframeFromNblog(&quot;plant_app&quot;)
 
+# WIP
 template slideEverything =
   slide:
     nbText: &quot;### For everything&quot;
@@ -227,7 +307,7 @@ template slideSource =
   slide:
     nbText: &quot;### Slides source&quot;
     nbText: &quot;```nim\n&quot; &amp; nb.source &amp; &quot;\n```\n&quot;
-    reference &quot;[nimislides by Hugo]()&quot;
+    reference &quot;[nimislides by Hugo Granström](https://github.com/HugoGranstrom/nimiSlides)&quot;
 
 when isMainModule:
   nbInit(theme = revealTheme)
@@ -238,18 +318,18 @@ when isMainModule:
     discard
   slideTitle
   slideWhatIsNim 
-  slideAlternativeToRust
+  #slideAlternativeToRust
   slideSyntax
-  slidePerformant
-  slidePragmatic
-  slidePortable
+  slidePerformant # compiles to C
+  slidePragmatic # FFI: e.g. nimporter and nimpy
+  slidePortable # Compiles to Javascript!
   #slideEverything
   #slideProductive
   slideSource
   nbSave
 
 </code></pre>
-      <small><p><a href="">nimislides by Hugo</a></p></small>
+      <small><p><a href="https://github.com/HugoGranstrom/nimiSlides">nimislides by Hugo Granström</a></p></small>
       </section>
     </div>
   </div>
