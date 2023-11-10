@@ -22,6 +22,11 @@ template slideTitle =
     nbText: "[github.com/pietroppeter/nim-for-pythonistas](https://github.com/pietroppeter/nim-for-pythonistas)"
     nbText: "_⚡ @ PyCon🇸🇪 2023, Nov 10th_"
     reference: "Pietro Peterlongo from [Python Milano](https://milano.python.it) 🇮🇹"
+    speakerNote: """
+- slides are on github
+- I organize event in Milan come to speak!
+- Nim is one of the reason I am here today
+"""
 
 template reference(text: string) =
   nbTextSmall: text
@@ -39,6 +44,12 @@ template slideWhatIsNim =
         nbText: "<span data-id=\"nimis\">Nim is a</span>" &
         "<span data-id=\"proglang\"><br>programming language</span>" #&
     reference "[A Programming Language Underdog (2018)](url.info)" # small
+    speakerNote: """
+- an interesting second (or 3rd or nth) proglang to learn after python
+- programming languages are fun!
+- nim is my way of procrastinating learning Rust
+- it is much more niche, I learn it for fun not for money
+"""
 
   slide(slideOptions(autoAnimate=true)):
     nbText: "## What is Nim"
