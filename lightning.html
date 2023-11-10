@@ -12,9 +12,10 @@
       <section data-nimib-slide-number="1" >
       <h2 class="r-fit-text"> <p>Nim 👑 for Pythonistas 🐍</p> </h2>
       <p><a href="https://github.com/pietroppeter/nim-for-pythonistas">github.com/pietroppeter/nim-for-pythonistas</a></p>
-      <p><em>⚡ PyCon🇸🇪 Nov 10</em></p>
+      <p><em>⚡ @ PyCon🇸🇪 2023, Nov 10th</em></p>
+      <small><p>Pietro Peterlongo from <a href="https://milano.python.it">Python Milano</a> 🇮🇹</p></small>
       </section>
-      <section data-nimib-slide-number="2" >
+      <section data-nimib-slide-number="2" data-auto-animate >
       <h2>What is Nim</h2>
       <div style="display: grid; grid-auto-flow: column;">
       <div>
@@ -35,12 +36,90 @@ Hi_PyConSE23
 Hi_PyConSE23!</samp></pre>
       </div>
       <div>
-      <p>Nim is a<br>multi-paradigm<br>(imperative,<br>functional,<br>object-oriented)<br>statically typed<br>compiled<br>programming language<br>for everything</p>
+      <p><span data-id="nimis">Nim is a</span><span data-id="proglang"><br>programming language</span></p>
       </div>
       </div>
       <small><p><a href="url.info">A Programming Language Underdog (2018)</a></p></small>
       </section>
-      <section data-nimib-slide-number="3" >
+      <section data-nimib-slide-number="3" data-auto-animate >
+      <h2>What is Nim</h2>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> message = <span class="hljs-string">&quot;Hi_PyConSE23!&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; message.len:
+  <span class="hljs-keyword">echo</span> message[<span class="hljs-number">0</span> .. i]</code></pre><pre style="width: 100%;"><samp class="hljs">H
+Hi
+Hi_
+Hi_P
+Hi_Py
+Hi_PyC
+Hi_PyCo
+Hi_PyCon
+Hi_PyConS
+Hi_PyConSE
+Hi_PyConSE2
+Hi_PyConSE23
+Hi_PyConSE23!</samp></pre>
+      </div>
+      <div>
+      <p><span data-id="nimis">Nim is a</span><span data-id="compiled"><br>compiled</span><span data-id="proglang"><br>programming language</span></p>
+      </div>
+      </div>
+      <small><p><a href="url.info">A Programming Language Underdog (2018)</a></p></small>
+      </section>
+      <section data-nimib-slide-number="4" data-auto-animate >
+      <h2>What is Nim</h2>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> message = <span class="hljs-string">&quot;Hi_PyConSE23!&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; message.len:
+  <span class="hljs-keyword">echo</span> message[<span class="hljs-number">0</span> .. i]</code></pre><pre style="width: 100%;"><samp class="hljs">H
+Hi
+Hi_
+Hi_P
+Hi_Py
+Hi_PyC
+Hi_PyCo
+Hi_PyCon
+Hi_PyConS
+Hi_PyConSE
+Hi_PyConSE2
+Hi_PyConSE23
+Hi_PyConSE23!</samp></pre>
+      </div>
+      <div>
+      <p><span data-id="nimis">Nim is a</span><span data-id="static"><br>statically typed</span><span data-id="compiled"><br>compiled</span><span data-id="proglang"><br>programming language</span></p>
+      </div>
+      </div>
+      <small><p><a href="url.info">A Programming Language Underdog (2018)</a></p></small>
+      </section>
+      <section data-nimib-slide-number="5" data-auto-animate >
+      <h2>What is Nim</h2>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> message = <span class="hljs-string">&quot;Hi_PyConSE23!&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; message.len:
+  <span class="hljs-keyword">echo</span> message[<span class="hljs-number">0</span> .. i]</code></pre><pre style="width: 100%;"><samp class="hljs">H
+Hi
+Hi_
+Hi_P
+Hi_Py
+Hi_PyC
+Hi_PyCo
+Hi_PyCon
+Hi_PyConS
+Hi_PyConSE
+Hi_PyConSE2
+Hi_PyConSE23
+Hi_PyConSE23!</samp></pre>
+      </div>
+      <div>
+      <p><span data-id="nimis">Nim is a</span><span data-id="static"><br>statically typed</span><span data-id="compiled"><br>compiled</span><span data-id="proglang"><br>programming language</span><span data-id="everything"><br>for everything</span></p>
+      </div>
+      </div>
+      <small><p><a href="url.info">A Programming Language Underdog (2018)</a></p></small>
+      </section>
+      <section data-nimib-slide-number="6" >
       <h3>Pythonic Syntax with Superpowers</h3>
       <div style="display: grid; grid-auto-flow: column;">
       <div>
@@ -84,7 +163,7 @@ show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="4" >
+      <section data-nimib-slide-number="7" >
       <h3>Performant: compiles to C</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">const</span> <span class="hljs-type">N</span> = <span class="hljs-number">3</span>
 <span class="hljs-keyword">type</span> <span class="hljs-type">Matrix</span> = <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">int</span>]]
@@ -102,7 +181,7 @@ show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
 <span class="hljs-keyword">echo</span> <span class="hljs-type">A</span>*<span class="hljs-type">B</span></code></pre><pre style="width: 100%;"><samp class="hljs">[[1, 3, 6], [4, 9, 15], [7, 15, 24]]</samp></pre>
       <small><p><a href="https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/">HPC from Python to Nim (Fosdem 2022)</a></p></small>
       </section>
-      <section data-nimib-slide-number="5" >
+      <section data-nimib-slide-number="8" >
       <h3>Interop with Python</h3>
       <p><code>fibonacci.nim</code></p>
 <pre><code class="language-nim">import nimpy
@@ -123,14 +202,14 @@ print(fib(10))
       <small><p><a href="https://github.com/Pebaz/nimporter">nimporter</a></p></small>
       <small><p><a href="https://github.com/yglukhov/nimpy">nimpy</a></p></small>
       </section>
-      <section data-nimib-slide-number="6" >
-      <section data-nimib-slide-number="7" >
+      <section data-nimib-slide-number="9" >
+      <section data-nimib-slide-number="10" >
       <h3>Compiles to Javascript!</h3>
       <small><p><a href="https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter">🌱✨ plant app</a></p></small>
       </section>
       <section data-background-iframe="https://nimib-land.github.io/nblog/drafts/plant_app.html" data-background-interactive></section>
       </section>
-      <section data-nimib-slide-number="8" >
+      <section data-nimib-slide-number="11" >
       <h3>Slides source</h3>
       <pre><code class="language-nim">import nimib, nimislides
 import std / strformat
@@ -154,30 +233,70 @@ template slideTitle =
   slide:
     bigText: &quot;Nim 👑 for Pythonistas 🐍&quot;
     nbText: &quot;[github.com/pietroppeter/nim-for-pythonistas](https://github.com/pietroppeter/nim-for-pythonistas)&quot;
-    nbText: &quot;_⚡ PyCon🇸🇪 Nov 10_&quot;
+    nbText: &quot;_⚡ @ PyCon🇸🇪 2023, Nov 10th_&quot;
+    reference: &quot;Pietro Peterlongo from [Python Milano](https://milano.python.it) 🇮🇹&quot;
 
 template reference(text: string) =
   nbTextSmall: text
 
 template slideWhatIsNim =
-  slide:
+  slide(slideOptions(autoAnimate=true)):
     nbText: &quot;## What is Nim&quot;
     columns:
       column:
-        nbCode:
+        nbCodeInBlock:
           let message = &quot;Hi_PyConSE23!&quot;
           for i in 0 ..&lt; message.len:
             echo message[0 .. i]
       column:
-        nbText: &quot;Nim is a&quot; &amp;
-        &quot;&lt;br&gt;multi-paradigm&quot; &amp;
-        &quot;&lt;br&gt;(imperative,&quot; &amp;
-        &quot;&lt;br&gt;functional,&quot; &amp;
-        &quot;&lt;br&gt;object-oriented)&quot; &amp;
-        &quot;&lt;br&gt;statically typed&quot; &amp;
-        &quot;&lt;br&gt;compiled&quot; &amp;
-        &quot;&lt;br&gt;programming language&quot; &amp;
-        &quot;&lt;br&gt;for everything&quot;
+        nbText: &quot;&lt;span data-id=\&quot;nimis\&quot;&gt;Nim is a&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;proglang\&quot;&gt;&lt;br&gt;programming language&lt;/span&gt;&quot; #&amp;
+    reference &quot;[A Programming Language Underdog (2018)](url.info)&quot; # small
+
+  slide(slideOptions(autoAnimate=true)):
+    nbText: &quot;## What is Nim&quot;
+    columns:
+      column:
+        nbCodeInBlock:
+          let message = &quot;Hi_PyConSE23!&quot;
+          for i in 0 ..&lt; message.len:
+            echo message[0 .. i]
+      column:
+        nbText: &quot;&lt;span data-id=\&quot;nimis\&quot;&gt;Nim is a&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;compiled\&quot;&gt;&lt;br&gt;compiled&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;proglang\&quot;&gt;&lt;br&gt;programming language&lt;/span&gt;&quot;
+    reference &quot;[A Programming Language Underdog (2018)](url.info)&quot; # small
+
+  slide(slideOptions(autoAnimate=true)):
+    nbText: &quot;## What is Nim&quot;
+    columns:
+      column:
+        nbCodeInBlock:
+          let message = &quot;Hi_PyConSE23!&quot;
+          for i in 0 ..&lt; message.len:
+            echo message[0 .. i]
+      column:
+        nbText: &quot;&lt;span data-id=\&quot;nimis\&quot;&gt;Nim is a&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;static\&quot;&gt;&lt;br&gt;statically typed&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;compiled\&quot;&gt;&lt;br&gt;compiled&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;proglang\&quot;&gt;&lt;br&gt;programming language&lt;/span&gt;&quot;
+        #&quot;&lt;span data-id=\&quot;everything\&quot;&gt;&lt;br&gt;for everything&lt;/span&gt;&quot;
+    reference &quot;[A Programming Language Underdog (2018)](url.info)&quot; # small
+
+  slide(slideOptions(autoAnimate=true)):
+    nbText: &quot;## What is Nim&quot;
+    columns:
+      column:
+        nbCodeInBlock:
+          let message = &quot;Hi_PyConSE23!&quot;
+          for i in 0 ..&lt; message.len:
+            echo message[0 .. i]
+      column:
+        nbText: &quot;&lt;span data-id=\&quot;nimis\&quot;&gt;Nim is a&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;static\&quot;&gt;&lt;br&gt;statically typed&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;compiled\&quot;&gt;&lt;br&gt;compiled&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;proglang\&quot;&gt;&lt;br&gt;programming language&lt;/span&gt;&quot; &amp;
+        &quot;&lt;span data-id=\&quot;everything\&quot;&gt;&lt;br&gt;for everything&lt;/span&gt;&quot;
     reference &quot;[A Programming Language Underdog (2018)](url.info)&quot; # small
 
 template slideAlternativeToRust =

@@ -20,30 +20,70 @@ template slideTitle =
   slide:
     bigText: "Nim 👑 for Pythonistas 🐍"
     nbText: "[github.com/pietroppeter/nim-for-pythonistas](https://github.com/pietroppeter/nim-for-pythonistas)"
-    nbText: "_⚡ PyCon🇸🇪 Nov 10_"
+    nbText: "_⚡ @ PyCon🇸🇪 2023, Nov 10th_"
+    reference: "Pietro Peterlongo from [Python Milano](https://milano.python.it) 🇮🇹"
 
 template reference(text: string) =
   nbTextSmall: text
 
 template slideWhatIsNim =
-  slide:
+  slide(slideOptions(autoAnimate=true)):
     nbText: "## What is Nim"
     columns:
       column:
-        nbCode:
+        nbCodeInBlock:
           let message = "Hi_PyConSE23!"
           for i in 0 ..< message.len:
             echo message[0 .. i]
       column:
-        nbText: "Nim is a" &
-        "<br>multi-paradigm" &
-        "<br>(imperative," &
-        "<br>functional," &
-        "<br>object-oriented)" &
-        "<br>statically typed" &
-        "<br>compiled" &
-        "<br>programming language" &
-        "<br>for everything"
+        nbText: "<span data-id=\"nimis\">Nim is a</span>" &
+        "<span data-id=\"proglang\"><br>programming language</span>" #&
+    reference "[A Programming Language Underdog (2018)](url.info)" # small
+
+  slide(slideOptions(autoAnimate=true)):
+    nbText: "## What is Nim"
+    columns:
+      column:
+        nbCodeInBlock:
+          let message = "Hi_PyConSE23!"
+          for i in 0 ..< message.len:
+            echo message[0 .. i]
+      column:
+        nbText: "<span data-id=\"nimis\">Nim is a</span>" &
+        "<span data-id=\"compiled\"><br>compiled</span>" &
+        "<span data-id=\"proglang\"><br>programming language</span>"
+    reference "[A Programming Language Underdog (2018)](url.info)" # small
+
+  slide(slideOptions(autoAnimate=true)):
+    nbText: "## What is Nim"
+    columns:
+      column:
+        nbCodeInBlock:
+          let message = "Hi_PyConSE23!"
+          for i in 0 ..< message.len:
+            echo message[0 .. i]
+      column:
+        nbText: "<span data-id=\"nimis\">Nim is a</span>" &
+        "<span data-id=\"static\"><br>statically typed</span>" &
+        "<span data-id=\"compiled\"><br>compiled</span>" &
+        "<span data-id=\"proglang\"><br>programming language</span>"
+        #"<span data-id=\"everything\"><br>for everything</span>"
+    reference "[A Programming Language Underdog (2018)](url.info)" # small
+
+  slide(slideOptions(autoAnimate=true)):
+    nbText: "## What is Nim"
+    columns:
+      column:
+        nbCodeInBlock:
+          let message = "Hi_PyConSE23!"
+          for i in 0 ..< message.len:
+            echo message[0 .. i]
+      column:
+        nbText: "<span data-id=\"nimis\">Nim is a</span>" &
+        "<span data-id=\"static\"><br>statically typed</span>" &
+        "<span data-id=\"compiled\"><br>compiled</span>" &
+        "<span data-id=\"proglang\"><br>programming language</span>" &
+        "<span data-id=\"everything\"><br>for everything</span>"
     reference "[A Programming Language Underdog (2018)](url.info)" # small
 
 template slideAlternativeToRust =
