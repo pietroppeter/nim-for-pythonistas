@@ -33,7 +33,7 @@ template reference(text: string) =
 
 template slideWhatIsNim =
   slide(slideOptions(autoAnimate=true)):
-    nbText: "## What is Nim"
+    nbText: "## What is Nim 👑"
     columns:
       column:
         nbCodeInBlock:
@@ -52,7 +52,7 @@ template slideWhatIsNim =
 """
 
   slide(slideOptions(autoAnimate=true)):
-    nbText: "## What is Nim"
+    nbText: "## What is Nim 👑"
     columns:
       column:
         nbCodeInBlock:
@@ -66,7 +66,7 @@ template slideWhatIsNim =
     reference "[A Programming Language Underdog (2018)](url.info)" # small
 
   slide(slideOptions(autoAnimate=true)):
-    nbText: "## What is Nim"
+    nbText: "## What is Nim 👑"
     columns:
       column:
         nbCodeInBlock:
@@ -82,7 +82,7 @@ template slideWhatIsNim =
     reference "[A Programming Language Underdog (2018)](url.info)" # small
 
   slide(slideOptions(autoAnimate=true)):
-    nbText: "## What is Nim"
+    nbText: "## What is Nim 👑"
     columns:
       column:
         nbCodeInBlock:
@@ -104,7 +104,7 @@ template slideAlternativeToRust =
 
 template slideSyntax =
   slide:
-    nbText: "### Pythonic Syntax with Superpowers"
+    nbText: "### Pythonic Syntax with 🦸 Superpowers"
     columns:
       column:
         nbCode:
@@ -123,8 +123,8 @@ template slideSyntax =
             for i in g.low .. g.high:
               for j in g[i].low .. g[i].high:
                 g[i][j] = if g[i][j] == X: O else: X
-        nbTextSmall: "- syntax fits well with **metaprogramming**\n" &
-        "- UFCS (Uniform Function Call Syntax)"
+        nbTextSmall: "- 🦸 syntax fits well with **metaprogramming**\n" &
+        "- 💡 UFCS (Uniform Function Call Syntax)"
         nbTextSmall: "[Zen of Nim (2021)](https://nim-lang.org/blog/2021/11/15/zen-of-nim.html)"
 
       column:
@@ -144,7 +144,7 @@ template slideSyntax =
 
 template slidePerformant =
   slide:
-    nbText: "### Performant: compiles to C"
+    nbText: "### 🏎️ Performant: compiles to C"
     #nbText: "_todo: matrix multiplications_"
     nbCode:
       const N = 3
@@ -172,7 +172,7 @@ const
 template slidePragmatic =
 
   slide:
-    nbText: "### Interop with Python"
+    nbText: "### 🤝 Interop with Python"
     nbText: fmt"""
 
 `fibonacci.nim`
@@ -207,8 +207,9 @@ python3 main.py
 template slidePortable =
   slide:
     slide:
-      nbText: "### Compiles to Javascript!"
-      reference "[🌱✨ plant app](https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter)"    
+      nbText: "### 🤯 Compiles to Javascript!"
+      fragment:
+        nbText: "### [🌱✨ plant app](https://pietroppeter.github.io/nblog/drafts/plant_app.html?utm_source=github-pietroppeter) 👇"    
   
     slideIframeFromNblog("plant_app")
 
@@ -222,7 +223,7 @@ template slideEverything =
 
 template slideSource =
   slide:
-    nbText: "### Slides source"
+    nbText: "### 🛷 Slides source"
     nbText: "```nim\n" & nb.source & "\n```\n"
     reference "[nimislides by Hugo Granström](https://github.com/HugoGranstrom/nimiSlides)"
 
