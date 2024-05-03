@@ -2,7 +2,7 @@
 
 - goal: draft of all slides!
 
-- title (basquiat's crown)
+- title (basquiat's crown) [x]
 - intro: motivation and plan
   - quote by Beazley (Rilevanza)
   - something about me? (credibilità)
