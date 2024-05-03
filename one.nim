@@ -16,16 +16,13 @@ It allows to build powerful DSLs
 # we will have example of usage of this feature later  
 
 template all* =
-  slidePerformant
+  slidePerformant # change compiles to C to native compilation!
   slideSyntax
+  # overload (or skip here?)
   metaprogramming
   slidePragmatic
 
 when isMainModule:
   myInit
-  slidePerformant
-  slideSyntax
-  # overload (or skip here?)
-  # metaprogramming
-  slidePragmatic # interop with python
+  all
   nbSave
