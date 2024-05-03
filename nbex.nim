@@ -17,6 +17,12 @@ template mySlide*(ident: untyped, body: untyped) =
     slide:
       body
 
+template minSlide*(ident: untyped, body: untyped) =
+  # I can customize with custom background if I do not get to make it complete
+  template ident* =
+    slide:
+      body
+
 template spanColor*(col: string, text: string) =
   nbRawHtml("<span style=\"color:" & col & ";\">" & text & "</span>")
 

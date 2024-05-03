@@ -1,6 +1,6 @@
 import nimib, nimislides, nbex
 
-mySlide(me):
+minSlide(me):
   nbText "## Me"
   speakerNote """
 When I mean for Pythonistas, besides having in mind
