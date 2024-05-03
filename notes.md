@@ -26,12 +26,14 @@ all slides:
     - min [x]
   - min intro ok [x]
 - node 1: nim for pythonistas
-  - performance
-  - syntax
+  - performance [x]
+  - syntax [x]
   - name overload? (link to New York article)
   - metaprogramming (3 layers)
     - (what is metaprogramming in Python)
     - mention also DSLs
+  - interop with Python [x]
+  - min one ok
 - node 2: compiler and types
   - compile time vs runtime
   - mutability

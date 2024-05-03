@@ -71,7 +71,7 @@ template all* =
   agenda
 
 when isMainModule:
-  nbInit(revealTheme)
+  myInit
   helloPyCon
   me
   Beazley

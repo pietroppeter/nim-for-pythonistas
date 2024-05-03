@@ -9,98 +9,7 @@
   <body>
   <div class="reveal">
     <div class="slides">
-      <section data-nimib-slide-number="1" data-background-image="crown.webp" >
-      <h1 style="color:#ffe953;">Nim for Pythonistas</h1>
-      <h2 style="color:#F17A5D;">PyCon 🇮🇹, May 24th 2024</h2>
-      <span style="color:#3572A5;">github.com/pietroppeter/nim-for-pythonistas</span>
-      </section>
-      <section data-nimib-slide-number="2" >
-      <section data-nimib-slide-number="3" >
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> sequtils, strutils
-<span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Ciao PyCon&quot;</span>
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
-  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     C     i     a     o           P     y     C     o     n
-    C    i    a    o         P    y    C    o    n
-   C   i   a   o       P   y   C   o   n
-  C  i  a  o     P  y  C  o  n
- C i a o   P y C o n
-Ciao PyCon
- C i a o   P y C o n
-  C  i  a  o     P  y  C  o  n
-   C   i   a   o       P   y   C   o   n
-    C    i    a    o         P    y    C    o    n
-     C     i     a     o           P     y     C     o     n</samp></pre>
-      <p>Nim is a statically typed and compiled<br />
-systems programming language for everything</p>
-      </section>
-      <section data-nimib-slide-number="4" >
-      <h2>Me 👨‍👩‍👧</h2>
-      <aside class="notes">
-  <p>When I mean for Pythonistas, besides having in mind
-many of you as target audience, I include also myself.</p>
-<ul>
-<li>I started with Python in the late 90s (received my first computer in the early 90s)</li>
-<li>while in University (studied math) I put aside Python for Matlab</li>
-<li>when starting to work I went back to it and rekindled my first love</li>
-<li>worked for a number of years as data scientist</li>
-<li>almost 6 years ago, I stumbled on Nim on HN</li>
-<li>in an article called &quot;A Underdog Programming Language (Sep 2018)&quot;</li>
-<li>I am a sucker for the underdog story</li>
-<li>got curious and fell in love very quickly (also thanks to Advent of Code)</li>
-<li>used it to improve my skills, including my python skills</li>
-<li>and to do something different from what I did at work</li>
-<li>more software engineer kind of stuff, and more low level (like writing a parser)</li>
-<li>have been thinking a lot on how it impacted myself as a pythonista
-(and comparisons nim/python)</li>
-<li>Python Milano and PyData Milano meetups</li>
-<li>one of the odd things that happened: nim pushed me to become more of a pythonista</li>
-</ul>
-
-</aside>
-      </section>
-      <section data-nimib-slide-number="5" >
-      <blockquote>
-<p>sometimes people ask me &quot;what can I do to improve my Python skills?&quot; Much to their surprise, I often suggest doing a project in a completely different language or outside of their area of expertise. I think the main benefit of doing this is that you'll often see a completely different way of thinking about a problem that you can bring home to your own projects.</p>
-</blockquote>
-<p>David Beazley, March 2023</p>
-      </section>
-      <section data-nimib-slide-number="6" >
-      <h2>Therapy</h2>
-      <aside class="notes">
-  <p>This could also serve as a therapy session for our relation
-with Python and its future, in case you happen to need one
-(add quotes from twitter)</p>
-
-</aside>
-      </section>
-      <section data-nimib-slide-number="7" >
-      <h2>3 things I like about Python 🐝</h2>
-<ul>
-<li>Accessibility</li>
-<li>Playfulness</li>
-<li>Everything</li>
-</ul>
-      </section>
-      <section data-nimib-slide-number="8" >
-      <h2>3 things I struggle with Python 🙊</h2>
-<ul>
-<li>Abstraction</li>
-<li>Portability</li>
-<li>Errors</li>
-</ul>
-      </section>
-      <section data-nimib-slide-number="9" >
-      <h2>Agenda</h2>
-<ol>
-<li>nim is an <em>easy</em> to learn and <em>fast</em> complement to Python (+ magic 🧙)</li>
-<li>a smart <em>compiler</em> and a good <em>type</em> system can do wonders</li>
-<li>multiple backends (C, C++, Objective-C, <em>Javascript</em>): pragmatic AND 🤯</li>
-<li>why invest in a niche tech?</li>
-</ol>
-      </section>
-      </section>
-      <section data-nimib-slide-number="10" >
-      <section data-nimib-slide-number="11" >
+      <section data-nimib-slide-number="1" >
       <h3>🏎️ Performant: compiles to C</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">const</span> <span class="hljs-type">N</span> = <span class="hljs-number">3</span>
 <span class="hljs-keyword">type</span> <span class="hljs-type">Matrix</span> = <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">int</span>]]
@@ -118,7 +27,7 @@ with Python and its future, in case you happen to need one
 <span class="hljs-keyword">echo</span> <span class="hljs-type">A</span>*<span class="hljs-type">B</span></code></pre><pre style="width: 100%;"><samp class="hljs">[[1, 3, 6], [4, 9, 15], [7, 15, 24]]</samp></pre>
       <small><p><a href="https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/">HPC from Python to Nim (Fosdem 2022)</a></p></small>
       </section>
-      <section data-nimib-slide-number="12" >
+      <section data-nimib-slide-number="2" >
       <h3>Pythonic Syntax with 🦸 Superpowers</h3>
       <div style="display: grid; grid-auto-flow: column;">
       <div>
@@ -162,7 +71,7 @@ show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="13" >
+      <section data-nimib-slide-number="3" >
       <h3>🤝 Interop with Python</h3>
       <p><code>fibonacci.nim</code></p>
 <pre><code class="language-nim">import nimpy
@@ -182,7 +91,6 @@ print(fib(10))
 </code></pre>
       <small><p><a href="https://github.com/Pebaz/nimporter">nimporter</a></p></small>
       <small><p><a href="https://github.com/yglukhov/nimpy">nimpy</a></p></small>
-      </section>
       </section>
     </div>
   </div>

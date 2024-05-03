@@ -1,5 +1,5 @@
 import nimib, nimislides, nbex
-import intro
+import intro, one
 
 template title =
   slide(slideOptions(imageBackground="crown.webp")):
@@ -8,8 +8,10 @@ template title =
     spanColor(pythonBlue): "github.com/pietroppeter/nim-for-pythonistas"
 
 when isMainModule:
-  nbInit(theme = revealTheme)
+  myInit
   title
   slide:
     intro.all
+  slide:
+    one.all
   nbSave

@@ -1,4 +1,5 @@
-import nimib, nimislides
+import nimib, nimislides, lightning
+export addNbTextSmall, tripleBackticks, bOpen, bClose
 
 const
   pythonBlue* = "#3572A5" # from github/linguist
@@ -34,8 +35,13 @@ template h2Color*(col: string, text: string) = hColor(2, col, text)
 template h3Color*(col: string, text: string) = hColor(3, col, text)
 template h4Color*(col: string, text: string) = hColor(4, col, text)
 
+template myInit* =
+  nbInit(revealTheme)
+  setSlidesTheme(Solarized)
+  addNbTextSmall
+
 when isMainModule:
-  nbInit(theme=revealTheme)
+  myInit
   slide:
     h1Color("orange"): "H1 Title"
     spanColor("blue"): "hi"

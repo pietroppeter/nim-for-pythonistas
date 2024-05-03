@@ -28,7 +28,7 @@ template slideTitle =
 - Nim is one of the reason I am here today
 """
 
-template reference(text: string) =
+template reference*(text: string) =
   nbTextSmall: text
 
 template slideWhatIsNim =
@@ -102,7 +102,7 @@ template slideAlternativeToRust =
     nbText: "_(an alternative to Rust)_" # have it appear later and small
     # with different tradeoffs
 
-template slideSyntax =
+template slideSyntax* =
   slide:
     nbText: "### Pythonic Syntax with 🦸 Superpowers"
     columns:
@@ -142,7 +142,7 @@ template slideSyntax =
           show(g)
     
 
-template slidePerformant =
+template slidePerformant* =
   slide:
     nbText: "### 🏎️ Performant: compiles to C"
     #nbText: "_todo: matrix multiplications_"
@@ -165,11 +165,11 @@ template slidePerformant =
     reference "[HPC from Python to Nim (Fosdem 2022)](https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/)"
 
 const
-  tripleBackticks = "```" # hack to avoid issues when showing source
-  bOpen = "{"
-  bClose = "}"
+  tripleBackticks* = "```" # hack to avoid issues when showing source
+  bOpen* = "{"
+  bClose* = "}"
 
-template slidePragmatic =
+template slidePragmatic* =
 
   slide:
     nbText: "### 🤝 Interop with Python"
@@ -204,7 +204,7 @@ python3 main.py
     reference "[nimporter](https://github.com/Pebaz/nimporter)"
     reference "[nimpy](https://github.com/yglukhov/nimpy)"
 
-template slidePortable =
+template slidePortable* =
   slide:
     slide:
       nbText: "### 🤯 Compiles to Javascript!"
