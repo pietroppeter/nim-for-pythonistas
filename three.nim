@@ -21,10 +21,13 @@ template plantApp* =
   slide(slideOptions(iframeBackground="https://nimib-land.github.io/nblog/drafts/plant_app.html")):
     discard
 
+slideIframe(okazzu, "https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")
+
 template all* =
   backends
+  okazzu
   plantApp
-
+  # example of macro-based DSL: karax?
 
 when isMainModule:
   myInit

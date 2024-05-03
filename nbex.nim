@@ -24,6 +24,12 @@ template minSlide*(ident: untyped, body: untyped) =
     slide:
       body
 
+template slideIframe*(ident: untyped, frameAsStr: untyped) =
+  template ident* =
+    slide(slideOptions(iframeBackground=frameAsStr)):
+      discard
+
+
 template spanColor*(col: string, text: string) =
   nbRawHtml("<span style=\"color:" & col & ";\">" & text & "</span>")
 

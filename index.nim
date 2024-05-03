@@ -1,5 +1,5 @@
 import nimib, nimislides, nbex
-import intro, one, three, conclusions
+import intro, one, three, four, conclusions
 
 template title =
   slide(slideOptions(imageBackground="crown.webp")):
@@ -17,6 +17,8 @@ when isMainModule:
     one.all
   slide:
     three.all
+  slide:
+    four.all
   slide:
     conclusions.all
   nbSave
