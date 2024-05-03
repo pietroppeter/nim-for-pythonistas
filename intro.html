@@ -10,6 +10,23 @@
   <div class="reveal">
     <div class="slides">
       <section data-nimib-slide-number="1" >
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> sequtils, strutils
+<span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Ciao PyCon&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     C     i     a     o           P     y     C     o     n
+    C    i    a    o         P    y    C    o    n
+   C   i   a   o       P   y   C   o   n
+  C  i  a  o     P  y  C  o  n
+ C i a o   P y C o n
+Ciao PyCon
+ C i a o   P y C o n
+  C  i  a  o     P  y  C  o  n
+   C   i   a   o       P   y   C   o   n
+    C    i    a    o         P    y    C    o    n
+     C     i     a     o           P     y     C     o     n</samp></pre>
+      <p>Nim is a statically typed and compiled systems programming language for everything</p>
+      </section>
+      <section data-nimib-slide-number="2" >
       <h2>Me</h2>
       <aside class="notes">
   <p>When I mean for Pythonistas, besides having in mind
@@ -28,9 +45,51 @@ many of you as target audience, I include also myself.</p>
 <li>more software engineer kind of stuff, and more low level (like writing a parser)</li>
 <li>have been thinking a lot on how it impacted myself as a pythonista
 (and comparisons nim/python)</li>
+<li>Python Milano and PyData Milano meetups</li>
+<li>one of the odd things that happened: nim pushed me to become more of a pythonista</li>
 </ul>
 
 </aside>
+      </section>
+      <section data-nimib-slide-number="3" >
+      <blockquote>
+<p>sometimes people ask me &quot;what can I do to improve my Python skills?&quot; Much to their surprise, I often suggest doing a project in a completely different language or outside of their area of expertise. I think the main benefit of doing this is that you'll often see a completely different way of thinking about a problem that you can bring home to your own projects.</p>
+</blockquote>
+<p>David Beazley, March 2023</p>
+      </section>
+      <section data-nimib-slide-number="4" >
+      <h2>Therapy</h2>
+      <aside class="notes">
+  <p>This could also serve as a therapy session for our relation
+with Python and its future, in case you happen to need one
+(add quotes from twitter)</p>
+
+</aside>
+      </section>
+      <section data-nimib-slide-number="5" >
+      <h2>3 things I like about Python 🐝</h2>
+<ul>
+<li>Accessibility</li>
+<li>Playfulness</li>
+<li>Everything</li>
+</ul>
+      </section>
+      <section data-nimib-slide-number="6" >
+      <h2>3 things I struggle with Python 🙊</h2>
+<ul>
+<li>Abstraction</li>
+<li>Portability</li>
+<li>Errors</li>
+</ul>
+      </section>
+      <section data-nimib-slide-number="7" >
+      <h2>Agenda</h2>
+<ol>
+<li>nim is an <em>easy</em> to learn and <em>fast</em> complement to Python (+ magic 🧙)</li>
+<li>a smart <em>compiler</em> and a good <em>type</em> system can do wonders</li>
+<li>multiple backends (C, C++, Objective-C, <em>Javascript</em>): pragmatic AND 🤯</li>
+<li>why invest in a niche tech?</li>
+</ol>
       </section>
     </div>
   </div>

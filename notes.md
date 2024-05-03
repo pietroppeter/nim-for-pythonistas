@@ -16,13 +16,15 @@ all slides:
     - min [x]
   - 3 things I (sometimes) suffer with Python: Abstraction, Portability, Errors (Problema?)
     - min [x]
-  - elephant in the room: Rust (Stopper?)
-    - min 
-    - different tradeoffs
-  - quote by Guido on Python and Freedom (reinforces the tradeoff message)
-    - min
+  - temporarily remove
+    - elephant in the room: Rust (Stopper?)
+      - min 
+      - different tradeoffs
+    - quote by Guido on Python and Freedom (reinforces the tradeoff message)
+      - min
   - agenda (promessa?)
-    - min 
+    - min [x]
+  - min intro ok [x]
 - node 1: nim for pythonistas
   - hello nim
   - performance
