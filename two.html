@@ -3,14 +3,13 @@
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/reveal.min.css" integrity="sha512-vFD6wFRj2whK8/X/dMgxJHinKfGlwMYtN+yRCxvxvmOgIiMIlgrFb5iOuCoqwCID+Qcq2/gY8DpmNHcAjfHWxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/theme/solarized.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/theme/black.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
   <div class="reveal">
     <div class="slides">
       <section data-nimib-slide-number="1" >
-      <h3>Compile time evaluation</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> std / [sequtils, strutils]
 
 <span class="hljs-keyword">func</span> fizzBuzz(n: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">string</span> = 
@@ -25,21 +24,14 @@
 <span class="hljs-keyword">echo</span> <span class="hljs-literal">result</span></code></pre><pre style="width: 100%;"><samp class="hljs">12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz</samp></pre>
       </section>
       <section data-nimib-slide-number="2" >
-      <h3><a href="https://github.com/SciNim/Unchained">Unchained</a></h3>
-<p>A fully type safe, compile time only units library</p>
-<pre><code class="language-nim">type
-  Kilogram = distinct float
-  Meter = distinct float
-...
-</code></pre>
+      <h3><code>distinct</code> types (+macros) for compile time units</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> unchained
 
-<span class="hljs-keyword">let</span>
-  m = <span class="hljs-number">80.</span>kg
-  g = <span class="hljs-number">9.81</span>.m•s⁻²
-  f = m*g
+<span class="hljs-keyword">let</span> m = <span class="hljs-number">80.</span>kg
+<span class="hljs-keyword">let</span> g = <span class="hljs-number">9.81</span>.m•s⁻²
+<span class="hljs-keyword">let</span> f = m*g
 doAssert typeof(f) <span class="hljs-keyword">is</span> <span class="hljs-type">Newton</span>
-
+<span class="hljs-comment">#doAssert f == 784.8.N</span>
 <span class="hljs-keyword">echo</span> f</code></pre><pre style="width: 100%;"><samp class="hljs">784.8 KiloGram•Meter•Second⁻²</samp></pre>
       </section>
     </div>
