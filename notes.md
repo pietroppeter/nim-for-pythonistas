@@ -23,6 +23,7 @@
   (- lignaggio (Wirthiano?))
   - metaprogramming (3 layers)
     - (what is metaprogramming in Python)
+    - mention also DSLs
 - node 2: compiler and types
   - compile time vs runtime
   - mutability
