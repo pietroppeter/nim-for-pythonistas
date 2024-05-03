@@ -6,9 +6,7 @@
 - intro: motivation and plan
   - quote by Beazley (Rilevanza)
   - something about me? (credibilità)
-    - data science
-    - nim since sep 2018 (underdog! 1.0 in sep 2019)
-    - involved in Python community
+    - minimal draft [x]
   - elephant in the room: Rust (Stopper?)
     - different tradeoffs
   - quote by Guido on Python and Freedom
