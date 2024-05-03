@@ -1,4 +1,4 @@
-## Thu May 2
+## Thu/Fri May 2/3
 
 - goal: draft of all slides!
 
@@ -26,11 +26,9 @@ all slides:
     - min [x]
   - min intro ok [x]
 - node 1: nim for pythonistas
-  - hello nim
   - performance
   - syntax
   - name overload? (link to New York article)
-  (- lignaggio (Wirthiano?))
   - metaprogramming (3 layers)
     - (what is metaprogramming in Python)
     - mention also DSLs
@@ -68,8 +66,9 @@ other slides:
   - I believe the most important idea is that Python is developed on the Internet, entirely in the open, by a community of volunteers (but not amateurs!) who feel passion and ownership.
   - “Python is an experiment in how much freedom programmers need. Too much freedom and nobody can read another’s code; too little and expressiveness is endangered.”
 - where is Nim used? exercism, status, ...
+- lignaggio (Wirthiano?)
 
-## Fri Apr 26
+## Fri Apr 26 + weekend
 
 news of today: this talk is short-listed for EuroPython 2024 (not accepted but in waiting list)
 

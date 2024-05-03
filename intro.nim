@@ -7,10 +7,10 @@ mySlide(helloPyCon):
     let 💬 = "Ciao PyCon"
     for i in -5 .. 5:
       echo 💬.toSeq.mapIt(' '.repeat(abs(i)) & it).join()
-  nbText "Nim is a statically typed and compiled systems programming language for everything"
+  nbText "Nim is a statically typed and compiled  \nsystems programming language for everything"
 
 minSlide(me):
-  nbText "## Me"
+  nbText "## Me 👨‍👩‍👧"
   speakerNote """
 When I mean for Pythonistas, besides having in mind
 many of you as target audience, I include also myself.
@@ -60,6 +60,15 @@ minSlide(agenda):
 3. multiple backends (C, C++, Objective-C, *Javascript*): pragmatic AND 🤯
 4. why invest in a niche tech?
 """
+
+template all* =
+  helloPyCon
+  me
+  Beazley
+  therapy
+  likePython
+  strugglePython
+  agenda
 
 when isMainModule:
   nbInit(revealTheme)
