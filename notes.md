@@ -39,6 +39,8 @@ all slides:
   - example metaprogramming (generics): jsony
 - node 3: javascript backend
   - multiple backends and FFI
+    - min [x]
+  - mind blown (p5nim okazzu art)
   - compiles to javascript
   - wrapping js stuff (e.g. p5js)
   - plant app
@@ -52,10 +54,11 @@ all slides:
   - nimib
   - nimib.py (advent of code example)
 - conclusions
-  - quote by thopper on programming languages are nice (or not?)
-  - mmh, bring home something
-  - finish with most important idea of Python
+  - (not for now) quote by thopper on programming languages are nice (or not?)
+  - not a conclusion, questions [x]
+  - finish with most important idea of Python [x]
     - community work is very important
+  - min ok [x]
 
 slides nice to have:
 - improve how quotes are shown

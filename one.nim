@@ -6,9 +6,11 @@ minSlide(metaprogramming):
 
 1. Generics
 2. Templates
-3. Macros 
+3. Macros (AST)
 
-It allows to build powerful DSLs
+AST: Abstract Syntax Tree
+
+DSL: Domain Specific Language
 
 > with power comes responsibility
 """
