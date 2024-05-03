@@ -27,11 +27,13 @@ mySlide(zenOfNim):
 ```
 """
 
+
 slideIframe(ruleTheMole, "https://forum.nim-lang.org/t/8780")
 
 template all* =
   whyNiche
   # color of a language?
+  # https://forum.nim-lang.org/t/6350#39982
   zenOfNim
   ruleTheMole
   # easier access to open source

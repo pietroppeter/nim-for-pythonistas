@@ -53,14 +53,6 @@ minSlide(strugglePython):
 - Errors
 """
 
-minSlide(agenda):
-  nbText """## Agenda
-1. nim is an *easy* to learn and *fast* complement to Python (+ magic 🧙)
-2. a smart *compiler* and a good *type* system can do wonders
-3. multiple backends (C, C++, Objective-C, *Javascript*): pragmatic AND 🤯
-4. why invest in a niche tech?
-"""
-
 template all* =
   helloPyCon
   me
@@ -77,5 +69,4 @@ when isMainModule:
   therapy
   likePython
   strugglePython
-  agenda
   nbSave
