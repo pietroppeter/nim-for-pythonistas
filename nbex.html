@@ -28,7 +28,7 @@
       <h3><a href="https://github.com/SciNim/Unchained">Unchained</a></h3>
 <p>A fully type safe, compile time only units library</p>
 <pre><code class="language-nim">type
-  Kilogram = distinct float
+  KiloGram = distinct float
   Meter = distinct float
 ...
 </code></pre>
@@ -41,6 +41,24 @@
 doAssert typeof(f) <span class="hljs-keyword">is</span> <span class="hljs-type">Newton</span>
 
 <span class="hljs-keyword">echo</span> f</code></pre><pre style="width: 100%;"><samp class="hljs">784.8 KiloGram•Meter•Second⁻²</samp></pre>
+      </section>
+      <section data-nimib-slide-number="3" >
+      <h3><a href="https://github.com/treeform/jsony">jsony</a></h3>
+<p>A fast and direct json &lt;-&gt; type serializer/deserializer</p>
+<pre><code class="language-nim">proc dumpHook*(s: var string, v: char) =
+  s.add '&quot;' &amp; v &amp; '&quot;'
+
+proc dumpHook*[T](s: var string, v: seq[T]) =
+  s.add '['
+  for i, e in v:
+    if i != 0: s.add ','
+    s.dumpHook(e)
+  s.add ']'
+</code></pre>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> jsony
+
+doAssert @[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>].toJson() == <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]&quot;&quot;&quot;</span>
+doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]&quot;&quot;&quot;</span>.fromJson(<span class="hljs-built_in">seq</span>[<span class="hljs-built_in">char</span>]) == @[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]</code></pre>
       </section>
     </div>
   </div>

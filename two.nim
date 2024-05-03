@@ -1,4 +1,5 @@
-import nimib, nimislides, nbex
+import nimib except toJson
+import nimislides, nbex
 
 mySlide(constFizzBuzz):
   nbText "### Compile time evaluation"
@@ -40,6 +41,31 @@ type
 
     echo f
 
+
+mySlide(jsonyExample):
+  nbText """### [jsony](https://github.com/treeform/jsony)
+
+A fast and direct json <-> type serializer/deserializer
+
+```nim
+proc dumpHook*(s: var string, v: char) =
+  s.add '"' & v & '"'
+
+proc dumpHook*[T](s: var string, v: seq[T]) =
+  s.add '['
+  for i, e in v:
+    if i != 0: s.add ','
+    s.dumpHook(e)
+  s.add ']'
+```
+
+"""
+  nbCode:
+    import jsony
+
+    doAssert @['a', 'b', 'c'].toJson() == """["a","b","c"]"""
+    doAssert """["a","b","c"]""".fromJson(seq[char]) == @['a', 'b', 'c']
+
 template all* =
   # maybe I start with types (structured + distinct)
   # int and float are kept distinct (avoid errors)
@@ -49,10 +75,10 @@ template all* =
   # let and var (mutability in declaration and parameters)
   # func (side effects)
   # what on type system? object vs ref object? enums? distinct?
-  unchainedExample
+  unchainedExample # maybe I skip it?
   # or maybe just an enumeration of type system in two slides (primitive and structured)
   # maybe just what is needed to explain jsony
-
+  jsonyExample
 
 
 when isMainModule:
