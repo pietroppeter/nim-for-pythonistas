@@ -8,7 +8,7 @@ template mySlide*(ident: untyped, body: untyped) =
 template nbTextColor*(col: string, text: string) =
   nbRawHtml("<span style=\"color:" & col & ";\">")
   nbText text
-  nbRawHtml("""</span">""")
+  nbRawHtml("</span>")
 
 when isMainModule:
   nbInit(theme=revealTheme)
