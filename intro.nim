@@ -68,7 +68,6 @@ template all* =
   therapy
   likePython
   strugglePython
-  agenda
 
 when isMainModule:
   myInit
