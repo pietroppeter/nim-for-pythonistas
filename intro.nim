@@ -1,4 +1,13 @@
 import nimib, nimislides, nbex
+import quotes
+
+mySlide(helloPyCon):
+  nbCode:
+    import sequtils, strutils
+    let 💬 = "Ciao PyCon"
+    for i in -5 .. 5:
+      echo 💬.toSeq.mapIt(' '.repeat(abs(i)) & it).join()
+  nbText "Nim is a statically typed and compiled systems programming language for everything"
 
 minSlide(me):
   nbText "## Me"
@@ -18,9 +27,38 @@ many of you as target audience, I include also myself.
 - more software engineer kind of stuff, and more low level (like writing a parser)
 - have been thinking a lot on how it impacted myself as a pythonista
   (and comparisons nim/python)
+- Python Milano and PyData Milano meetups
+- one of the odd things that happened: nim pushed me to become more of a pythonista
+"""
+
+minSlide(therapy):
+  nbText "## Therapy"
+  speakerNote """
+This could also serve as a therapy session for our relation
+with Python and its future, in case you happen to need one
+(add quotes from twitter)
+"""
+
+minSlide(likePython):
+  nbText """## 3 things I like about Python 🐝
+- Accessibility
+- Playfulness
+- Everything
+"""
+
+minSlide(strugglePython):
+  nbText """## 3 things I struggle with Python 🙊
+- Abstraction
+- Portability
+- Errors
 """
 
 when isMainModule:
   nbInit(revealTheme)
+  helloPyCon
   me
+  Beazley
+  therapy
+  likePython
+  strugglePython
   nbSave

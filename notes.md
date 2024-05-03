@@ -2,17 +2,27 @@
 
 - goal: draft of all slides!
 
+all slides:
+
 - title (basquiat's crown) [x]
 - intro: motivation and plan
-  - quote by Beazley (Rilevanza)
+  - hello [x]
   - something about me? (credibilità)
     - minimal draft [x]
-  - elephant in the room: Rust (Stopper?)
-    - different tradeoffs
-  - quote by Guido on Python and Freedom
+  - quote by Beazley (Rilevanza) [x]
+  - therapy
+    - min [x]
   - 3 things I like about Python: Accessible, Playful, Everything (Soluzione?)
+    - min [x]
   - 3 things I (sometimes) suffer with Python: Abstraction, Portability, Errors (Problema?)
+    - min [x]
+  - elephant in the room: Rust (Stopper?)
+    - min 
+    - different tradeoffs
+  - quote by Guido on Python and Freedom (reinforces the tradeoff message)
+    - min
   - agenda (promessa?)
+    - min 
 - node 1: nim for pythonistas
   - hello nim
   - performance
@@ -46,12 +56,16 @@
   - finish with most important idea of Python
     - community work is very important
 
+slides nice to have:
+- improve how quotes are shown
+- custom background color in minSlides
+- better animation for the APE slides
 
-- other slides
-  - quotes by Guido
-    - I believe the most important idea is that Python is developed on the Internet, entirely in the open, by a community of volunteers (but not amateurs!) who feel passion and ownership.
-    - “Python is an experiment in how much freedom programmers need. Too much freedom and nobody can read another’s code; too little and expressiveness is endangered.”
-  - where is Nim used? exercism, status, ...
+other slides:
+- quote by Guido (use in conclusion)
+  - I believe the most important idea is that Python is developed on the Internet, entirely in the open, by a community of volunteers (but not amateurs!) who feel passion and ownership.
+  - “Python is an experiment in how much freedom programmers need. Too much freedom and nobody can read another’s code; too little and expressiveness is endangered.”
+- where is Nim used? exercism, status, ...
 
 ## Fri Apr 26
 
