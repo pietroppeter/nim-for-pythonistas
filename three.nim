@@ -21,9 +21,13 @@ slideIframe(plantApp, "https://nimib-land.github.io/nblog/drafts/plant_app.html"
 
 slideIframe(okazzu, "https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")
 
+mySlide(testForGithubPages):
+  nbText "..."
+
 template all* =
   backends
   okazzu
+  testForGithubPages
   plantApp
   # example of macro-based DSL: karax?
 
