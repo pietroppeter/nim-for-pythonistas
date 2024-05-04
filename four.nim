@@ -34,10 +34,18 @@ mySlide(growingCulture):
 mySlide(easierOpenSource):
   nbText "### Easier Open Source 🎋"
 
+mySlide(colorLanguage):
+  nbText "### Color of a Language 🎨"
+  columns:
+    column:
+      nbImage "languages-color.png"
+      nbText "[forum.nim-lang.org](https://forum.nim-lang.org/t/6350#39982)"
+    column:
+      nbImage "https://github.com/PMunch/colourfinder/raw/master/goodcolours.png"
+
 template all* =
   easierOwnership
-  # color of a language?
-  # https://forum.nim-lang.org/t/6350#39982
+  colorLanguage
 
   growingCulture
   zenOfNim
