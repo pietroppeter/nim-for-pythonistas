@@ -26,13 +26,13 @@ mySlide(zenOfNim):
 slideIframe(ruleTheMole, "https://forum.nim-lang.org/t/8780")
 
 mySlide(easierOwnership):
-  nbText "### Easier ownership"
+  nbText "### Easier ownership 💌"
 
 mySlide(growingCulture):
-  nbText "### Growing Culture"
+  nbText "### Growing Culture 🎏"
 
 mySlide(easierOpenSource):
-  nbText "### Easier Open Source"
+  nbText "### Easier Open Source 🎋"
 
 template all* =
   easierOwnership
