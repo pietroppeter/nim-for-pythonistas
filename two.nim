@@ -102,12 +102,31 @@ use `var` for a mutable parameter
     divmod(8, 5, q, r) # modifies q and r
     echo (q, r)
 
+mySlide(procedureOverloading):
+  nbText "### Procedure Overloading"
+  nbCode:
+    type
+      Cat = object
+      Dog = object
+    
+    proc speak(c: Cat) = echo "meow"
+    proc speak(d: Dog) = echo "woof"
+
+    let
+      fuffi = Cat()
+      fido = Dog()
+
+    fuffi.speak
+    fido.speak
+  nbText "(the advantages of OOP without full blown OOP)"
+  # add ref to Nim for Pyhton Programmers by ZDSmith at blog.zdsmith.com
 
 template all* =
   constFizzbuzz # (compile time evaluation) - when?
   letAndVar
   varParameters
   # func (side effects)
+  procedureOverloading
 
   # describe briefly type system (primitive vs structured)
   unchainedExample # maybe I skip it?
