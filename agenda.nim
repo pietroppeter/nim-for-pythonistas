@@ -4,9 +4,9 @@ const
   oneShort* = "Easy and fast (+ magic 🧙)"
   oneLong* = "nim is an *easy* to learn and *fast* complement to Python (with magic metaprogramming)"
   twoShort* = "Compiler and types"
-  twoLong* = "A smart compiler and a powerful type system can do wonders"
+  twoLong* = "A smart compiler and a powerful type system can do wonders of safety and expressivity"
   threeShort* = "Multiple backends (Javascript 🤯)"
-  threeLong* = "Having multiple backends is cool and the Javascript one is a game changer"
+  threeLong* = "Having multiple backends is cool and<br>the Javascript one is a game changer"
   fourShort* = "Niche tech"
   fourLong* = "Why should I invest in a niche tech?"
 

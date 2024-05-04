@@ -1,5 +1,6 @@
-import nimib, nimislides, nbex
-import intro, agenda, one, three, four, conclusions
+import nimib except toJson
+import nimislides, nbex
+import intro, agenda, one, two, three, four, conclusions
 
 template title =
   slide(slideOptions(imageBackground="crown.webp")):
@@ -18,6 +19,7 @@ when isMainModule:
     one.all
   slide:
     agenda.two
+    two.all
   slide:
     agenda.three
     three.all
