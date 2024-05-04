@@ -1,9 +1,5 @@
 import nimib, nimislides, nbex
 
-mySlide(whyNiche):
-  nbText """## Why invest in Niche tech
-
-"""
 
 mySlide(zenOfNim):
     nbText: "### Zen of Nim"
@@ -27,15 +23,27 @@ mySlide(zenOfNim):
 ```
 """
 
-
 slideIframe(ruleTheMole, "https://forum.nim-lang.org/t/8780")
 
+mySlide(easierOwnership):
+  nbText "### Easier ownership"
+
+mySlide(growingCulture):
+  nbText "### Growing Culture"
+
+mySlide(easierOpenSource):
+  nbText "### Easier Open Source"
+
 template all* =
-  whyNiche
+  easierOwnership
   # color of a language?
   # https://forum.nim-lang.org/t/6350#39982
+
+  growingCulture
   zenOfNim
   ruleTheMole
+  
+  easierOpenSource
   # easier access to open source
   # nimib (and nimib.py)
 

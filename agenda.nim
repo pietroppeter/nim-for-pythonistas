@@ -7,7 +7,7 @@ const
   twoLong* = "A smart compiler and a powerful type system can do wonders of safety and expressivity"
   threeShort* = "Multiple backends (Javascript 🤯)"
   threeLong* = "Having multiple backends is cool and<br>the Javascript one is a game changer"
-  fourShort* = "Niche tech"
+  fourShort* = "A Niche tech (and me)"
   fourLong* = "Why should I invest in a niche tech?"
 
 mySlide(all):
