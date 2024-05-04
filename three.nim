@@ -17,9 +17,7 @@ FFI: Foreign Function Interface
 - you will use a single backend at the time (but you can use when clauses)
 """
 
-template plantApp* =
-  slide(slideOptions(iframeBackground="https://nimib-land.github.io/nblog/drafts/plant_app.html")):
-    discard
+slideIframe(plantApp, "https://nimib-land.github.io/nblog/drafts/plant_app.html")
 
 slideIframe(okazzu, "https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")
 
