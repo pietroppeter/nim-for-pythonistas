@@ -382,9 +382,30 @@ doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot
       <p>Why should I invest in a niche tech?</p>
       </section>
       <section data-nimib-slide-number="32" >
-      <h2>Why invest in Niche tech</h2>
+      <h3>Easier ownership 💌</h3>
       </section>
       <section data-nimib-slide-number="33" >
+      <h3>Color of a Language 🎨</h3>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <figure>
+<img src="languages-color.png" alt="">
+<figcaption></figcaption>
+</figure>
+      <p><a href="https://forum.nim-lang.org/t/6350#39982">forum.nim-lang.org</a></p>
+      </div>
+      <div>
+      <figure>
+<img src="https://github.com/PMunch/colourfinder/raw/master/goodcolours.png" alt="">
+<figcaption></figcaption>
+</figure>
+      </div>
+      </div>
+      </section>
+      <section data-nimib-slide-number="34" >
+      <h3>Growing Culture 🎏</h3>
+      </section>
+      <section data-nimib-slide-number="35" >
       <h3>Zen of Nim</h3>
       <pre><code class="language-md">1. Copying bad design is not good design.
 2. If the compiler cannot reason about the code,
@@ -403,11 +424,60 @@ doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot
    That language is Nim.
 </code></pre>
       </section>
-      <section data-nimib-slide-number="34" data-background-iframe="https://forum.nim-lang.org/t/8780" data-background-interactive >
+      <section data-nimib-slide-number="36" data-background-iframe="https://forum.nim-lang.org/t/8780" data-background-interactive >
+      </section>
+      <section data-nimib-slide-number="37" >
+      <h3>Easier Open Source 🎋</h3>
+      </section>
+      <section data-nimib-slide-number="38" >
+      <h3>Nimib as 'Literate Programming'</h3>
+      <pre>hello.nim</pre>
+<pre><code class="nim hljs">import nimib
+
+nbInit
+
+nbText &quot;A sample program with _Nimib_&quot;
+
+nbCode:
+    echo &quot;hello RC!&quot;
+
+nbSave
+</code></pre>
+
+      <p><code>nim r hello</code></p>
+      </section>
+      <section data-nimib-slide-number="39" data-background-iframe="hello.html" data-background-interactive >
+      </section>
+      <section data-nimib-slide-number="40" >
+      <h3><a href="">Nimib.py</a></h3>
+      <pre>hi.py</pre>
+<pre><code class="py hljs">import nimib as nb
+
+nb.init()
+
+nb.text(&quot;Welcome to `nimib.py`!&quot;)
+
+message = &quot;hello&quot;
+
+with nb.code():
+    print(message)
+
+nb.save()
+</code></pre>
+
+      <p><code>python hi.py</code></p>
+      <aside class="notes">
+  <p>Thanks to advent of code</p>
+
+</aside>
+      </section>
+      <section data-nimib-slide-number="41" data-background-iframe="https://nimib.land/nimib.py/hi.html" data-background-interactive >
+      </section>
+      <section data-nimib-slide-number="42" data-background-iframe="https://pietroppeter.github.io/adventofcode2023/day25/solution.html" data-background-interactive >
       </section>
       </section>
-      <section data-nimib-slide-number="35" >
-      <section data-nimib-slide-number="36" >
+      <section data-nimib-slide-number="43" >
+      <section data-nimib-slide-number="44" >
       <h2>Not really a Conclusion</h2>
 <ul>
 <li>do you feel Nim is Accessible, Playful, &quot;Everything&quot;?</li>
@@ -417,7 +487,7 @@ doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot
 <li>did you change your mind on something from this talk?</li>
 </ul>
       </section>
-      <section data-nimib-slide-number="37" >
+      <section data-nimib-slide-number="45" >
       <blockquote>
 <p>I believe the most important idea is that Python is developed on the Internet, entirely in the open, by a community of volunteers (but not amateurs!) who feel passion and ownership.</p>
 </blockquote>

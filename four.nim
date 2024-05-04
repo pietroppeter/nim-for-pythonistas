@@ -59,7 +59,32 @@ nbSave
 """
   nbText: "`nim r hello`"
 
-slideIframe(nimibPy, "hello.html")
+slideIframe(nimibShow, "hello.html")
+
+mySlide(nimibPy):
+  nbText: """### [Nimib.py]()
+"""
+  nbFile("hi.py"): """
+import nimib as nb
+
+nb.init()
+
+nb.text("Welcome to `nimib.py`!")
+
+message = "hello"
+
+with nb.code():
+    print(message)
+
+nb.save()
+"""
+  nbText: "`python hi.py`"
+  speakerNote: """
+Thanks to advent of code
+"""
+
+slideIframe(nimibPyShow, "https://nimib.land/nimib.py/hi.html")
+
 slideIframe(adventOfCode, "https://pietroppeter.github.io/adventofcode2023/day25/solution.html")
 
 template all* =
@@ -72,7 +97,9 @@ template all* =
   
   easierOpenSource
   nimibLiterate
+  nimibShow
   nimibPy
+  nimibPyShow
   adventOfCode
 
 when isMainModule:
