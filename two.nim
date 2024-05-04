@@ -121,11 +121,38 @@ mySlide(procedureOverloading):
   nbText "(the advantages of OOP without full blown OOP)"
   # add ref to Nim for Pyhton Programmers by ZDSmith at blog.zdsmith.com
 
+mySlide(effectsTracking):
+  nbText "### Effects tracking"
+  columns:
+    column:
+      nbCode:
+        let aGlobal = 42
+
+        proc withSideEffects(x: int): int =
+          echo "writing ", x, " in a file"
+          "IcanDo.IO".writeFile($x)
+          x + aGlobal
+        
+        echo withSideEffects(624)
+        echo "IcanDo.IO".readFile
+
+    column:
+      nbText "⠀"
+
+    column:
+      nbCode:
+        func noSideEffects(x: int): int =
+          # in a func compiler will error
+          # if you try to do I/O or access global ...
+          x + 42
+
+        echo noSideEffects(-42)
+
 template all* =
   constFizzbuzz # (compile time evaluation) - when?
   letAndVar
   varParameters
-  # func (side effects)
+  effectsTracking
   procedureOverloading
 
   # describe briefly type system (primitive vs structured)

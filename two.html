@@ -57,6 +57,35 @@ divmod(<span class="hljs-number">8</span>, <span class="hljs-number">5</span>, q
 (1, 3)</samp></pre>
       </section>
       <section data-nimib-slide-number="4" >
+      <h3>Effects tracking</h3>
+      <div style="display: grid; grid-auto-flow: column;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> aGlobal = <span class="hljs-number">42</span>
+
+<span class="hljs-keyword">proc</span> withSideEffects(x: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;writing &quot;</span>, x, <span class="hljs-string">&quot; in a file&quot;</span>
+  <span class="hljs-string">&quot;IcanDo.IO&quot;</span>.writeFile($x)
+  x + aGlobal
+
+<span class="hljs-keyword">echo</span> withSideEffects(<span class="hljs-number">624</span>)
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;IcanDo.IO&quot;</span>.readFile</code></pre><pre style="width: 100%;"><samp class="hljs">writing 624 in a file
+666
+624</samp></pre>
+      </div>
+      <div>
+      <p>⠀</p>
+      </div>
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">func</span> noSideEffects(x: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+  <span class="hljs-comment"># in a func compiler will error</span>
+  <span class="hljs-comment"># if you try to do I/O or access global ...</span>
+  x + <span class="hljs-number">42</span>
+
+<span class="hljs-keyword">echo</span> noSideEffects(-<span class="hljs-number">42</span>)</code></pre><pre style="width: 100%;"><samp class="hljs">0</samp></pre>
+      </div>
+      </div>
+      </section>
+      <section data-nimib-slide-number="5" >
       <h3>Procedure Overloading</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
   <span class="hljs-type">Cat</span> = <span class="hljs-keyword">object</span>
@@ -72,9 +101,9 @@ divmod(<span class="hljs-number">8</span>, <span class="hljs-number">5</span>, q
 fuffi.speak
 fido.speak</code></pre><pre style="width: 100%;"><samp class="hljs">meow
 woof</samp></pre>
-      <p>(the advantages of OOP without OOP)</p>
+      <p>(the advantages of OOP without full blown OOP)</p>
       </section>
-      <section data-nimib-slide-number="5" >
+      <section data-nimib-slide-number="6" >
       <h3><a href="https://github.com/SciNim/Unchained">Unchained</a></h3>
 <p>A fully type safe, compile time only units library</p>
 <pre><code class="language-nim">type
@@ -92,7 +121,7 @@ doAssert typeof(f) <span class="hljs-keyword">is</span> <span class="hljs-type">
 
 <span class="hljs-keyword">echo</span> f</code></pre><pre style="width: 100%;"><samp class="hljs">784.8 KiloGram•Meter•Second⁻²</samp></pre>
       </section>
-      <section data-nimib-slide-number="6" >
+      <section data-nimib-slide-number="7" >
       <h3><a href="https://github.com/treeform/jsony">jsony</a></h3>
 <p>A fast and direct json &lt;-&gt; type serializer/deserializer</p>
 <pre><code class="language-nim">proc dumpHook*(s: var string, v: char) =
