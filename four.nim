@@ -43,6 +43,25 @@ mySlide(colorLanguage):
     column:
       nbImage "https://github.com/PMunch/colourfinder/raw/master/goodcolours.png"
 
+mySlide(nimibLiterate):
+  nbText: "### Nimib as 'Literate Programming'"
+  nbFile("hello.nim"): """
+import nimib
+
+nbInit
+
+nbText "A sample program with _Nimib_"
+
+nbCode:
+    echo "hello RC!"
+
+nbSave
+"""
+  nbText: "`nim r hello`"
+
+slideIframe(nimibPy, "hello.html")
+slideIframe(adventOfCode, "https://pietroppeter.github.io/adventofcode2023/day25/solution.html")
+
 template all* =
   easierOwnership
   colorLanguage
@@ -52,8 +71,9 @@ template all* =
   ruleTheMole
   
   easierOpenSource
-  # easier access to open source
-  # nimib (and nimib.py)
+  nimibLiterate
+  nimibPy
+  adventOfCode
 
 when isMainModule:
   myInit("four")
