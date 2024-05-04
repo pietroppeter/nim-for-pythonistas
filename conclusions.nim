@@ -15,6 +15,6 @@ template all* =
   GuidoPythonMainIdea
 
 when isMainModule:
-  myInit
+  myInit("conclusions")
   all
   nbSave

@@ -62,11 +62,6 @@ template all* =
   strugglePython
 
 when isMainModule:
-  myInit
-  helloPyCon
-  me
-  Beazley
-  therapy
-  likePython
-  strugglePython
+  myInit("intro")
+  all
   nbSave

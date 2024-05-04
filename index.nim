@@ -8,7 +8,7 @@ template title =
     spanColor(pythonBlue): "github.com/pietroppeter/nim-for-pythonistas"
 
 when isMainModule:
-  myInit
+  myInit("index")
   title
   slide:
     intro.all

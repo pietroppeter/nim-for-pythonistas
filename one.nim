@@ -25,6 +25,6 @@ template all* =
   slidePragmatic
 
 when isMainModule:
-  myInit
+  myInit("one")
   all
   nbSave

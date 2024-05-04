@@ -40,6 +40,6 @@ template all* =
   # nimib (and nimib.py)
 
 when isMainModule:
-  myInit
+  myInit("four")
   all
   nbSave

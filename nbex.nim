@@ -41,8 +41,8 @@ template h2Color*(col: string, text: string) = hColor(2, col, text)
 template h3Color*(col: string, text: string) = hColor(3, col, text)
 template h4Color*(col: string, text: string) = hColor(4, col, text)
 
-template myInit* =
-  nbInit(revealTheme)
+template myInit*(sourceFileRel = "my.nim") =
+  nbInit(thisFileRel=sourceFileRel, theme=revealTheme)
   setSlidesTheme(Solarized)
   addNbTextSmall
 

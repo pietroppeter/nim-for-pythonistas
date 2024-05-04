@@ -29,7 +29,7 @@ section(three)
 section(four)
 
 when isMainModule:
-  myInit
+  myInit("agenda")
   all
   one
   two

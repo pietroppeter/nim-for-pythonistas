@@ -2,7 +2,7 @@ import nimib except toJson
 import nimislides, nbex
 
 mySlide(constFizzBuzz):
-  nbText "### Compile time evaluation"
+  nbText "### `const` for compile time evaluation"
   nbCode:
     import std / [sequtils, strutils]
 
@@ -66,22 +66,55 @@ proc dumpHook*[T](s: var string, v: seq[T]) =
     doAssert @['a', 'b', 'c'].toJson() == """["a","b","c"]"""
     doAssert """["a","b","c"]""".fromJson(seq[char]) == @['a', 'b', 'c']
 
+mySlide(letAndVar):
+  nbText "### `let` and `var` for safe mutability"
+  columns:
+    column:
+      nbText """
+`let` is a (runtime defined) immutable value
+
+```nim
+let x = 1
+x = x + 1
+# Error: 'x' cannot be assigned to
+```
+"""
+    column:
+      nbText "use `var` for a mutable variable"
+      nbCode:
+        var x = 1
+        inc x
+        echo x
+
+mySlide(varParameters):
+  nbText """### `var` parameters
+
+use `var` for a mutable parameter
+"""
+  nbCode:
+    proc divmod(a, b: int; q, r: var int) =
+      q = a div b
+      r = a mod b
+
+    var q, r: int
+
+    echo (q, r)
+    divmod(8, 5, q, r) # modifies q and r
+    echo (q, r)
+
+
 template all* =
-  # maybe I start with types (structured + distinct)
-  # int and float are kept distinct (avoid errors)
-  # for distinct I could give example of unchained!
-  # tuple as named tuple!
   constFizzbuzz # (compile time evaluation) - when?
-  # let and var (mutability in declaration and parameters)
+  letAndVar
+  varParameters
   # func (side effects)
-  # what on type system? object vs ref object? enums? distinct?
+
+  # describe briefly type system (primitive vs structured)
   unchainedExample # maybe I skip it?
-  # or maybe just an enumeration of type system in two slides (primitive and structured)
-  # maybe just what is needed to explain jsony
   jsonyExample
 
 
 when isMainModule:
-  myInit
+  myInit("two")
   all
   nbSave

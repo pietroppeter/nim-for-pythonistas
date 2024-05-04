@@ -11,7 +11,7 @@ quoteSlide("Guido Van Rossum, King's Day Speech, 2016", """I believe the most im
 GuidoPythonMainIdea)
 
 when isMainModule:
-  myInit
+  myInit("quotes")
   Beazley
   GuidoPythonMainIdea
   nbSave

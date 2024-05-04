@@ -30,6 +30,6 @@ template all* =
   # example of macro-based DSL: karax?
 
 when isMainModule:
-  myInit
+  myInit("three")
   all
   nbSave
