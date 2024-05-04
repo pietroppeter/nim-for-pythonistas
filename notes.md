@@ -1,3 +1,7 @@
+## outstanding issues
+
+- I have a CORS problem for plant app from pietroppeter to nimib-land! (reveal.js iframe issue)
+
 ## Thu/Fri May 2/3
 
 - goal: draft of all slides!

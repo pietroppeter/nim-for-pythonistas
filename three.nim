@@ -17,7 +17,9 @@ FFI: Foreign Function Interface
 - you will use a single backend at the time (but you can use when clauses)
 """
 
-slideIframe(plantApp, "https://nimib-land.github.io/nblog/drafts/plant_app.html")
+#slideIframe(plantApp, "https://nimib-land.github.io/nblog/drafts/plant_app.html")
+# workaround for CORS problem when serving over github pages:
+slideIframe(plantApp, "plant_app.html")
 
 slideIframe(okazzu, "https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")
 
@@ -27,7 +29,7 @@ mySlide(testForGithubPages):
 template all* =
   backends
   okazzu
-  testForGithubPages
+  #testForGithubPages
   plantApp
   # example of macro-based DSL: karax?
 
