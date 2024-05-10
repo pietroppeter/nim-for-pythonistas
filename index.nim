@@ -1,16 +1,10 @@
 import nimib except toJson
 import nimislides, nbex
-import intro, agenda, one, two, three, four, conclusions
-
-template title =
-  slide(slideOptions(imageBackground="crown.webp")):
-    h1Color(nimYellow): "Nim for Pythonistas"
-    h2Color(pyconRedBrick): "PyCon 🇮🇹, May 24th 2024"
-    spanColor(pythonBlue): "github.com/pietroppeter/nim-for-pythonistas"
+import title, intro, agenda, one, two, three, four, conclusions
 
 when isMainModule:
   myInit("index")
-  title
+  titleSlide
   slide:
     intro.all
   agenda.all

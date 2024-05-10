@@ -1,6 +1,19 @@
+## fixing stuff after dry run at "assaggi di pycon""
+
+- [x] title
+
+improve intro slides (write script and time it faster (5min?))
+- [ ] me (add a few lines, improve speaker notes)
+- [ ] animate the 3 properties slide
+- [ ] script and time it
+
+improve conclusion:
+- new conclusion slide [ ]
+
 ## outstanding issues
 
 - I have a CORS problem for plant app from pietroppeter to nimib-land! (reveal.js iframe issue)
+  - fixed with a hack (copied and pasted html of plant_app in local)
 
 ## Thu/Fri May 2/3
 

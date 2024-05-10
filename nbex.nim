@@ -46,9 +46,15 @@ template myInit*(sourceFileRel = "my.nim") =
   setSlidesTheme(Solarized)
   addNbTextSmall
 
+template divStyled*(style: string, body: untyped) =
+  nbRawHtml "<div style=\"" & style & "\">"
+  body
+  nbRawHtml "</div>"
+
 when isMainModule:
   myInit
   slide:
-    h1Color("orange"): "H1 Title"
-    spanColor("blue"): "hi"
+    divStyled("background-color:pink;"):
+      h1Color("orange"): "H1 Title"
+      spanColor("blue"): "hi"
   nbSave
