@@ -85,7 +85,8 @@ Thanks to advent of code
 
 slideIframe(nimibPyShow, "https://nimib.land/nimib.py/hi.html")
 
-slideIframe(adventOfCode, "https://pietroppeter.github.io/adventofcode2023/day25/solution.html")
+slideIframe(adventOfCode, "https://pietroppeter.github.io/adventofcode2023/day25/solution.html"):
+  nbText "# 🎄👨‍💻"
 
 template all* =
   easierOwnership

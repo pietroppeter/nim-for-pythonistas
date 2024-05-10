@@ -1,3 +1,4 @@
+
 ## fixing stuff after dry run at "assaggi di pycon""
 
 - [x] title
@@ -9,6 +10,30 @@ improve intro slides (write script and time it faster (5min?))
 
 improve conclusion:
 - new conclusion slide [ ]
+
+### from issue
+
+given yesterday's dry run:
+- overall structure and content is fine
+- need to practice more and refine first intro part to go quicker and say fewer things
+  - me slide: python clicked for me right away, had to program other stuff, when I came back to it I was happy
+    - add reference here to programming language underdog 
+  - nim clicked me with me right away, surprised in how I could love another language in a similar way on how I love pyton
+  - working with nim improved me as pythonista, surprised on which ways I was improved
+  - struggle APE: do E first, then P, then A last and explain more clearly
+- redo the conclusion making more clear what are the goals: 1) taking an offside trip (like I did) is fine and might improve you in expected ways; 2) nim is a very interesting place to take an offside trip, based on some conditions and decisions about yourself and what you want to do.
+- maybe add a slide about making slides with code?
+
+other practical improvements:
+- [x] title slide: contrast of colors
+- fragments for the "therapy slides" (starting with initials)
+- fragments for the hello slide
+- change magic to superpowers (metaprogramming is a superpower)
+  - also in that slide, compiles natively (not: to C)
+- what do I do with the references? 
+- on compiler section emphasis is on safety, not expressivity
+- [x] add emojis 🎄👨‍💻 to advent of code slide
+- improve the color slide (more references, maybe fragments?)
 
 ## outstanding issues
 
