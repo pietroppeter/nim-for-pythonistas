@@ -156,8 +156,8 @@ template all* =
   procedureOverloading
 
   # describe briefly type system (primitive vs structured)
-  unchainedExample # maybe I skip it?
-  jsonyExample
+  # unchainedExample # maybe I skip it?
+  # jsonyExample
 
 
 when isMainModule:

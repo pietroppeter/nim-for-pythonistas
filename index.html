@@ -101,7 +101,7 @@ with Python and its future, in case you happen to need one
       <aside class="notes">
   <ul>
 <li>nim is an <em>easy</em> to learn and <em>fast</em> complement to Python (with magic metaprogramming)</li>
-<li>A smart compiler and a powerful type system can do wonders of safety and expressivity</li>
+<li>A smart compiler and a powerful type system can do (small) wonders of safety and expressivity</li>
 <li>Having multiple backends is cool and<br>the Javascript one is a game changer</li>
 <li>Why should I invest in a niche tech?</li>
 </ul>
@@ -213,7 +213,7 @@ print(fib(10))
       <section data-nimib-slide-number="16" >
       <section data-nimib-slide-number="17" >
       <h3>Compiler and types</h3>
-      <p>A smart compiler and a powerful type system can do wonders of safety and expressivity</p>
+      <p>A smart compiler and a powerful type system can do (small) wonders of safety and expressivity</p>
       </section>
       <section data-nimib-slide-number="18" >
       <h3><code>const</code> for compile time evaluation</h3>
@@ -309,49 +309,13 @@ fido.speak</code></pre><pre style="width: 100%;"><samp class="hljs">meow
 woof</samp></pre>
       <p>(the advantages of OOP without full blown OOP)</p>
       </section>
+      </section>
       <section data-nimib-slide-number="23" >
-      <h3><a href="https://github.com/SciNim/Unchained">Unchained</a></h3>
-<p>A fully type safe, compile time only units library</p>
-<pre><code class="language-nim">type
-  KiloGram = distinct float
-  Meter = distinct float
-...
-</code></pre>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> unchained
-
-<span class="hljs-keyword">let</span>
-  m = <span class="hljs-number">80.</span>kg
-  g = <span class="hljs-number">9.81</span>.m•s⁻²
-  f = m*g
-doAssert typeof(f) <span class="hljs-keyword">is</span> <span class="hljs-type">Newton</span>
-
-<span class="hljs-keyword">echo</span> f</code></pre><pre style="width: 100%;"><samp class="hljs">784.8 KiloGram•Meter•Second⁻²</samp></pre>
-      </section>
       <section data-nimib-slide-number="24" >
-      <h3><a href="https://github.com/treeform/jsony">jsony</a></h3>
-<p>A fast and direct json &lt;-&gt; type serializer/deserializer</p>
-<pre><code class="language-nim">proc dumpHook*(s: var string, v: char) =
-  s.add '&quot;' &amp; v &amp; '&quot;'
-
-proc dumpHook*[T](s: var string, v: seq[T]) =
-  s.add '['
-  for i, e in v:
-    if i != 0: s.add ','
-    s.dumpHook(e)
-  s.add ']'
-</code></pre>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> jsony
-
-doAssert @[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>].toJson() == <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]&quot;&quot;&quot;</span>
-doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]&quot;&quot;&quot;</span>.fromJson(<span class="hljs-built_in">seq</span>[<span class="hljs-built_in">char</span>]) == @[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]</code></pre>
-      </section>
-      </section>
-      <section data-nimib-slide-number="25" >
-      <section data-nimib-slide-number="26" >
       <h3>Multiple backends (Javascript 🤯)</h3>
       <p>Having multiple backends is cool and<br>the Javascript one is a game changer</p>
       </section>
-      <section data-nimib-slide-number="27" >
+      <section data-nimib-slide-number="25" >
       <h2>compiler backends</h2>
 <ul>
 <li>C</li>
@@ -371,20 +335,20 @@ doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot
 
 </aside>
       </section>
-      <section data-nimib-slide-number="28" data-background-iframe="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html" data-background-interactive >
+      <section data-nimib-slide-number="26" data-background-iframe="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="29" data-background-iframe="plant_app.html" data-background-interactive >
+      <section data-nimib-slide-number="27" data-background-iframe="plant_app.html" data-background-interactive >
       </section>
       </section>
-      <section data-nimib-slide-number="30" >
-      <section data-nimib-slide-number="31" >
+      <section data-nimib-slide-number="28" >
+      <section data-nimib-slide-number="29" >
       <h3>A Niche tech (and me)</h3>
       <p>Why should I invest in a niche tech?</p>
       </section>
-      <section data-nimib-slide-number="32" >
+      <section data-nimib-slide-number="30" >
       <h3>Easier ownership 💌</h3>
       </section>
-      <section data-nimib-slide-number="33" >
+      <section data-nimib-slide-number="31" >
       <h3>Color of a Language 🎨</h3>
       <div style="display: grid; grid-auto-flow: column;">
       <div>
@@ -402,10 +366,10 @@ doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="34" >
+      <section data-nimib-slide-number="32" >
       <h3>Growing Culture 🎏</h3>
       </section>
-      <section data-nimib-slide-number="35" >
+      <section data-nimib-slide-number="33" >
       <h3>Zen of Nim</h3>
       <pre><code class="language-md">1. Copying bad design is not good design.
 2. If the compiler cannot reason about the code,
@@ -424,12 +388,12 @@ doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot
    That language is Nim.
 </code></pre>
       </section>
-      <section data-nimib-slide-number="36" data-background-iframe="https://forum.nim-lang.org/t/8780" data-background-interactive >
+      <section data-nimib-slide-number="34" data-background-iframe="https://forum.nim-lang.org/t/8780" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="37" >
+      <section data-nimib-slide-number="35" >
       <h3>Easier Open Source 🎋</h3>
       </section>
-      <section data-nimib-slide-number="38" >
+      <section data-nimib-slide-number="36" >
       <h3>Nimib as 'Literate Programming'</h3>
       <pre>hello.nim</pre>
 <pre><code class="nim hljs">import nimib
@@ -446,9 +410,9 @@ nbSave
 
       <p><code>nim r hello</code></p>
       </section>
-      <section data-nimib-slide-number="39" data-background-iframe="hello.html" data-background-interactive >
+      <section data-nimib-slide-number="37" data-background-iframe="hello.html" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="40" >
+      <section data-nimib-slide-number="38" >
       <h3><a href="">Nimib.py</a></h3>
       <pre>hi.py</pre>
 <pre><code class="py hljs">import nimib as nb
@@ -471,13 +435,13 @@ nb.save()
 
 </aside>
       </section>
-      <section data-nimib-slide-number="41" data-background-iframe="https://nimib.land/nimib.py/hi.html" data-background-interactive >
+      <section data-nimib-slide-number="39" data-background-iframe="https://nimib.land/nimib.py/hi.html" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="42" data-background-iframe="https://pietroppeter.github.io/adventofcode2023/day25/solution.html" data-background-interactive >
+      <section data-nimib-slide-number="40" data-background-iframe="https://pietroppeter.github.io/adventofcode2023/day25/solution.html" data-background-interactive >
       </section>
       </section>
-      <section data-nimib-slide-number="43" >
-      <section data-nimib-slide-number="44" >
+      <section data-nimib-slide-number="41" >
+      <section data-nimib-slide-number="42" >
       <h2>Not really a Conclusion</h2>
 <ul>
 <li>do you feel Nim is Accessible, Playful, &quot;Everything&quot;?</li>
@@ -487,7 +451,7 @@ nb.save()
 <li>did you change your mind on something from this talk?</li>
 </ul>
       </section>
-      <section data-nimib-slide-number="45" >
+      <section data-nimib-slide-number="43" >
       <blockquote>
 <p>I believe the most important idea is that Python is developed on the Internet, entirely in the open, by a community of volunteers (but not amateurs!) who feel passion and ownership.</p>
 </blockquote>
