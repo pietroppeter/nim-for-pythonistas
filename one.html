@@ -2,15 +2,16 @@
 <html>
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/reveal.min.css" integrity="sha512-vFD6wFRj2whK8/X/dMgxJHinKfGlwMYtN+yRCxvxvmOgIiMIlgrFb5iOuCoqwCID+Qcq2/gY8DpmNHcAjfHWxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/theme/solarized.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/solarized.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/monokai.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
   <div class="reveal">
     <div class="slides">
       <section data-nimib-slide-number="1" >
-      <h3>🏎️ Performant: compiles to C</h3>
+      <h3>🏎️ Performant: compiles natively</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">const</span> <span class="hljs-type">N</span> = <span class="hljs-number">3</span>
 <span class="hljs-keyword">type</span> <span class="hljs-type">Matrix</span> = <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">int</span>]]
 
@@ -29,7 +30,7 @@
       </section>
       <section data-nimib-slide-number="2" >
       <h3>Pythonic Syntax with 🦸 Superpowers</h3>
-      <div style="display: grid; grid-auto-flow: column;">
+      <div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word;">
       <div>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
   <span class="hljs-type">Grid</span> = <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-type">Cell</span>]]
@@ -50,7 +51,6 @@
 <li>🦸 syntax fits well with <strong>metaprogramming</strong></li>
 <li>💡 UFCS (Uniform Function Call Syntax)</li>
 </ul></small>
-      <small><p><a href="https://nim-lang.org/blog/2021/11/15/zen-of-nim.html">Zen of Nim (2021)</a></p></small>
       </div>
       <div>
       <p>⠀</p>
@@ -72,6 +72,19 @@ show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
       </div>
       </section>
       <section data-nimib-slide-number="3" >
+      <h2>🦸 Metaprogramming</h2>
+<ol>
+<li>Generics</li>
+<li>Templates</li>
+<li>Macros (AST)</li>
+</ol>
+<p>AST: Abstract Syntax Tree</p>
+<p>DSL: Domain Specific Language</p>
+<blockquote>
+<p>with power comes responsibility</p>
+</blockquote>
+      </section>
+      <section data-nimib-slide-number="4" >
       <h3>🤝 Interop with Python</h3>
       <p><code>fibonacci.nim</code></p>
 <pre><code class="language-nim">import nimpy
@@ -94,9 +107,9 @@ print(fib(10))
       </section>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/reveal.js" integrity="sha512-+Dy2HJZ3Z1DWerDhqFE7AH2HTfnbq8RC1pKOashfMwx1s01fjPUebWoHqrRedU1yFimkexmzJJRilKxjs7lz8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/highlight/highlight.min.js" integrity="sha512-U3fPDUX5bMrn1wnYqjaK44MFA9E6MKS+zPAg9WPAGF5XhReBeDj3FGaA831CjueG+YJxYA3WaO/m33kMIoOs/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/notes/notes.min.js" integrity="sha512-v2co+5nr0bgHekutTzF5jAB0UAjM95dpCF7VVw7WsFCjfxonbQo8Vwl487tNYl0iHWHHGV4o5xKBp5ifyhJkWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/highlight.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/notes/notes.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     Reveal.initialize({
       plugins: [ 

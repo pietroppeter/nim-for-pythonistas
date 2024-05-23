@@ -123,7 +123,7 @@ mySlide(procedureOverloading):
 
 mySlide(effectsTracking):
   nbText "### Effects tracking"
-  columns:
+  adaptiveColumns:
     column:
       nbCode:
         let aGlobal = 42

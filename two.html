@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/reveal.min.css" integrity="sha512-vFD6wFRj2whK8/X/dMgxJHinKfGlwMYtN+yRCxvxvmOgIiMIlgrFb5iOuCoqwCID+Qcq2/gY8DpmNHcAjfHWxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/theme/solarized.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/solarized.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/monokai.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
   <div class="reveal">
@@ -26,7 +27,7 @@
       </section>
       <section data-nimib-slide-number="2" >
       <h3><code>let</code> and <code>var</code> for safe mutability</h3>
-      <div style="display: grid; grid-auto-flow: column;">
+      <div style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); overflow-wrap: break-word;">
       <div>
       <p><code>let</code> is a (runtime defined) immutable value</p>
 <pre><code class="language-nim">let x = 1
@@ -58,7 +59,7 @@ divmod(<span class="hljs-number">8</span>, <span class="hljs-number">5</span>, q
       </section>
       <section data-nimib-slide-number="4" >
       <h3>Effects tracking</h3>
-      <div style="display: grid; grid-auto-flow: column;">
+      <div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word;">
       <div>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> aGlobal = <span class="hljs-number">42</span>
 
@@ -103,47 +104,11 @@ fido.speak</code></pre><pre style="width: 100%;"><samp class="hljs">meow
 woof</samp></pre>
       <p>(the advantages of OOP without full blown OOP)</p>
       </section>
-      <section data-nimib-slide-number="6" >
-      <h3><a href="https://github.com/SciNim/Unchained">Unchained</a></h3>
-<p>A fully type safe, compile time only units library</p>
-<pre><code class="language-nim">type
-  KiloGram = distinct float
-  Meter = distinct float
-...
-</code></pre>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> unchained
-
-<span class="hljs-keyword">let</span>
-  m = <span class="hljs-number">80.</span>kg
-  g = <span class="hljs-number">9.81</span>.m•s⁻²
-  f = m*g
-doAssert typeof(f) <span class="hljs-keyword">is</span> <span class="hljs-type">Newton</span>
-
-<span class="hljs-keyword">echo</span> f</code></pre><pre style="width: 100%;"><samp class="hljs">784.8 KiloGram•Meter•Second⁻²</samp></pre>
-      </section>
-      <section data-nimib-slide-number="7" >
-      <h3><a href="https://github.com/treeform/jsony">jsony</a></h3>
-<p>A fast and direct json &lt;-&gt; type serializer/deserializer</p>
-<pre><code class="language-nim">proc dumpHook*(s: var string, v: char) =
-  s.add '&quot;' &amp; v &amp; '&quot;'
-
-proc dumpHook*[T](s: var string, v: seq[T]) =
-  s.add '['
-  for i, e in v:
-    if i != 0: s.add ','
-    s.dumpHook(e)
-  s.add ']'
-</code></pre>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> jsony
-
-doAssert @[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>].toJson() == <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]&quot;&quot;&quot;</span>
-doAssert <span class="hljs-string">&quot;&quot;&quot;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]&quot;&quot;&quot;</span>.fromJson(<span class="hljs-built_in">seq</span>[<span class="hljs-built_in">char</span>]) == @[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]</code></pre>
-      </section>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/reveal.js" integrity="sha512-+Dy2HJZ3Z1DWerDhqFE7AH2HTfnbq8RC1pKOashfMwx1s01fjPUebWoHqrRedU1yFimkexmzJJRilKxjs7lz8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/highlight/highlight.min.js" integrity="sha512-U3fPDUX5bMrn1wnYqjaK44MFA9E6MKS+zPAg9WPAGF5XhReBeDj3FGaA831CjueG+YJxYA3WaO/m33kMIoOs/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/notes/notes.min.js" integrity="sha512-v2co+5nr0bgHekutTzF5jAB0UAjM95dpCF7VVw7WsFCjfxonbQo8Vwl487tNYl0iHWHHGV4o5xKBp5ifyhJkWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/highlight.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/notes/notes.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     Reveal.initialize({
       plugins: [ 

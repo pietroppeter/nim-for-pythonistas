@@ -1,3 +1,5 @@
+issue nimislides:
+- had to use import conversions instead of import ./[conversions]
 
 ## fixing stuff after dry run at "assaggi di pycon""
 
@@ -5,11 +7,11 @@
 
 improve intro slides (write script and time it faster (5min?))
 - [ ] me (add a few lines, improve speaker notes)
-- [ ] animate the 3 properties slide
+- [x] animate the 3 properties slide
 - [ ] script and time it
 
 improve conclusion:
-- new conclusion slide [ ]
+- [ ] new conclusion slide
 
 ### from issue
 
@@ -28,11 +30,11 @@ other practical improvements:
 - [x] title slide: contrast of colors
 - [x] autoanimation for the "therapy slides" (starting with initials)
 - a gif for therapy slide?
-- autoanimation for the hello slide
-- change magic to superpowers (metaprogramming is a superpower)
-  - also in that slide, compiles natively (not: to C)
+- [x] autoanimation for the hello slide
+- [x] change magic to superpowers (metaprogramming is a superpower)
+  - [x] also in that slide, compiles natively (not: to C)
 - what do I do with the references? 
-- on compiler section emphasis is on safety, not expressivity
+- [x] on compiler section emphasis is on safety, not expressivity
 - [x] add emojis 🎄👨‍💻 to advent of code slide
 - improve the color slide (more references, maybe fragments?)
 

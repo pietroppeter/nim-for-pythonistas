@@ -9,6 +9,22 @@ mySlide(helloPyCon):
       echo 💬.toSeq.mapIt(' '.repeat(abs(i)) & it).join()
   nbText "Nim is a statically typed and compiled  \nsystems programming language for everything"
 
+
+template helloPyConAnimated* =
+  import sequtils, strutils
+  autoAnimateSlides(4):
+    nbCode:
+      let 💬 = "Ciao PyCon"
+      for i in -5 .. 5:
+        echo 💬.toSeq.mapIt(' '.repeat(abs(i)) & it).join()
+    showText(@[
+      ({1.int255, 2, 3, 4}, "Nim is a"),
+      ({3.int255, 4}, " statically typed and compiled<br>"),
+      ({2.int255, 3, 4}, " systems"),
+      ({1.int255, 2, 3, 4}, " programming language"),
+      ({4.int255}, "<br>good for everything"),
+    ])
+
 minSlide(me):
   nbText "## Me 👨‍👩‍👧"
   speakerNote """
@@ -45,9 +61,6 @@ minSlide(likePython):
 - Playfulness
 - Everything
 """
-
-type
-  int255 = range[0 .. 255]
 
 template threethingsAnimated*(titolo, uno, due, tre: string, reverse=false) =
   autoAnimateSlides(4):
@@ -107,7 +120,7 @@ template strugglePythonAnimated* =
   )
 
 template all* =
-  helloPyCon
+  helloPyConAnimated
   me
   Beazley
   therapy

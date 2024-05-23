@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/reveal.min.css" integrity="sha512-vFD6wFRj2whK8/X/dMgxJHinKfGlwMYtN+yRCxvxvmOgIiMIlgrFb5iOuCoqwCID+Qcq2/gY8DpmNHcAjfHWxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/theme/solarized.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/solarized.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/monokai.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
   <div class="reveal">
@@ -17,9 +18,8 @@
       </div>
       </section>
       <section data-nimib-slide-number="2" >
-      <section data-nimib-slide-number="3" >
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> sequtils, strutils
-<span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Ciao PyCon&quot;</span>
+      <section data-nimib-slide-number="3" data-auto-animate >
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Ciao PyCon&quot;</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
   <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     C     i     a     o           P     y     C     o     n
     C    i    a    o         P    y    C    o    n
@@ -32,10 +32,57 @@ Ciao PyCon
    C   i   a   o       P   y   C   o   n
     C    i    a    o         P    y    C    o    n
      C     i     a     o           P     y     C     o     n</samp></pre>
-      <p>Nim is a statically typed and compiled<br />
-systems programming language for everything</p>
+      <p><span data-id="autoAnimateId-0">Nim is a</span><span data-id="autoAnimateId-3"> programming language</span></p>
       </section>
-      <section data-nimib-slide-number="4" >
+      <section data-nimib-slide-number="4" data-auto-animate >
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Ciao PyCon&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     C     i     a     o           P     y     C     o     n
+    C    i    a    o         P    y    C    o    n
+   C   i   a   o       P   y   C   o   n
+  C  i  a  o     P  y  C  o  n
+ C i a o   P y C o n
+Ciao PyCon
+ C i a o   P y C o n
+  C  i  a  o     P  y  C  o  n
+   C   i   a   o       P   y   C   o   n
+    C    i    a    o         P    y    C    o    n
+     C     i     a     o           P     y     C     o     n</samp></pre>
+      <p><span data-id="autoAnimateId-0">Nim is a</span><span data-id="autoAnimateId-2"> systems</span><span data-id="autoAnimateId-3"> programming language</span></p>
+      </section>
+      <section data-nimib-slide-number="5" data-auto-animate >
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Ciao PyCon&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     C     i     a     o           P     y     C     o     n
+    C    i    a    o         P    y    C    o    n
+   C   i   a   o       P   y   C   o   n
+  C  i  a  o     P  y  C  o  n
+ C i a o   P y C o n
+Ciao PyCon
+ C i a o   P y C o n
+  C  i  a  o     P  y  C  o  n
+   C   i   a   o       P   y   C   o   n
+    C    i    a    o         P    y    C    o    n
+     C     i     a     o           P     y     C     o     n</samp></pre>
+      <p><span data-id="autoAnimateId-0">Nim is a</span><span data-id="autoAnimateId-1"> statically typed and compiled<br></span><span data-id="autoAnimateId-2"> systems</span><span data-id="autoAnimateId-3"> programming language</span></p>
+      </section>
+      <section data-nimib-slide-number="6" data-auto-animate >
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Ciao PyCon&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     C     i     a     o           P     y     C     o     n
+    C    i    a    o         P    y    C    o    n
+   C   i   a   o       P   y   C   o   n
+  C  i  a  o     P  y  C  o  n
+ C i a o   P y C o n
+Ciao PyCon
+ C i a o   P y C o n
+  C  i  a  o     P  y  C  o  n
+   C   i   a   o       P   y   C   o   n
+    C    i    a    o         P    y    C    o    n
+     C     i     a     o           P     y     C     o     n</samp></pre>
+      <p><span data-id="autoAnimateId-0">Nim is a</span><span data-id="autoAnimateId-1"> statically typed and compiled<br></span><span data-id="autoAnimateId-2"> systems</span><span data-id="autoAnimateId-3"> programming language</span><span data-id="autoAnimateId-4"><br>good for everything</span></p>
+      </section>
+      <section data-nimib-slide-number="7" >
       <h2>Me 👨‍👩‍👧</h2>
       <aside class="notes">
   <p>When I mean for Pythonistas, besides having in mind
@@ -60,13 +107,13 @@ many of you as target audience, I include also myself.</p>
 
 </aside>
       </section>
-      <section data-nimib-slide-number="5" >
+      <section data-nimib-slide-number="8" >
       <blockquote>
 <p>sometimes people ask me &quot;what can I do to improve my Python skills?&quot; Much to their surprise, I often suggest doing a project in a completely different language or outside of their area of expertise. I think the main benefit of doing this is that you'll often see a completely different way of thinking about a problem that you can bring home to your own projects.</p>
 </blockquote>
 <p>David Beazley, March 2023</p>
       </section>
-      <section data-nimib-slide-number="6" >
+      <section data-nimib-slide-number="9" >
       <h2>Therapy</h2>
       <aside class="notes">
   <p>This could also serve as a therapy session for our relation
@@ -75,24 +122,56 @@ with Python and its future, in case you happen to need one
 
 </aside>
       </section>
-      <section data-nimib-slide-number="7" >
+      <section data-nimib-slide-number="10" data-auto-animate >
       <h2>3 things I like about Python 🐝</h2>
-<ul>
-<li>Accessibility</li>
-<li>Playfulness</li>
-<li>Everything</li>
-</ul>
+      <p><span data-id="autoAnimateId-0">- A</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span></p>
       </section>
-      <section data-nimib-slide-number="8" >
+      <section data-nimib-slide-number="11" data-auto-animate >
+      <h2>3 things I like about Python 🐝</h2>
+      <p><span data-id="autoAnimateId-0">- A</span><span data-id="autoAnimateId-1">ccessibility</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span></p>
+      </section>
+      <section data-nimib-slide-number="12" data-auto-animate >
+      <h2>3 things I like about Python 🐝</h2>
+      <p><span data-id="autoAnimateId-0">- A</span><span data-id="autoAnimateId-1">ccessibility</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span><span data-id="autoAnimateId-1">layfulness</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span></p>
+      </section>
+      <section data-nimib-slide-number="13" data-auto-animate >
+      <h2>3 things I like about Python 🐝</h2>
+      <p><span data-id="autoAnimateId-0">- A</span><span data-id="autoAnimateId-1">ccessibility</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span><span data-id="autoAnimateId-1">layfulness</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span><span data-id="autoAnimateId-1">verything</span></p>
+      </section>
+      <section data-nimib-slide-number="14" data-auto-animate >
       <h2>3 things I struggle with Python 🙊</h2>
-<ul>
-<li>Abstraction</li>
-<li>Portability</li>
-<li>Errors</li>
-</ul>
+      <p><span data-id="autoAnimateId-0">- A</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span></p>
+      </section>
+      <section data-nimib-slide-number="15" data-auto-animate >
+      <h2>3 things I struggle with Python 🙊</h2>
+      <p><span data-id="autoAnimateId-0">- A</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span><span data-id="autoAnimateId-1">rrors</span></p>
+      </section>
+      <section data-nimib-slide-number="16" data-auto-animate >
+      <h2>3 things I struggle with Python 🙊</h2>
+      <p><span data-id="autoAnimateId-0">- A</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span><span data-id="autoAnimateId-1">ortability</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span><span data-id="autoAnimateId-1">rrors</span></p>
+      </section>
+      <section data-nimib-slide-number="17" data-auto-animate >
+      <h2>3 things I struggle with Python 🙊</h2>
+      <p><span data-id="autoAnimateId-0">- A</span><span data-id="autoAnimateId-1">bstraction</span></p>
+      <p><span data-id="autoAnimateId-0">- P</span><span data-id="autoAnimateId-1">ortability</span></p>
+      <p><span data-id="autoAnimateId-0">- E</span><span data-id="autoAnimateId-1">rrors</span></p>
       </section>
       </section>
-      <section data-nimib-slide-number="9" >
+      <section data-nimib-slide-number="18" >
       <h2>Agenda</h2>
 <ol>
 <li>Easy and fast (+ superpowers 🦸)</li>
@@ -103,20 +182,20 @@ with Python and its future, in case you happen to need one
       <aside class="notes">
   <ul>
 <li>nim is an <em>easy</em> to learn and <em>fast</em> complement to Python (with metaprogramming 🦸)</li>
-<li>A smart compiler and a powerful type system can do (small) wonders of safety and expressivity</li>
+<li>A smart compiler and a powerful type system can give you safety without compromising expressivity</li>
 <li>Having multiple backends is cool and<br>the Javascript one is a game changer</li>
 <li>Why should I invest in a niche tech?</li>
 </ul>
 
 </aside>
       </section>
-      <section data-nimib-slide-number="10" >
-      <section data-nimib-slide-number="11" >
+      <section data-nimib-slide-number="19" >
+      <section data-nimib-slide-number="20" >
       <h3>Easy and fast (+ superpowers 🦸)</h3>
       <p>nim is an <em>easy</em> to learn and <em>fast</em> complement to Python (with metaprogramming 🦸)</p>
       </section>
-      <section data-nimib-slide-number="12" >
-      <h3>🏎️ Performant: compiles to C</h3>
+      <section data-nimib-slide-number="21" >
+      <h3>🏎️ Performant: compiles natively</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">const</span> <span class="hljs-type">N</span> = <span class="hljs-number">3</span>
 <span class="hljs-keyword">type</span> <span class="hljs-type">Matrix</span> = <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">int</span>]]
 
@@ -133,9 +212,9 @@ with Python and its future, in case you happen to need one
 <span class="hljs-keyword">echo</span> <span class="hljs-type">A</span>*<span class="hljs-type">B</span></code></pre><pre style="width: 100%;"><samp class="hljs">[[1, 3, 6], [4, 9, 15], [7, 15, 24]]</samp></pre>
       <small><p><a href="https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/">HPC from Python to Nim (Fosdem 2022)</a></p></small>
       </section>
-      <section data-nimib-slide-number="13" >
+      <section data-nimib-slide-number="22" >
       <h3>Pythonic Syntax with 🦸 Superpowers</h3>
-      <div style="display: grid; grid-auto-flow: column;">
+      <div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word;">
       <div>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
   <span class="hljs-type">Grid</span> = <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-type">Cell</span>]]
@@ -156,7 +235,6 @@ with Python and its future, in case you happen to need one
 <li>🦸 syntax fits well with <strong>metaprogramming</strong></li>
 <li>💡 UFCS (Uniform Function Call Syntax)</li>
 </ul></small>
-      <small><p><a href="https://nim-lang.org/blog/2021/11/15/zen-of-nim.html">Zen of Nim (2021)</a></p></small>
       </div>
       <div>
       <p>⠀</p>
@@ -177,7 +255,7 @@ show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="14" >
+      <section data-nimib-slide-number="23" >
       <h2>🦸 Metaprogramming</h2>
 <ol>
 <li>Generics</li>
@@ -190,7 +268,7 @@ show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
 <p>with power comes responsibility</p>
 </blockquote>
       </section>
-      <section data-nimib-slide-number="15" >
+      <section data-nimib-slide-number="24" >
       <h3>🤝 Interop with Python</h3>
       <p><code>fibonacci.nim</code></p>
 <pre><code class="language-nim">import nimpy
@@ -212,12 +290,12 @@ print(fib(10))
       <small><p><a href="https://github.com/yglukhov/nimpy">nimpy</a></p></small>
       </section>
       </section>
-      <section data-nimib-slide-number="16" >
-      <section data-nimib-slide-number="17" >
+      <section data-nimib-slide-number="25" >
+      <section data-nimib-slide-number="26" >
       <h3>Compiler and types</h3>
-      <p>A smart compiler and a powerful type system can do (small) wonders of safety and expressivity</p>
+      <p>A smart compiler and a powerful type system can give you safety without compromising expressivity</p>
       </section>
-      <section data-nimib-slide-number="18" >
+      <section data-nimib-slide-number="27" >
       <h3><code>const</code> for compile time evaluation</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> std / [sequtils, strutils]
 
@@ -232,9 +310,9 @@ print(fib(10))
 
 <span class="hljs-keyword">echo</span> <span class="hljs-literal">result</span></code></pre><pre style="width: 100%;"><samp class="hljs">12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz</samp></pre>
       </section>
-      <section data-nimib-slide-number="19" >
+      <section data-nimib-slide-number="28" >
       <h3><code>let</code> and <code>var</code> for safe mutability</h3>
-      <div style="display: grid; grid-auto-flow: column;">
+      <div style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); overflow-wrap: break-word;">
       <div>
       <p><code>let</code> is a (runtime defined) immutable value</p>
 <pre><code class="language-nim">let x = 1
@@ -250,7 +328,7 @@ inc x
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="20" >
+      <section data-nimib-slide-number="29" >
       <h3><code>var</code> parameters</h3>
 <p>use <code>var</code> for a mutable parameter</p>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">proc</span> divmod(a, b: <span class="hljs-built_in">int</span>; q, r: <span class="hljs-keyword">var</span> <span class="hljs-built_in">int</span>) =
@@ -264,9 +342,9 @@ divmod(<span class="hljs-number">8</span>, <span class="hljs-number">5</span>, q
 <span class="hljs-keyword">echo</span> (q, r)</code></pre><pre style="width: 100%;"><samp class="hljs">(0, 0)
 (1, 3)</samp></pre>
       </section>
-      <section data-nimib-slide-number="21" >
+      <section data-nimib-slide-number="30" >
       <h3>Effects tracking</h3>
-      <div style="display: grid; grid-auto-flow: column;">
+      <div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word;">
       <div>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> aGlobal = <span class="hljs-number">42</span>
 
@@ -293,7 +371,7 @@ divmod(<span class="hljs-number">8</span>, <span class="hljs-number">5</span>, q
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="22" >
+      <section data-nimib-slide-number="31" >
       <h3>Procedure Overloading</h3>
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
   <span class="hljs-type">Cat</span> = <span class="hljs-keyword">object</span>
@@ -312,12 +390,12 @@ woof</samp></pre>
       <p>(the advantages of OOP without full blown OOP)</p>
       </section>
       </section>
-      <section data-nimib-slide-number="23" >
-      <section data-nimib-slide-number="24" >
+      <section data-nimib-slide-number="32" >
+      <section data-nimib-slide-number="33" >
       <h3>Multiple backends (Javascript 🤯)</h3>
       <p>Having multiple backends is cool and<br>the Javascript one is a game changer</p>
       </section>
-      <section data-nimib-slide-number="25" >
+      <section data-nimib-slide-number="34" >
       <h2>compiler backends</h2>
 <ul>
 <li>C</li>
@@ -337,22 +415,22 @@ woof</samp></pre>
 
 </aside>
       </section>
-      <section data-nimib-slide-number="26" data-background-iframe="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html" data-background-interactive >
+      <section data-nimib-slide-number="35" data-background-iframe="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="27" data-background-iframe="plant_app.html" data-background-interactive >
+      <section data-nimib-slide-number="36" data-background-iframe="plant_app.html" data-background-interactive >
       </section>
       </section>
-      <section data-nimib-slide-number="28" >
-      <section data-nimib-slide-number="29" >
+      <section data-nimib-slide-number="37" >
+      <section data-nimib-slide-number="38" >
       <h3>A Niche tech (and me)</h3>
       <p>Why should I invest in a niche tech?</p>
       </section>
-      <section data-nimib-slide-number="30" >
+      <section data-nimib-slide-number="39" >
       <h3>Easier ownership 💌</h3>
       </section>
-      <section data-nimib-slide-number="31" >
+      <section data-nimib-slide-number="40" >
       <h3>Color of a Language 🎨</h3>
-      <div style="display: grid; grid-auto-flow: column;">
+      <div style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); overflow-wrap: break-word;">
       <div>
       <figure>
 <img src="languages-color.png" alt="">
@@ -368,10 +446,10 @@ woof</samp></pre>
       </div>
       </div>
       </section>
-      <section data-nimib-slide-number="32" >
+      <section data-nimib-slide-number="41" >
       <h3>Growing Culture 🎏</h3>
       </section>
-      <section data-nimib-slide-number="33" >
+      <section data-nimib-slide-number="42" >
       <h3>Zen of Nim</h3>
       <pre><code class="language-md">1. Copying bad design is not good design.
 2. If the compiler cannot reason about the code,
@@ -390,12 +468,12 @@ woof</samp></pre>
    That language is Nim.
 </code></pre>
       </section>
-      <section data-nimib-slide-number="34" data-background-iframe="https://forum.nim-lang.org/t/8780" data-background-interactive >
+      <section data-nimib-slide-number="43" data-background-iframe="https://forum.nim-lang.org/t/8780" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="35" >
+      <section data-nimib-slide-number="44" >
       <h3>Easier Open Source 🎋</h3>
       </section>
-      <section data-nimib-slide-number="36" >
+      <section data-nimib-slide-number="45" >
       <h3>Nimib as 'Literate Programming'</h3>
       <pre>hello.nim</pre>
 <pre><code class="nim hljs">import nimib
@@ -412,9 +490,9 @@ nbSave
 
       <p><code>nim r hello</code></p>
       </section>
-      <section data-nimib-slide-number="37" data-background-iframe="hello.html" data-background-interactive >
+      <section data-nimib-slide-number="46" data-background-iframe="hello.html" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="38" >
+      <section data-nimib-slide-number="47" >
       <h3><a href="">Nimib.py</a></h3>
       <pre>hi.py</pre>
 <pre><code class="py hljs">import nimib as nb
@@ -437,13 +515,14 @@ nb.save()
 
 </aside>
       </section>
-      <section data-nimib-slide-number="39" data-background-iframe="https://nimib.land/nimib.py/hi.html" data-background-interactive >
+      <section data-nimib-slide-number="48" data-background-iframe="https://nimib.land/nimib.py/hi.html" data-background-interactive >
       </section>
-      <section data-nimib-slide-number="40" data-background-iframe="https://pietroppeter.github.io/adventofcode2023/day25/solution.html" data-background-interactive >
+      <section data-nimib-slide-number="49" data-background-iframe="https://pietroppeter.github.io/adventofcode2023/day25/solution.html" data-background-interactive >
+      <h1>🎄👨‍💻</h1>
       </section>
       </section>
-      <section data-nimib-slide-number="41" >
-      <section data-nimib-slide-number="42" >
+      <section data-nimib-slide-number="50" >
+      <section data-nimib-slide-number="51" >
       <h2>Not really a Conclusion</h2>
 <ul>
 <li>do you feel Nim is Accessible, Playful, &quot;Everything&quot;?</li>
@@ -453,7 +532,7 @@ nb.save()
 <li>did you change your mind on something from this talk?</li>
 </ul>
       </section>
-      <section data-nimib-slide-number="43" >
+      <section data-nimib-slide-number="52" >
       <blockquote>
 <p>I believe the most important idea is that Python is developed on the Internet, entirely in the open, by a community of volunteers (but not amateurs!) who feel passion and ownership.</p>
 </blockquote>
@@ -462,9 +541,9 @@ nb.save()
       </section>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/reveal.js" integrity="sha512-+Dy2HJZ3Z1DWerDhqFE7AH2HTfnbq8RC1pKOashfMwx1s01fjPUebWoHqrRedU1yFimkexmzJJRilKxjs7lz8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/highlight/highlight.min.js" integrity="sha512-U3fPDUX5bMrn1wnYqjaK44MFA9E6MKS+zPAg9WPAGF5XhReBeDj3FGaA831CjueG+YJxYA3WaO/m33kMIoOs/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0/plugin/notes/notes.min.js" integrity="sha512-v2co+5nr0bgHekutTzF5jAB0UAjM95dpCF7VVw7WsFCjfxonbQo8Vwl487tNYl0iHWHHGV4o5xKBp5ifyhJkWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/highlight.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/notes/notes.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     Reveal.initialize({
       plugins: [ 

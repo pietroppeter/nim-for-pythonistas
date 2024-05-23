@@ -19,9 +19,18 @@ FFI: Foreign Function Interface
 
 #slideIframe(plantApp, "https://nimib-land.github.io/nblog/drafts/plant_app.html")
 # workaround for CORS problem when serving over github pages:
-slideIframe(plantApp, "plant_app.html")
+# slideIframe(plantApp, "plant_app.html")
 
-slideIframe(okazzu, "https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")
+template plantApp* =
+  slide(slideOptions(iframeBackground="plant_app.html")):
+    discard
+
+# slideIframe(okazzu, "https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")
+
+template okazzu* =
+  slide(slideOptions(iframeBackground="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")):
+    discard
+
 
 template all* =
   backends

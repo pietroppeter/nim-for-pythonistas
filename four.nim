@@ -23,7 +23,11 @@ mySlide(zenOfNim):
 ```
 """
 
-slideIframe(ruleTheMole, "https://forum.nim-lang.org/t/8780")
+template ruleTheMole* =
+  slide(slideOptions(iframeBackground="https://forum.nim-lang.org/t/8780")):
+    discard
+
+# slideIframe(ruleTheMole, "https://forum.nim-lang.org/t/8780")
 
 mySlide(easierOwnership):
   nbText "### Easier ownership 💌"
@@ -59,7 +63,10 @@ nbSave
 """
   nbText: "`nim r hello`"
 
-slideIframe(nimibShow, "hello.html")
+#slideIframe(nimibShow, "hello.html")
+template nimibShow* =
+  slide(slideOptions(iframeBackground="hello.html")):
+    discard
 
 mySlide(nimibPy):
   nbText: """### [Nimib.py]()
@@ -83,10 +90,16 @@ nb.save()
 Thanks to advent of code
 """
 
-slideIframe(nimibPyShow, "https://nimib.land/nimib.py/hi.html")
+#slideIframe(nimibPyShow, "https://nimib.land/nimib.py/hi.html")
+template nimibPyShow* =
+  slide(slideOptions(iframeBackground="https://nimib.land/nimib.py/hi.html")):
+    discard
 
-slideIframe(adventOfCode, "https://pietroppeter.github.io/adventofcode2023/day25/solution.html"):
-  nbText "# 🎄👨‍💻"
+#slideIframe(adventOfCode, "https://pietroppeter.github.io/adventofcode2023/day25/solution.html"):
+#  nbText "# 🎄👨‍💻"
+template adventOfCode* =
+  slide(slideOptions(iframeBackground="https://pietroppeter.github.io/adventofcode2023/day25/solution.html")):
+    nbText "# 🎄👨‍💻"
 
 template all* =
   easierOwnership

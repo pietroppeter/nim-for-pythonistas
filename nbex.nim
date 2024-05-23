@@ -1,5 +1,9 @@
-import nimib, nimislides, lightning
-export addNbTextSmall, tripleBackticks, bOpen, bClose
+import nimib, nimislides
+import std / strformat
+export strformat
+
+type
+  int255* = range[0 .. 255]
 
 const
   pythonBlue* = "#3572A5" # from github/linguist
@@ -13,6 +17,23 @@ const
   pyconWhite* = "#FCE8DE"
   nimYellow* = "#ffe953"
 
+const
+  tripleBackticks* = "```" # hack to avoid issues when showing source
+  bOpen* = "{"
+  bClose* = "}"
+
+template reference*(text: string) =
+  nbTextSmall: text
+
+# small text
+template addNbTextSmall* =
+  nb.partials["nbTextSmall"] = "<small>" & nb.partials["nbText"] & "</small>"
+  nb.renderPlans["nbTextSmall"] = nb.renderPlans["nbText"]
+
+template nbTextSmall*(text: string) =
+  nbText: text
+  nb.blk.command = "nbTextSmall"
+
 template mySlide*(ident: untyped, body: untyped) =
   template ident* =
     slide:
@@ -23,6 +44,12 @@ template minSlide*(ident: untyped, body: untyped) =
   template ident* =
     slide:
       body
+
+template slideIframe*(url: string) =
+  nbRawHtml: "<section data-background-iframe=\"" & url & "\" data-background-interactive></section>"
+
+template slideIframeFromNblog*(filename: string) =
+  slideIframe("https://nimib-land.github.io/nblog/drafts/" & filename & ".html")
 
 template slideIframe*(ident: untyped, frameAsStr: untyped) =
   template ident* =
