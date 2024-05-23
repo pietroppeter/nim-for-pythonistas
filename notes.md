@@ -26,8 +26,9 @@ given yesterday's dry run:
 
 other practical improvements:
 - [x] title slide: contrast of colors
-- fragments for the "therapy slides" (starting with initials)
-- fragments for the hello slide
+- [x] autoanimation for the "therapy slides" (starting with initials)
+- a gif for therapy slide?
+- autoanimation for the hello slide
 - change magic to superpowers (metaprogramming is a superpower)
   - also in that slide, compiles natively (not: to C)
 - what do I do with the references? 

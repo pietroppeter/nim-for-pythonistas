@@ -46,6 +46,50 @@ minSlide(likePython):
 - Everything
 """
 
+type
+  int255 = range[0 .. 255]
+
+template threethingsAnimated*(titolo, uno, due, tre: string, reverse=false) =
+  autoAnimateSlides(4):
+    nbText: titolo
+    showText(@[
+      ({1.int255, 2, 3, 4}, "- " & uno[0]),
+      ((if reverse: {4.int255} else: {2.int255, 3, 4}), uno[1 .. ^1]),
+    ])
+    showText(@[
+      ({1.int255, 2, 3, 4}, "- " & due[0]),
+      ({3.int255, 4}, due[1 .. ^1]),
+    ])
+    showText(@[
+      ({1.int255, 2, 3, 4}, "- " & tre[0]),
+      ((if reverse: {2.int255, 3, 4} else: {4.int255}), tre[1 .. ^1]),
+    ])
+
+template likePythonAnimated* =
+  threethingsAnimated(
+    "## 3 things I like about Python 🐝",
+    "Accessibility",
+    "Playfulness",
+    "Everything",
+  )
+
+
+template likePythonAnimatedOld* =
+  autoAnimateSlides(4):
+    nbText: "## 3 things I like about Python 🐝"
+    showText(@[
+      ({1.int255, 2, 3, 4}, "- A"),
+      ({2.int255, 3, 4}, "ccessibility"),
+    ])
+    showText(@[
+      ({1.int255, 2, 3, 4}, "- P"),
+      ({3.int255, 4}, "layfulness"),
+    ])
+    showText(@[
+      ({1.int255, 2, 3, 4}, "- E"),
+      ({4.int255}, "verything"),
+    ])
+
 minSlide(strugglePython):
   nbText """## 3 things I struggle with Python 🙊
 - Abstraction
@@ -53,13 +97,22 @@ minSlide(strugglePython):
 - Errors
 """
 
+template strugglePythonAnimated* =
+  threethingsAnimated(
+    "## 3 things I struggle with Python 🙊",
+    "Abstraction",
+    "Portability",
+    "Errors",
+    reverse = true
+  )
+
 template all* =
   helloPyCon
   me
   Beazley
   therapy
-  likePython
-  strugglePython
+  likePythonAnimated
+  strugglePythonAnimated
 
 when isMainModule:
   myInit("intro")
