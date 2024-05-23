@@ -4,11 +4,16 @@ issue nimislides:
 ## fixing stuff after dry run at "assaggi di pycon""
 
 - [x] title
+- [ ] add note: art by basquiat
 
 improve intro slides (write script and time it faster (5min?))
-- [ ] me (add a few lines, improve speaker notes)
+- [x] me (add a few lines, improve speaker notes)
+  - [ ] animate it
 - [x] animate the 3 properties slide
 - [ ] script and time it
+
+improve four:
+- [ ] add slide on making slides with nimib
 
 improve conclusion:
 - [ ] new conclusion slide
@@ -29,14 +34,14 @@ given yesterday's dry run:
 other practical improvements:
 - [x] title slide: contrast of colors
 - [x] autoanimation for the "therapy slides" (starting with initials)
-- a gif for therapy slide?
+- [ ] a gif for therapy slide?
 - [x] autoanimation for the hello slide
 - [x] change magic to superpowers (metaprogramming is a superpower)
   - [x] also in that slide, compiles natively (not: to C)
 - what do I do with the references? 
 - [x] on compiler section emphasis is on safety, not expressivity
 - [x] add emojis 🎄👨‍💻 to advent of code slide
-- improve the color slide (more references, maybe fragments?)
+- [ ] improve the color slide (more references, maybe fragments?)
 
 ## outstanding issues
 

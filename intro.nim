@@ -26,25 +26,30 @@ template helloPyConAnimated* =
     ])
 
 minSlide(me):
-  nbText "## Me 👨‍👩‍👧"
+  nbText """## Me 👨‍👩‍👧
+- Pythonista
+- (applied) mathematician
+- Data Scientist
+- [HN: Programming Language Underdog (2018)](https://totallywearingpants.com/posts/nim-underdog/)
+- Python Milano and PyData Milan: [milano.python.it](milano.python.it)
+- Recurse Center: [recurse.com](recurse.com) 
+"""
   speakerNote """
-When I mean for Pythonistas, besides having in mind
-many of you as target audience, I include also myself.
-- I started with Python in the late 90s (received my first computer in the early 90s)
-- while in University (studied math) I put aside Python for Matlab
-- when starting to work I went back to it and rekindled my first love
-- worked for a number of years as data scientist
-- almost 6 years ago, I stumbled on Nim on HN
-- in an article called "A Underdog Programming Language (Sep 2018)"
-- I am a sucker for the underdog story
-- got curious and fell in love very quickly (also thanks to Advent of Code)
-- used it to improve my skills, including my python skills
-- and to do something different from what I did at work
-- more software engineer kind of stuff, and more low level (like writing a parser)
-- have been thinking a lot on how it impacted myself as a pythonista
-  (and comparisons nim/python)
-- Python Milano and PyData Milano meetups
-- one of the odd things that happened: nim pushed me to become more of a pythonista
+When I mean for Pythonistas, in my idea audience for this talk
+I include myself.
+- I have worked the last few years as a Data Scientist
+- and I have a Pythonista since the late nineties
+- (took a break from Python while studying Math at the university)
+- I have started to be recently be much more involved in
+  Python community as a Python Milano and PyData Milan co-organizer
+- but before that, a few years ago I ran into an article on Hacker News
+  that talked about a programming language underdog.
+- somehow that encounter and the journey I am going to share
+  is responsible for why I have been more active in Python community
+- as a final note, I will mention that some of the work for this presentation
+  has been prepared while doing a batch at Recurse Center,
+  which is a delightful place to improve your skills as a programmer
+  surrounded by kind and generous people doing the same
 """
 
 minSlide(therapy):
