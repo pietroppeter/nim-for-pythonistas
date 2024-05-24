@@ -25,6 +25,22 @@ template helloPyConAnimated* =
       ({4.int255}, "<br>good for everything"),
     ])
 
+template meAnimated* =
+  autoAnimateSlides(7):
+    nbText "## Me 👨‍👩‍👧"
+    showFrom(3):
+      nbText "🐍 Pythonista"
+    showFrom(4):
+      nbText "🧮 (applied) Mathematician"
+    showFrom(2):
+      nbText "🧑‍🔬 Data Scientist"
+    showFrom(6):
+      nbText "👑 [HN: Programming Language Underdog (2018)](https://totallywearingpants.com/posts/nim-underdog/)"
+    showFrom(5):
+      nbText "🍸 Python Milano and PyData Milan: [milano.python.it](milano.python.it)"
+    showFrom(7):
+      nbText "🐙 Recurse Center: [recurse.com](recurse.com)"
+
 minSlide(me):
   nbText """## Me 👨‍👩‍👧
 - Pythonista
@@ -59,6 +75,10 @@ This could also serve as a therapy session for our relation
 with Python and its future, in case you happen to need one
 (add quotes from twitter)
 """
+
+template therapySpongebob* =
+  slide:
+    nbImage("therapy_spongebob.gif")
 
 minSlide(likePython):
   nbText """## 3 things I like about Python 🐝
@@ -126,9 +146,9 @@ template strugglePythonAnimated* =
 
 template all* =
   helloPyConAnimated
-  me
+  meAnimated
   Beazley
-  therapy
+  therapySpongebob
   likePythonAnimated
   strugglePythonAnimated
 

@@ -1,22 +1,26 @@
 issue nimislides:
 - had to use import conversions instead of import ./[conversions]
+  (assume this is due to the fact I am using Nim 1.6)
+- int255 weird issue (again a 1.6 issue?)
 
 ## fixing stuff after dry run at "assaggi di pycon""
 
 - [x] title
-- [ ] add note: art by basquiat
+- [x] add note: art by basquiat
+  - [x] remove note!
 
 improve intro slides (write script and time it faster (5min?))
 - [x] me (add a few lines, improve speaker notes)
-  - [ ] animate it
+  - [x] animate it
 - [x] animate the 3 properties slide
+- [x] spongebob therapy
 - [ ] script and time it
 
 improve four:
-- [ ] add slide on making slides with nimib
+- [x] add slide on making slides with nimib? yes! and thank Hugo!
 
 improve conclusion:
-- [ ] new conclusion slide
+- [x] new conclusion slide (animated)
 
 ### from issue
 

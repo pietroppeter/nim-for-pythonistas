@@ -101,6 +101,26 @@ template adventOfCode* =
   slide(slideOptions(iframeBackground="https://pietroppeter.github.io/adventofcode2023/day25/solution.html")):
     nbText "# 🎄👨‍💻"
 
+template nimislides* =
+  slide:
+    nbText """## 🛝 Slides with Nim(ib)"""
+    nbCodeSkip:
+        autoAnimateSlides(7):
+          nbText "## Me 👨‍👩‍👧"
+          showFrom(3):
+            nbText "🐍 Pythonista"
+          showFrom(4):
+            nbText "🧮 (applied) Mathematician"
+          showFrom(2):
+            nbText "🧑‍🔬 Data Scientist"
+          showFrom(6):
+            nbText "👑 [HN: Programming Language Underdog (2018)](https://totallywearingpants.com/posts/nim-underdog/)"
+          showFrom(5):
+            nbText "🍸 Python Milano and PyData Milan: [milano.python.it](milano.python.it)"
+          showFrom(7):
+            nbText "🐙 Recurse Center: [recurse.com](recurse.com)"
+
+    reference "[nimislides](), thanks Hugo!💘"
 template all* =
   easierOwnership
   colorLanguage
@@ -112,6 +132,7 @@ template all* =
   easierOpenSource
   nimibLiterate
   nimibShow
+  nimiSlides
   nimibPy
   nimibPyShow
   adventOfCode
