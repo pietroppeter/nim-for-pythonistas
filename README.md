@@ -1,10 +1,13 @@
 # nim-for-pythonistas
 
-me introducing nim to pythonistas
+me introducing [Nim](https://nim-lang.org/) to pythonistas. a talk on the Nim programming language, being a Pythonista and improving your programming skills learning a (niche) language.
+
+A lot of thoughts and work for this presentation prepared during a batch at [Recurse Center](https://www.recurse.com/) 🐙
 
 ## PyCon Italy 2024
 
-Work-in-progress: preparation of 30' talk for PyCon Italy 2024
+Click thumbnail to see the video:
+[![pycon 2024 nim for pythonista video thumbnail](https://github.com/user-attachments/assets/7bb4621c-6518-4e2e-9450-766cf55cf279)](https://www.youtube.com/watch?v=yPMudqyKtLQ)
 
 https://2024.pycon.it/it/event/nim-for-pythonistas
 
@@ -22,46 +25,15 @@ At the end we will briefly cover Nimib, my open source project recently ported a
 
 The goal of this talk is to make you curious to go and try out Nim (come for the performance, stay for the ergonomics!), but even if you just come out with a better appreciation and understanding of Python we would still be happy.
 
-## EuroPython
-
-submitted with some changes to proposal:
-
-### abstract 
-
-Learning a new programming language is a particularly rewarding way to improve your programming skills. In this talk we will make the case on why Nim is an interesting language to learn for Pythonistas and in doing so we might learn also something more about Python.
-
-Nim is interesting because:
-- it is easy to learn for Pythonistas, since it has a Pythonic syntax
-- it is performant and compiles fast to produce native binaries
-- it has a powerful type system with strong type inference
-- it has a very powerful metaprogramming that, combined with the syntax, allows you to write powerful DSLs (Domain Specific Languages)
-- it compiles (also) to Javascript, so you can do frontend stuff with Nim
-- it interoperates very well with Python and the other compiling targets (C, C++, ObjectiveC, JS).
-
-We will cover all the aspects above and try to cover also Nim philosophy and making frequent comparison with Python.
-
-At the end we will briefly cover p5nim, a library that wraps one of the most popular libraries for creative coding, p5js.
-
-### outline
-
-- why learning a new programming language (2')
-- why Nim coming from Python (2')
-- a first program with Nim and differences with Python (3')
-- calling Nim from Python and use Nim for performance bottlenecks (3')
-- Nim type system (2')
-- metaprogramming in Nim (3')
-- Compiling Nim to javascript (and related FFI) (3')
-- Zen of Nim (2')
-- notable Nim libraries and projects (3')
-- p5nim and creative coding (5')
-- concluding remarks (2')
-
-### bio
-
-Pietro Peterlongo has worked for a number of years as Data Scientist/Software Engineer in a company developing a B2B product for Supply Chain Planning and Optimization where he was in charge of Machine Learning functionalities. He quit and went to Recurse Center for a while (a delightful place to improve your programming skills). At the time of submission he is wondering what he will do next, but the idea of spending his birthday in Prague at a Python conference seems like a very appealing one.
-
 ## Lightning at PyCon Sweden 2023
 
-Lightning talk 5' at PyCon Sweden 2023, November 10th.
+Lightning talk 5' at PyCon Sweden 2023, November 10th. That lightning session was lots of fun, watch it in full here: https://www.youtube.com/watch?v=FLCTCyTjqFc
 
 https://pietroppeter.github.io/nim-for-pythonistas/lightning.html
+
+## code for slides
+
+slides are done with [nimislides] (a [nimib] theme). slide code is structure in modules (using named templated for slide), it is a helpful way to structure nimislides code while working on it.
+
+[nimislides]: https://github.com/HugoGranstrom/nimiSlides
+[nimib]: https://github.com/pietroppeter/nimib
