@@ -18,7 +18,7 @@ This talk is divided in three parts:
 2. Why Nim made me a better Pythonista
 3. How Nim can help you getting more involved in Open Source
 
-In the first part I will give a quick introduction to Nim emphasizing similarity and differences with Python. I will explain that Nim can be used as a fast and easy to use complement to Python with a great interoperability and metaprogramming superpowers. Nim has also a powerful type system, functional features and can compile to Javascript.
+In the first part I will give a quick introduction to Nim emphasizing similarity and differences with Python. I will explain that Nim can be used as a fast and easy to learn complement to Python with a great interoperability and metaprogramming superpowers. Nim has also a powerful type system, functional features and can compile to Javascript.
 
 In the second part I will tell you a bit about my story on how I got attracted to Nim coming from Python, the benefits of a niche community, and how I came out with a deeper appreciation for the Python project and community.
 

@@ -13,6 +13,9 @@ const
   fourLong* = "Why should I invest in a niche tech?"
   fourIsNewThreeShort* = "A Niche tech (and Open Source)"
   fourIsNewThreeLong* = "Doing Open Source with a niche tech"
+  fosdemOne = "What is Nim?"
+  fosdemTwo = "Why Nim made me a better Pythonista"
+  fosdemThree = "How Nim can help you getting more involved in Open Source"
 
 mySlide(all):
   nbText "## Agenda"&
@@ -21,6 +24,12 @@ mySlide(all):
   "\n3. " & threeShort &
   "\n4. " & fourShort
   speakerNote "- " & oneLong & "\n- " & twoLong & "\n- " & threeLong & "\n- " & fourLong
+
+mySlide(allFosdem):
+  nbText "## Agenda"&
+  "\n1. " & fosdemOne &
+  "\n2. " & fosdemTwo &
+  "\n3. " & fosdemThree
 
 mySlide(allPyMi):
   nbText "## Agenda"&

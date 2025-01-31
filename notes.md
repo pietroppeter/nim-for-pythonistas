@@ -1,7 +1,7 @@
 ## fosdem version
 
 - fix title [x]
-  - review with internet
+  - adapt colors to fosdem [x]
 - new fosdem module [x]
 - refresh intro [x]
   - add to fosdem [x]
@@ -9,8 +9,15 @@
   - slideSyntax fix bug [x]
     - without columns it works :/
     - hard time handling too many templates :/, found workaround [x]
+  - fix syntax slide
   - add karax as example of metaprogramming? or maybe strformat!
   - add to fosdem
+- agenda
+  - new agenda slide [x]
+  - section slides
+
+
+
 - stories about Nim and Open Source
   - Status (p2p, crypto)
   - Exercism

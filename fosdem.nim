@@ -7,5 +7,5 @@ when isMainModule:
   titleSlideFosdem
   slide:
     intro.allFosdem
-  #agenda.allPyMi
+  agenda.allFosdem
   nbSave

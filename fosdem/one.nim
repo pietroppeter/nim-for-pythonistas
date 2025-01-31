@@ -24,7 +24,7 @@ template slidePerformant* =
 
 template slideSyntaxFlexible* =
   slide:
-    nbText: "### Pythonic Syntax with Extra Flexibility"
+    nbText: "### Pythonic Syntax with 🤸‍♂️ Extra Flexibility"
     nbCode:
       type Counter = object
         val: int
@@ -32,16 +32,36 @@ template slideSyntaxFlexible* =
       proc inc(c: var Counter) = inc c.val
 
       var counter = Counter(val: 0)
+      echo(counter)
 
-      echo counter
+    nbCode:
       # all the following are equivalent:
       inc counter  # command syntax
       inc(counter) # function syntax
       counter.inc  # method syntax
 
-      echo(counter) # remember Python 2.0 -> 3.?  
+      echo counter
 
     nbTextSmall "\"Concise code is not in conflict with readability, it enables readability\", [Zen of Nim](https://nim-lang.org/blog/2021/11/15/zen-of-nim.html)"
+
+mySlide(procedureOverloading):
+  nbText "### Procedure Overloading"
+  nbCode:
+    type
+      Cat = object
+      Dog = object
+    
+    proc speak(c: Cat) = echo "meow"
+    proc speak(d: Dog) = echo "woof"
+
+    let
+      fuffi = Cat()
+      fido = Dog()
+
+    fuffi.speak
+    fido.speak
+  nbText "(the advantages of OOP without full blown OOP)"
+  # add ref to Nim for Pyhton Programmers by ZDSmith at blog.zdsmith.com
 
 template slideInterop* =
 
@@ -78,12 +98,13 @@ python3 main.py
     reference "[nimporter](https://github.com/Pebaz/nimporter)"
     reference "[nimpy](https://github.com/yglukhov/nimpy)"
 
-template allFosdem* =
+template all* =
   slidePerformant # change compiles to C to native compilation!
   slideSyntaxFlexible
+  procedureOverloading
   slideInterop
 
 when isMainModule:
   myInit("one")
-  slideSyntaxFlexible
+  all
   nbSave
