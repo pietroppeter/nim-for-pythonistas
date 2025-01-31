@@ -23,7 +23,8 @@ template slidePerformant* =
     reference "[HPC from Python to Nim (Fosdem 2022)](https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/)"
 
 
-template slideSyntax* =
+template slideSyntaxBug* =
+  # does not compile with nim 2.0.8 (and nimiSlides 0.2.6)
   slide:
     nbText: "### Pythonic Syntax with 🦸 Superpowers"
     adaptivecolumns:
@@ -78,8 +79,29 @@ template slideSyntax* =
             update(g) # function
             show(g)
 
+template slideSyntaxWorkaround* =
+  slide:
+    nbText: "### Pythonic Syntax with Extra Flexibility"
+    nbCode:
+      type Counter = object
+        val: int
 
-template slidePragmatic* =
+      proc inc(c: var Counter) = inc c.val
+
+      var counter = Counter(val: 0)
+
+      echo counter
+
+      inc counter  # command syntax
+      inc(counter) # function syntax
+      counter.inc  # method syntax
+
+      echo(counter)
+
+    nbTextSmall: "- 🦸 syntax fits well with **metaprogramming**\n" &
+    "- 💡 UFCS (Uniform Function Call Syntax)"
+
+template slideInterop* =
 
   slide:
     nbText: "### 🤝 Interop with Python"
@@ -116,11 +138,10 @@ python3 main.py
 
 template all* =
   slidePerformant # change compiles to C to native compilation!
-  slideSyntax
-  slidePragmatic
+  slideSyntaxWorkaround
+  slideInterop
 
 when isMainModule:
   myInit("one")
   all
-  #slidePerformant
   nbSave

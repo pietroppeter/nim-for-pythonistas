@@ -3,8 +3,22 @@
 - fix title [x]
   - review with internet
 - new fosdem module [x]
-
-
+- refresh intro [x]
+  - add to fosdem [x]
+- one
+  - slideSyntax fix bug [x]
+    - without columns it works :/
+    - hard time handling too many templates :/, found workaround [x]
+  - add karax as example of metaprogramming? or maybe strformat!
+  - add to fosdem
+- stories about Nim and Open Source
+  - Status (p2p, crypto)
+  - Exercism
+  - Reddit (pixie?)
+  - Crashoverride
+  - Nitter
+  - Unreal?
+  - fasterthanrequests
 
 ## towards fosdem version - old
 

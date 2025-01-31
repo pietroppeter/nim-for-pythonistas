@@ -30,61 +30,27 @@
       </section>
       <section data-nimib-slide-number="2" >
       <h3>Pythonic Syntax with 🦸 Superpowers</h3>
-      <div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word;">
-      <div>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
-  <span class="hljs-type">Grid</span> = <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-built_in">array</span>[<span class="hljs-number">3</span>, <span class="hljs-type">Cell</span>]]
-  <span class="hljs-type">Cell</span> = <span class="hljs-keyword">enum</span> <span class="hljs-type">X</span>, <span class="hljs-type">O</span>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span> <span class="hljs-type">Counter</span> = <span class="hljs-keyword">object</span>
+  val: <span class="hljs-built_in">int</span>
 
-<span class="hljs-keyword">func</span> initGrid: <span class="hljs-type">Grid</span> =
-  [[<span class="hljs-type">X</span>,<span class="hljs-type">O</span>,<span class="hljs-type">X</span>],[<span class="hljs-type">O</span>,<span class="hljs-type">X</span>,<span class="hljs-type">O</span>],[<span class="hljs-type">X</span>,<span class="hljs-type">O</span>,<span class="hljs-type">X</span>]]
+<span class="hljs-keyword">proc</span> inc(c: <span class="hljs-keyword">var</span> <span class="hljs-type">Counter</span>) = inc c.val
 
-<span class="hljs-keyword">proc</span> show(g: <span class="hljs-type">Grid</span>) =
-  <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> g:
-    <span class="hljs-keyword">echo</span> row
+<span class="hljs-keyword">var</span> counter = <span class="hljs-type">Counter</span>(val: <span class="hljs-number">0</span>)
 
-<span class="hljs-keyword">proc</span> update(g: <span class="hljs-keyword">var</span> <span class="hljs-type">Grid</span>) =
-  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> g.<span class="hljs-keyword">low</span> .. g.<span class="hljs-keyword">high</span>:
-    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> g[i].<span class="hljs-keyword">low</span> .. g[i].<span class="hljs-keyword">high</span>:
-      g[i][j] = <span class="hljs-keyword">if</span> g[i][j] == <span class="hljs-type">X</span>: <span class="hljs-type">O</span> <span class="hljs-keyword">else</span>: <span class="hljs-type">X</span></code></pre>
+<span class="hljs-keyword">echo</span> counter
+
+inc counter  <span class="hljs-comment"># command syntax</span>
+inc(counter) <span class="hljs-comment"># function syntax</span>
+counter.inc  <span class="hljs-comment"># method syntax</span>
+
+<span class="hljs-keyword">echo</span>(counter)</code></pre><pre style="width: 100%;"><samp class="hljs">(val: 0)
+(val: 3)</samp></pre>
       <small><ul>
 <li>🦸 syntax fits well with <strong>metaprogramming</strong></li>
 <li>💡 UFCS (Uniform Function Call Syntax)</li>
 </ul></small>
-      </div>
-      <div>
-      <p>⠀</p>
-      </div>
-      <div>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">var</span> g = initGrid()
-show g <span class="hljs-comment"># command</span></code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
-[O, X, O]
-[X, O, X]</samp></pre>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers>g.update <span class="hljs-comment"># method</span>
-g.show</code></pre><pre style="width: 100%;"><samp class="hljs">[O, X, O]
-[X, O, X]
-[O, X, O]</samp></pre>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers>update(g) <span class="hljs-comment"># function</span>
-show(g)</code></pre><pre style="width: 100%;"><samp class="hljs">[X, O, X]
-[O, X, O]
-[X, O, X]</samp></pre>
-      </div>
-      </div>
       </section>
       <section data-nimib-slide-number="3" >
-      <h2>🦸 Metaprogramming</h2>
-<ol>
-<li>Generics</li>
-<li>Templates</li>
-<li>Macros (AST)</li>
-</ol>
-<p>AST: Abstract Syntax Tree</p>
-<p>DSL: Domain Specific Language</p>
-<blockquote>
-<p>with power comes responsibility</p>
-</blockquote>
-      </section>
-      <section data-nimib-slide-number="4" >
       <h3>🤝 Interop with Python</h3>
       <p><code>fibonacci.nim</code></p>
 <pre><code class="language-nim">import nimpy

@@ -1,11 +1,11 @@
 import nimib except toJson
 import nimislides, nbex
-import title#, intro, agenda, one, two, three, four, conclusions
+import title, intro, agenda, one, two, three, four, conclusions
 
 when isMainModule:
   myInit("fosdem")
   titleSlideFosdem
-  #slide:
-  #  intro.all
+  slide:
+    intro.allFosdem
   #agenda.allPyMi
   nbSave
