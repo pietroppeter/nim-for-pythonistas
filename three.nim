@@ -32,7 +32,24 @@ template okazzu* =
     discard
 
 
+minSlide(metaprogramming):
+  nbText """## 🦸 Metaprogramming
+
+1. Generics
+2. Templates
+3. Macros (AST)
+
+AST: Abstract Syntax Tree
+
+DSL: Domain Specific Language
+
+> with power comes responsibility
+"""
+# should I not mention it here?
+# we will have example of usage of this feature later  
+
 template all* =
+  metaprogramming
   backends
   okazzu
   plantApp

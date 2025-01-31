@@ -150,9 +150,6 @@ mySlide(effectsTracking):
 
 template all* =
   constFizzbuzz # (compile time evaluation) - when?
-  letAndVar
-  varParameters
-  effectsTracking
   procedureOverloading
 
   # describe briefly type system (primitive vs structured)

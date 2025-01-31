@@ -7,18 +7,16 @@ when isMainModule:
   titleSlide
   slide:
     intro.all
-  agenda.all
+  agenda.allPyMi
   slide:
     agenda.one
     one.all
   slide:
-    agenda.two
+    agenda.twoAndThree
     two.all
-  slide:
-    agenda.three
     three.all
   slide:
-    agenda.four
+    agenda.fourIsNewThree
     four.all
   slide:
     conclusions.all

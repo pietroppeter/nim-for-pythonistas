@@ -7,7 +7,7 @@ A lot of thoughts and work for this presentation prepared during a batch at [Rec
 ## PyCon Italy 2024
 
 Click thumbnail to see the video:
-[![pycon 2024 nim for pythonista video thumbnail](https://github.com/user-attachments/assets/7bb4621c-6518-4e2e-9450-766cf55cf279)](https://www.youtube.com/watch?v=yPMudqyKtLQ)
+[![pycon 2024 nim for pythonista video thumbnail](pyconit.png)](https://www.youtube.com/watch?v=yPMudqyKtLQ)
 
 https://2024.pycon.it/it/event/nim-for-pythonistas
 

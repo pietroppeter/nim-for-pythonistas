@@ -28,9 +28,9 @@ template slideSyntax* =
     nbText: "### Pythonic Syntax with 🦸 Superpowers"
     adaptivecolumns:
       column:
-        nbCode:
+        nbCodeSkip:
           type
-            Grid = array[3, array[3, Cell]]
+            Grid = array[0..2, array[0..2, Cell]]
             Cell = enum X, O
 
           func initGrid: Grid =
@@ -51,32 +51,32 @@ template slideSyntax* =
         nbText: "⠀" # https://www.compart.com/en/unicode/U+2800
       column:
         #nbText: "Indentation based syntax that fits Nim's macro system"
-        nbCode:
-          var g = initGrid()
-          show g # command
-        nbCode:          
-          g.update # method
-          g.show
-        nbCode:
-          update(g) # function
-          show(g)
-  
+        block:
+          type
+            Grid = array[3, array[3, Cell]]
+            Cell = enum X, O
 
-minSlide(metaprogramming):
-  nbText """## 🦸 Metaprogramming
+          func initGrid: Grid =
+            [[X,O,X],[O,X,O],[X,O,X]]
 
-1. Generics
-2. Templates
-3. Macros (AST)
+          proc show(g: Grid) =
+            for row in g:
+              echo row
+          
+          proc update(g: var Grid) =
+            for i in g.low .. g.high:
+              for j in g[i].low .. g[i].high:
+                g[i][j] = if g[i][j] == X: O else: X
 
-AST: Abstract Syntax Tree
-
-DSL: Domain Specific Language
-
-> with power comes responsibility
-"""
-# should I not mention it here?
-# we will have example of usage of this feature later  
+          nbCode:
+            var g = initGrid()
+            show g # command
+          nbCode:          
+            g.update # method
+            g.show
+          nbCode:
+            update(g) # function
+            show(g)
 
 
 template slidePragmatic* =
@@ -117,8 +117,6 @@ python3 main.py
 template all* =
   slidePerformant # change compiles to C to native compilation!
   slideSyntax
-  # overload (or skip here?)
-  metaprogramming
   slidePragmatic
 
 when isMainModule:

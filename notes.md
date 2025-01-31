@@ -1,3 +1,15 @@
+## towards fosdem version
+
+- update title [x]
+- update intro [x]
+- agenda (change)
+- one (same?)
+- combine two and three
+- four is new three
+
+
+----
+
 issue nimislides:
 - had to use import conversions instead of import ./[conversions]
   (assume this is due to the fact I am using Nim 1.6)
