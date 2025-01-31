@@ -1,4 +1,12 @@
-## towards fosdem version
+## fosdem version
+
+- fix title [x]
+  - review with internet
+- new fosdem module [x]
+
+
+
+## towards fosdem version - old
 
 - update title [x]
 - update intro [x]
