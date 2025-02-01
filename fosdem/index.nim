@@ -9,5 +9,6 @@ when isMainModule:
     intro.all
   agenda.all
   slide:
+    agenda.one
     one.all
   nbSave

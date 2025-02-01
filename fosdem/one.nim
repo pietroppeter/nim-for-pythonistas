@@ -29,13 +29,13 @@ template slideSyntaxFlexible* =
       type Counter = object
         val: int
 
-      proc inc(c: var Counter) = inc c.val
-
       var counter = Counter(val: 0)
       echo(counter)
 
     nbCode:
-      # all the following are equivalent:
+      proc inc(c: var Counter) = inc c.val
+
+      # all the following are equivalent 🤸‍♂️
       inc counter  # command syntax
       inc(counter) # function syntax
       counter.inc  # method syntax
@@ -60,13 +60,12 @@ mySlide(procedureOverloading):
 
     fuffi.speak
     fido.speak
-  nbText "(the advantages of OOP without full blown OOP)"
-  # add ref to Nim for Pyhton Programmers by ZDSmith at blog.zdsmith.com
+  nbText "💎 the advantages of OOP without full blown OOP 💎"
 
 template slideInterop* =
 
   slide:
-    nbText: "### 🤝 Interop with Python"
+    nbText: "### 🤝 Interop with Python 🐍"
     nbText: fmt"""
 
 `fibonacci.nim`
@@ -95,16 +94,74 @@ python3 main.py
 
 """
 
-    reference "[nimporter](https://github.com/Pebaz/nimporter)"
-    reference "[nimpy](https://github.com/yglukhov/nimpy)"
+    reference "[yglukhov/nimpy](https://github.com/yglukhov/nimpy)"
+    reference "[Pebaz/nimporter](https://github.com/Pebaz/nimporter)"
+
+
+mySlide(effectsTracking):
+  nbText "### Functional Powers 🧠 Effects tracking"
+  nbRawHtml adaptiveColumnsHtml
+  nbRawHtml "<div>"
+  nbCode:
+    let aGlobal = 42
+
+    proc withSideEffects(x: int): int =
+      echo "writing ", x, " in a file"
+      "IcanDo.IO".writeFile($x)
+      x + aGlobal
+    
+    echo withSideEffects(624)
+    echo "IcanDo.IO".readFile
+  nbRawHtml "</div>"
+
+  nbRawHtml "<div>"
+  nbText "⠀"
+  nbRawHtml "</div>"
+
+  nbRawHtml "<div>"
+  nbCode:
+    func noSideEffects(x: int): int =
+      # in a func compiler will error
+      # if you try to do I/O or access global ...
+      x + 42
+
+    echo noSideEffects(-42)
+  nbRawHtml "</div>"
+  nbRawHtml "</div>"
+
+template okazzu* =
+  slide(slideOptions(iframeBackground="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")):
+    discard
+
+mySlide(backends):
+  nbText """## compiler backends
+- C
+- C++
+- Objective-C
+- Javascript
+
+FFI: Foreign Function Interface
+"""
+  speakerNote """
+- very pragmatic choice
+- C is the primary (default) backend
+- C++ allows for best-in-class interoperability with C++ libraries (e.g. Unreal engine)
+- backends are treated like assembler
+- you will use a single backend at the time (but you can use when clauses)
+"""
 
 template all* =
   slidePerformant # change compiles to C to native compilation!
   slideSyntaxFlexible
   procedureOverloading
+  effectsTracking
+  # metaprogramming one strformat
   slideInterop
+  # metaprogramming two karax js backend
+  backends
+  okazzu
 
 when isMainModule:
   myInit("one")
-  all
+  okazzu
   nbSave

@@ -15,17 +15,17 @@
       </div>
       </section>
       <section data-nimib-slide-number="2" data-background-image="../crown.webp" >
-      <div style="background-color:rgba(255, 175, 243, 0.5);">
+      <div style="background-color:rgb(161, 45, 148);">
       <h1 style="color:#ffe953;">Nim for Pythonistas</h1>
-      <h2 style="color:#219653;">FOSDEM, Brussels, Feb 2nd 2025</h2>
-      <span style="color:#3572A5;">github.com/pietroppeter/nim-for-pythonistas</span>
+      <h2 style="color:#ffe953;">FOSDEM, Brussels, Feb 2nd 2025</h2>
+      <span style="color:#00B9E8;">github.com/pietroppeter/nim-for-pythonistas</span>
       </div>
       </section>
       <section data-nimib-slide-number="3" >
       <section data-nimib-slide-number="4" data-auto-animate >
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Hi Fosdem&quot;</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
-  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(' <span class="hljs-string">'.repeat(abs(i)) &amp; it).join()</span></code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
     H    i         F    o    s    d    e    m
    H   i       F   o   s   d   e   m
   H  i     F  o  s  d  e  m
@@ -41,7 +41,7 @@ Hi Fosdem
       <section data-nimib-slide-number="5" data-auto-animate >
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Hi Fosdem&quot;</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
-  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(' <span class="hljs-string">'.repeat(abs(i)) &amp; it).join()</span></code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
     H    i         F    o    s    d    e    m
    H   i       F   o   s   d   e   m
   H  i     F  o  s  d  e  m
@@ -57,7 +57,7 @@ Hi Fosdem
       <section data-nimib-slide-number="6" data-auto-animate >
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Hi Fosdem&quot;</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
-  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(' <span class="hljs-string">'.repeat(abs(i)) &amp; it).join()</span></code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
     H    i         F    o    s    d    e    m
    H   i       F   o   s   d   e   m
   H  i     F  o  s  d  e  m
@@ -73,7 +73,7 @@ Hi Fosdem
       <section data-nimib-slide-number="7" data-auto-animate >
       <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> 💬 = <span class="hljs-string">&quot;Hi Fosdem&quot;</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> -<span class="hljs-number">5</span> .. <span class="hljs-number">5</span>:
-  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(<span class="hljs-string">' '</span>.repeat(abs(i)) &amp; it).join()</code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
+  <span class="hljs-keyword">echo</span> 💬.toSeq.mapIt(' <span class="hljs-string">'.repeat(abs(i)) &amp; it).join()</span></code></pre><pre style="width: 100%;"><samp class="hljs">     H     i           F     o     s     d     e     m
     H    i         F    o    s    d    e    m
    H   i       F   o   s   d   e   m
   H  i     F  o  s  d  e  m
@@ -88,22 +88,27 @@ Hi Fosdem
       </section>
       <section data-nimib-slide-number="8" >
       <h2>Me 👨‍👩‍👧</h2>
-      <p>🧑‍🔬 Data Scientist @ AgileLab</p>
+      <p>🧑‍🔬 Data Scientist @ <a href="https://www.agilelab.it/">AgileLab</a></p>
       <p>🍸 Python Milano and PyData Milan: <a href="milano.python.it">milano.python.it</a></p>
       <p>👑 <a href="https://totallywearingpants.com/posts/nim-underdog/">HN: Programming Language Underdog (2018)</a></p>
       <p>🐙 Recurse Center: <a href="recurse.com">recurse.com</a></p>
       </section>
       <section data-nimib-slide-number="9" >
-      <blockquote>
-<p>sometimes people ask me &quot;what can I do to improve my Python skills?&quot; Much to their surprise, I often suggest doing a project in a completely different language or outside of their area of expertise. I think the main benefit of doing this is that you'll often see a completely different way of thinking about a problem that you can bring home to your own projects.</p>
-</blockquote>
-<p>David Beazley, March 2023</p>
-      </section>
-      <section data-nimib-slide-number="10" >
       <figure>
 <img src="../pyconit.png" alt="">
 <figcaption></figcaption>
 </figure>
+      </section>
+      <section data-nimib-slide-number="10" data-background-image="pyconit.png" >
+      <p style="font-size: 60px; font-weight: 700; color: #ffe953;">🍝Come to PyCon Italy!🤌</style>
+      <p style="font-size: 40px; font-weight: 700; color: #ffe953;">May 28-31, Bologna | pycon.it</style>
+      <p>⠀</p>
+      <p>⠀</p>
+      <p>⠀</p>
+      <p>⠀</p>
+      <p>⠀</p>
+      <p>⠀</p>
+      <p>⠀</p>
       </section>
       </section>
       <section data-nimib-slide-number="11" >
@@ -113,6 +118,116 @@ Hi Fosdem
 <li>Why Nim made me a better Pythonista</li>
 <li>How Nim can help you getting more involved in Open Source</li>
 </ol>
+      </section>
+      <section data-nimib-slide-number="12" >
+      <section data-nimib-slide-number="13" >
+      <h3>What is Nim?</h3>
+      <p>Nim can be used as a fast and easy to learn complement to Python with a great interoperability and metaprogramming superpowers.</p>
+<p>Nim has also a powerful type system, functional features and can compile to Javascript.</p>
+      </section>
+      <section data-nimib-slide-number="14" >
+      <h3>🏎️ Performant: compiles natively</h3>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">const</span> <span class="hljs-type">N</span> = <span class="hljs-number">3</span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Matrix</span> = <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">array</span>[<span class="hljs-type">N</span>, <span class="hljs-built_in">int</span>]]
+
+<span class="hljs-keyword">let</span>
+  <span class="hljs-type">A</span> = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]]
+  <span class="hljs-type">B</span> = [[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]]
+
+<span class="hljs-keyword">func</span> `*`(a, b: <span class="hljs-type">Matrix</span>): <span class="hljs-type">Matrix</span> =
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; <span class="hljs-type">N</span>:
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; <span class="hljs-type">N</span>:
+      <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ..&lt; <span class="hljs-type">N</span>:
+        <span class="hljs-literal">result</span>[i][j] += a[i][k]*b[k][j]
+
+<span class="hljs-keyword">echo</span> <span class="hljs-type">A</span>*<span class="hljs-type">B</span></code></pre><pre style="width: 100%;"><samp class="hljs">[[1, 3, 6], [4, 9, 15], [7, 15, 24]]</samp></pre>
+      <small><p><a href="https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/">HPC from Python to Nim (Fosdem 2022)</a></p></small>
+      </section>
+      <section data-nimib-slide-number="15" >
+      <h3>Pythonic Syntax with 🤸‍♂️ Extra Flexibility</h3>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span> <span class="hljs-type">Counter</span> = <span class="hljs-keyword">object</span>
+  val: <span class="hljs-built_in">int</span>
+
+<span class="hljs-keyword">var</span> counter = <span class="hljs-type">Counter</span>(val: <span class="hljs-number">0</span>)
+<span class="hljs-keyword">echo</span>(counter)</code></pre><pre style="width: 100%;"><samp class="hljs">(val: 0)</samp></pre>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">proc</span> inc(c: <span class="hljs-keyword">var</span> <span class="hljs-type">Counter</span>) = inc c.val
+
+<span class="hljs-comment"># all the following are equivalent 🤸‍♂️</span>
+inc counter  <span class="hljs-comment"># command syntax</span>
+inc(counter) <span class="hljs-comment"># function syntax</span>
+counter.inc  <span class="hljs-comment"># method syntax</span>
+
+<span class="hljs-keyword">echo</span> counter</code></pre><pre style="width: 100%;"><samp class="hljs">(val: 3)</samp></pre>
+      <small><p>&quot;Concise code is not in conflict with readability, it enables readability&quot;, <a href="https://nim-lang.org/blog/2021/11/15/zen-of-nim.html">Zen of Nim</a></p></small>
+      </section>
+      <section data-nimib-slide-number="16" >
+      <h3>Procedure Overloading</h3>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">type</span>
+  <span class="hljs-type">Cat</span> = <span class="hljs-keyword">object</span>
+  <span class="hljs-type">Dog</span> = <span class="hljs-keyword">object</span>
+
+<span class="hljs-keyword">proc</span> speak(c: <span class="hljs-type">Cat</span>) = <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;meow&quot;</span>
+<span class="hljs-keyword">proc</span> speak(d: <span class="hljs-type">Dog</span>) = <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;woof&quot;</span>
+
+<span class="hljs-keyword">let</span>
+  fuffi = <span class="hljs-type">Cat</span>()
+  fido = <span class="hljs-type">Dog</span>()
+
+fuffi.speak
+fido.speak</code></pre><pre style="width: 100%;"><samp class="hljs">meow
+woof</samp></pre>
+      <p>💎 the advantages of OOP without full blown OOP 💎</p>
+      </section>
+      <section data-nimib-slide-number="17" >
+      <h3>Functional Powers 🧠 Effects tracking</h3>
+      <div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word; column-gap: 2.0 em;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> aGlobal = <span class="hljs-number">42</span>
+
+<span class="hljs-keyword">proc</span> withSideEffects(x: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;writing &quot;</span>, x, <span class="hljs-string">&quot; in a file&quot;</span>
+  <span class="hljs-string">&quot;IcanDo.IO&quot;</span>.writeFile($x)
+  x + aGlobal
+
+<span class="hljs-keyword">echo</span> withSideEffects(<span class="hljs-number">624</span>)
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;IcanDo.IO&quot;</span>.readFile</code></pre><pre style="width: 100%;"><samp class="hljs">writing 624 in a file
+666
+624</samp></pre>
+      </div>
+      <div>
+      <p>⠀</p>
+      </div>
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">func</span> noSideEffects(x: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+  <span class="hljs-comment"># in a func compiler will error</span>
+  <span class="hljs-comment"># if you try to do I/O or access global ...</span>
+  x + <span class="hljs-number">42</span>
+
+<span class="hljs-keyword">echo</span> noSideEffects(-<span class="hljs-number">42</span>)</code></pre><pre style="width: 100%;"><samp class="hljs">0</samp></pre>
+      </div>
+      </div>
+      </section>
+      <section data-nimib-slide-number="18" >
+      <h3>🤝 Interop with Python 🐍</h3>
+      <p><code>fibonacci.nim</code></p>
+<pre><code class="language-nim">import nimpy
+
+func fib*(n: int): int {. exportpy .} =
+  if n &lt; 2: 1 else: fib(n - 1) + fib(n - 2)
+</code></pre>
+<p><code>main.py</code></p>
+<pre><code class="language-python">import nimporter
+from fibonacci import fib
+
+print(fib(10))
+</code></pre>
+<pre><code>python3 main.py
+</code></pre>
+<pre><code>89
+</code></pre>
+      <small><p><a href="https://github.com/yglukhov/nimpy">yglukhov/nimpy</a></p></small>
+      <small><p><a href="https://github.com/Pebaz/nimporter">Pebaz/nimporter</a></p></small>
+      </section>
       </section>
     </div>
   </div>

@@ -1,22 +1,32 @@
 ## fosdem version
 
+- new fosdem folder [x]
 - fix title [x]
   - adapt colors to fosdem [x]
-- new fosdem module [x]
 - refresh intro [x]
-  - add to fosdem [x]
-- one
-  - slideSyntax fix bug [x]
-    - without columns it works :/
-    - hard time handling too many templates :/, found workaround [x]
-  - fix syntax slide
-  - add karax as example of metaprogramming? or maybe strformat!
-  - add to fosdem
+  - first slide [x] 
+  - me slide [x]
+  - promo pyconit [x]
 - agenda
   - new agenda slide [x]
-  - section slides
-
-
+  - section slides [x]
+- one: what is nim
+  - new slide flexible syntax [x]
+  - slide functional programming (effects) [x]
+    - mention funtional? [x]
+  - slide(s) metaprogramming one strformat
+  - slide metaprogramming two karax
+  - multiple backends
+  - mind blown: Okazzu!
+  - slide type system? nope [x]
+- two: better pythonista
+  - attracted why (APE slides)
+  - better as a programmer (quote beazley)
+  - niche community: sense of ownership
+  - better appreciation of python (end with quote Guido)
+- three: open source
+  - new slide on nimble publish
+  - what else is new? same as before?
 
 - stories about Nim and Open Source
   - Status (p2p, crypto)

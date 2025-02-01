@@ -5,6 +5,8 @@ export strformat
 type
   int255* = range[0 .. 255]
 
+const adaptiveColumnsHtml* = """<div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word; column-gap: 2.0 em;">"""
+
 const
   pythonBlue* = "#3572A5" # from github/linguist
   pyconRedBrick* = "#F17A5D"

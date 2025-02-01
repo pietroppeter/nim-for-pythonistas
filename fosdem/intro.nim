@@ -1,5 +1,4 @@
 import nimib, nimislides, nbex
-import ../quotes
 
 template helloFosdemAnimated* =
   import sequtils, strutils
@@ -19,7 +18,7 @@ template helloFosdemAnimated* =
 template meNotAnimated* =
   slide:
     nbText "## Me 👨‍👩‍👧"
-    nbText "🧑‍🔬 Data Scientist @ AgileLab"
+    nbText "🧑‍🔬 Data Scientist @ [AgileLab](https://www.agilelab.it/)"
     nbText "🍸 Python Milano and PyData Milan: [milano.python.it](milano.python.it)"
     nbText "👑 [HN: Programming Language Underdog (2018)](https://totallywearingpants.com/posts/nim-underdog/)"
     nbText "🐙 Recurse Center: [recurse.com](recurse.com)"
@@ -28,11 +27,23 @@ template pyconitVideo* =
   slide:
     nbImage "../pyconit.png"
 
+template pyconitPromo* =
+  slide(slideOptions(imageBackground="pyconit.png")):
+    nbText """<p style="font-size: 60px; font-weight: 700; color: #ffe953;">🍝Come to PyCon Italy!🤌</style>"""
+    nbText """<p style="font-size: 40px; font-weight: 700; color: #ffe953;">May 28-31, Bologna | pycon.it</style>"""
+    nbText "⠀"
+    nbText "⠀"
+    nbText "⠀"
+    nbText "⠀"
+    nbText "⠀"
+    nbText "⠀"
+    nbText "⠀"
+
 template all* =
   helloFosdemAnimated
   meNotAnimated
-  beazley
   pyconitVideo
+  pyconitPromo
 
 when isMainModule:
   myInit("intro")
