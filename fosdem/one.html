@@ -10,8 +10,12 @@
   <body>
   <div class="reveal">
     <div class="slides">
-      <section data-nimib-slide-number="1" data-background-iframe="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html" data-background-interactive >
-      </section>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> std / strformat <span class="hljs-comment"># move outside of nbCode</span>
+<span class="hljs-keyword">let</span>
+  (a, b) = (<span class="hljs-string">&quot;Brussels&quot;</span>, <span class="hljs-string">&quot;Milan&quot;</span>)
+  h = (<span class="hljs-number">10</span>*<span class="hljs-number">60</span>+<span class="hljs-number">15</span>).<span class="hljs-built_in">float</span> / <span class="hljs-number">60</span>
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">fmt&quot;from {a} to {b} the train takes {h} hours&quot;</span></code></pre><pre style="width: 100%;"><samp class="hljs">from Brussels to Milan the train takes 10.25 hours</samp></pre>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

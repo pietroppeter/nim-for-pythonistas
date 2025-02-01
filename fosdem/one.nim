@@ -150,6 +150,14 @@ FFI: Foreign Function Interface
 - you will use a single backend at the time (but you can use when clauses)
 """
 
+mySlide(metaFormat):
+  nbCode:
+    import std / strformat
+    let here = "Brussels"
+    let there = "Milan"
+    let minutes = 10*60+15
+    echo fmt"from {here} to {there} the train takes {time.float / 60:.2f} hours"
+
 template all* =
   slidePerformant # change compiles to C to native compilation!
   slideSyntaxFlexible
@@ -163,5 +171,11 @@ template all* =
 
 when isMainModule:
   myInit("one")
-  okazzu
+  import std / strformat # move outside of nbCode
+  nbCode:
+    let
+      (a, b) = ("Brussels", "Milan")
+      h = (10*60+15).float / 60
+
+    echo fmt"from {a} to {b} the train takes {h} hours"
   nbSave
