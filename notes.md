@@ -1,34 +1,19 @@
 ## fosdem version
 
 - new fosdem folder [x]
-- fix title [x]
-  - adapt colors to fosdem [x]
-- refresh intro [x]
-  - first slide [x] 
-  - me slide [x]
-  - promo pyconit [x]
-- agenda
-  - new agenda slide [x]
-  - section slides [x]
+- title [x]
+- intro [x]
+- agenda [x]
 - one: what is nim
-  - new slide flexible syntax [x]
-  - slide functional programming (effects) [x]
-    - mention funtional? [x]
   - slide(s) metaprogramming one strformat
   - slide metaprogramming two karax
-  - multiple backends
-  - mind blown: Okazzu!
-  - slide type system? nope [x]
-- two: better pythonista
-  - attracted why (APE slides)
-  - better as a programmer (quote beazley)
-  - niche community: sense of ownership
-  - better appreciation of python (end with quote Guido)
+- two: better pythonista [x]
 - three: open source
   - new slide on nimble publish
-  - what else is new? same as before?
+  - reuse previous slides
+- thankyou (nim, python, fosdem)
 
-- stories about Nim and Open Source
+- stories about Nim and Open Source? NO
   - Status (p2p, crypto)
   - Exercism
   - Reddit (pixie?)

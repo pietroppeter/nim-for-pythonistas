@@ -18,7 +18,7 @@ template helloFosdemAnimated* =
 template meNotAnimated* =
   slide:
     nbText "## Me 👨‍👩‍👧"
-    nbText "🧑‍🔬 Data Scientist @ [AgileLab](https://www.agilelab.it/)"
+    nbText "🧑‍🔬 Data Scientist @ [AgileLab](https://www.agilelab.it/)" # mention handbook an holacracy
     nbText "🍸 Python Milano and PyData Milan: [milano.python.it](milano.python.it)"
     nbText "👑 [HN: Programming Language Underdog (2018)](https://totallywearingpants.com/posts/nim-underdog/)"
     nbText "🐙 Recurse Center: [recurse.com](recurse.com)"
