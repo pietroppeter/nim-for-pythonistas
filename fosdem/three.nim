@@ -20,6 +20,37 @@ nimble publish # opens a PR to a packages.json
 
 """
 
+template easierOpenSourceAnimated* =
+  import nimoji
+  autoAnimateSlides(5):
+    showFrom(1):
+      nbText "### Easier Open Source 🎋"
+    showFrom(2):
+      nbText "1. Idea"
+    showFrom(3):
+      nbCodeSkip:
+        import nimoji
+        echo "I :heart: :pizza: and :beer:".emojize
+      nbText "```\nI ❤️ 🍕 and 🍺\n```"
+    showFrom(4):
+      nbText """
+2. Code
+
+```nim
+nimble init # ...
+```
+"""
+    showFrom(5):
+      nbText """
+3. Publish
+
+```nim
+nimble publish # opens a PR to a packages.json
+```
+
+"""
+
+
 
 mySlide(nimibLiterate):
   nbText: "### Nimib as 'Literate Programming'"
@@ -111,7 +142,7 @@ template nimibPyscript* =
 
 
 template all* =
-  easierOpenSource
+  easierOpenSourceAnimated
   nimibLand
   plantApp
   nimibLiterate
@@ -123,6 +154,5 @@ template all* =
 
 when isMainModule:
   myInit("three")
-  #all
-  easierOpenSource
+  all
   nbSave

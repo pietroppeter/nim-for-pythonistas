@@ -215,6 +215,32 @@ template metaprogramming* {. dirty .} =
       temp.formatValue(h, ".2f")
       temp.add " hours"
 
+
+template metaprogrammingAnimated* {. dirty .} =
+  import std / strformat # move outside of nbCode
+  autoAnimateSlides(3):
+    showFrom(1):
+      nbText "## Metaprogramming 🦸"
+    # add quote from Zen of Nim (Leverage meta programming to keep the language small.)
+    
+    showFrom(2):
+      nbCodeInBlock: # to counter dirty
+        let
+          home = "Milan"
+          h = (10*60+15).float / 60
+
+        echo fmt"from Brussels to {home} the train takes {h:.1f} hours"
+
+    showFrom(3):
+      nbText "the `echo fmt\"...\"` statement is transformed at **compile time** into something like"
+      nbCodeSkip:
+        var temp = ""
+        temp.add "from Brussels to "
+        temp.formatValue(home, "")
+        temp.add " the train takes "
+        temp.formatValue(h, ".2f")
+        temp.add " hours"
+
 template interactivity* =
   slide:
     nbRawHtml """
@@ -257,7 +283,7 @@ template all* =
   slideSyntaxFlexible
   procedureOverloading
   effectsTracking
-  metaprogramming
+  metaprogrammingAnimated
   slideInterop
   interactivity
   backends

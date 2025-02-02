@@ -10,7 +10,7 @@
   - added pyscript slide [x]
 - thanks [x]
 - animate stuff
-  - strformat
+  - strformat [x]
   - nimoji
 
 - stories about Nim and Open Source? NO
