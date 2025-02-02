@@ -9,7 +9,7 @@
   - slide metaprogramming two karax
 - two: better pythonista [x]
 - three: open source
-  - new slide on nimble publish
+  - new slide on nimble publish [x]
   - add plant app and remove advent?
   - reuse previous slides [x]
 - thanks [x]

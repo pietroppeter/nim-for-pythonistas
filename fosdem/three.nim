@@ -2,6 +2,23 @@ import nimib, nimislides, nbex
 
 mySlide(easierOpenSource):
   nbText "### Easier Open Source 🎋"
+  nbText "1. Idea"
+  nbCode:
+    import nimoji
+    echo "I :heart: :pizza: and :beer:".emojize
+  nbText """2. Code
+
+```nim
+nimble init # ...
+```
+
+3. Publish
+
+```nim
+nimble publish # opens a PR to a packages.json
+```
+
+"""
 
 
 mySlide(nimibLiterate):
@@ -91,5 +108,6 @@ template all* =
 
 when isMainModule:
   myInit("three")
-  all
+  #all
+  easierOpenSource
   nbSave

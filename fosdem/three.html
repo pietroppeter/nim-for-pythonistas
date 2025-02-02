@@ -12,71 +12,21 @@
     <div class="slides">
       <section data-nimib-slide-number="1" >
       <h3>Easier Open Source 🎋</h3>
-      </section>
-      <section data-nimib-slide-number="2" >
-      <h3>Nimib as 'Literate Programming'</h3>
-      <pre>hello.nim</pre>
-<pre><code class="nim hljs">import nimib
-
-nbInit
-
-nbText &quot;A sample program with _Nimib_&quot;
-
-nbCode:
-    echo &quot;hello RC!&quot;
-
-nbSave
+      <ol>
+<li>Idea</li>
+</ol>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> nimoji
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;I :heart: :pizza: and :beer:&quot;</span>.emojize</code></pre><pre style="width: 100%;"><samp class="hljs">I ❤️ 🍕 and 🍺</samp></pre>
+      <ol start="2">
+<li>Code</li>
+</ol>
+<pre><code class="language-nim">nimble init # ...
 </code></pre>
-
-      <p><code>nim r hello</code></p>
-      </section>
-      <section data-nimib-slide-number="3" data-background-iframe="../hello.html" data-background-interactive >
-      </section>
-      <section data-nimib-slide-number="4" >
-      <h2>🛝 Slides with Nim(ib)</h2>
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers>mySlide(all):
-  nbText <span class="hljs-string">&quot;## Agenda&quot;</span>&amp;
-  <span class="hljs-string">&quot;</span><span class="hljs-meta">\n</span><span class="hljs-string">1. &quot;</span> &amp; oneShort &amp;
-  <span class="hljs-string">&quot;</span><span class="hljs-meta">\n</span><span class="hljs-string">2. &quot;</span> &amp; twoShort &amp;
-  <span class="hljs-string">&quot;</span><span class="hljs-meta">\n</span><span class="hljs-string">3. &quot;</span> &amp; threeShort
-
-<span class="hljs-keyword">template</span> section(number: <span class="hljs-built_in">untyped</span>) =
-  mySlide(number):
-    nbText <span class="hljs-string">&quot;### &quot;</span> &amp; `number <span class="hljs-type">Short</span>`
-    nbText `number <span class="hljs-type">Long</span>`
-
-section(one)
-section(two)
-section(three)</code></pre>
-      <small><p><a href="">nimislides</a>, thanks Hugo!💘</p></small>
-      </section>
-      <section data-nimib-slide-number="5" >
-      <h3><a href="">Nimib.py</a></h3>
-      <pre>hi.py</pre>
-<pre><code class="py hljs">import nimib as nb
-
-nb.init()
-
-nb.text(&quot;Welcome to `nimib.py`!&quot;)
-
-message = &quot;hello&quot;
-
-with nb.code():
-    print(message)
-
-nb.save()
+<ol start="3">
+<li>Publish</li>
+</ol>
+<pre><code class="language-nim">nimble publish # opens a PR to a packages.json
 </code></pre>
-
-      <p><code>python hi.py</code></p>
-      <aside class="notes">
-  <p>Thanks to advent of code</p>
-
-</aside>
-      </section>
-      <section data-nimib-slide-number="6" data-background-iframe="https://nimib.land/nimib.py/hi.html" data-background-interactive >
-      </section>
-      <section data-nimib-slide-number="7" data-background-iframe="https://pietroppeter.github.io/adventofcode2023/day25/solution.html" data-background-interactive >
-      <h1>🎄👨‍💻</h1>
       </section>
     </div>
   </div>
