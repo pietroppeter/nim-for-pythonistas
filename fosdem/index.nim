@@ -12,7 +12,7 @@ template thanks* =
     nbText "🧑‍💻 [github.com/pietroppeter](https://github.com/pietroppeter)"
 
 when isMainModule:
-  myInit("index")
+  myInit("index.nim")
   titleSlide
   slide:
     intro.all

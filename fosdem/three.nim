@@ -96,15 +96,30 @@ template nimislides* =
 
     reference "[nimislides](), thanks Hugo!💘"
 
+template plantApp* =
+  slide(slideOptions(iframeBackground="../plant_app.html")):
+    discard
+
+template nimibLand* =
+  slide:
+    nbText "## Nimib(Land) 🐳"
+
+template nimibPyscript* =
+  slide(slideOptions(iframeBackground="bunny.html")):
+    discard
+
+
+
 template all* =
-  easierOpenSource # adjust, add nimoji slide
+  easierOpenSource
+  nimibLand
+  plantApp
   nimibLiterate
   nimibShow
-  # add plant app?
   nimiSlides
   nimibPy
   nimibPyShow
-  adventOfCode # remove?
+  nimibPyscript
 
 when isMainModule:
   myInit("three")

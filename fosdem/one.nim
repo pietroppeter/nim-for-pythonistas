@@ -162,11 +162,11 @@ template okazzu* =
     discard
 
 mySlide(backends):
-  nbText """## compiler backends
+  nbText """## compiler backends ⚙️
 - C
 - C++
 - Objective-C
-- Javascript
+- Javascript 🤯
 
 FFI: Foreign Function Interface
 """
@@ -198,6 +198,7 @@ template metaprogrammingBug* {. dirty .} = # dirty fixes it!
 template metaprogramming* {. dirty .} =
   slide:
     nbText "## Metaprogramming 🦸"
+    # add quote from Zen of Nim (Leverage meta programming to keep the language small.)
     import std / strformat # move outside of nbCode
     nbCodeInBlock: # to counter dirty
       let
@@ -214,6 +215,43 @@ template metaprogramming* {. dirty .} =
       temp.formatValue(h, ".2f")
       temp.add " hours"
 
+template interactivity* =
+  slide:
+    nbRawHtml """
+<style>
+button {
+font-size: 40px;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5em;
+    background-color: #A12D94;
+    color: #ffe953;
+}
+</style>
+"""
+    nbText """
+## Interactivity 🪄
+
+```nim
+button:
+  text "Say hi!"
+  proc onclick(ev: Event; n: VNode) =
+    waves.add "👋"
+tdiv:
+  text waves
+```
+"""
+    nbKaraxCode:
+      from jsony import toJson
+      var waves = "".kstring
+      karaxHtml:
+        button:
+          text "Say hi!"
+          proc onclick(ev: Event; n: VNode) =
+            waves.add "👋"
+        tdiv:
+          text waves
+
 template all* =
   slidePerformant # change compiles to C to native compilation!
   slideSyntaxFlexible
@@ -221,11 +259,11 @@ template all* =
   effectsTracking
   metaprogramming
   slideInterop
-  # metaprogramming two karax js backend
+  interactivity
   backends
   okazzu
 
 when isMainModule:
-  myInit("one")
-  effectsTrackingBug
+  myInit("one.nim")
+  all
   nbSave

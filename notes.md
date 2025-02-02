@@ -4,14 +4,10 @@
 - title [x]
 - intro [x]
 - agenda [x]
-- one: what is nim
-  - slide(s) metaprogramming one strformat [x]
-  - slide metaprogramming two karax
+- one: what is nim [x]
 - two: better pythonista [x]
-- three: open source
-  - new slide on nimble publish [x]
-  - add plant app and remove advent?
-  - reuse previous slides [x]
+- three: open source [x]
+  - added pyscript slide [x]
 - thanks [x]
 - animate stuff
   - strformat

@@ -10,6 +10,7 @@ template titleSlide* =
   slide(slideOptions(imageBackground="../crown.webp")):
     divStyled("background-color:rgb(161, 45, 148);"):
       h1Color(nimYellow): "Nim for Pythonistas"
+      h2Color(nimYellow): "(and Open Source Lovers)"
       h2Color(nimYellow): "FOSDEM, Brussels, Feb 2nd 2025"
       spanColor(blueForFosdem): "github.com/pietroppeter/nim-for-pythonistas"
 
