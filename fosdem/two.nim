@@ -58,7 +58,7 @@ mySlide(colorLanguage):
 template all* =
   beazley
 
-  likePythonAnimated
+  likePythonAnimated # low floor, no ceiling
   strugglePythonAnimated
 
   nicheCommunity

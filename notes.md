@@ -5,13 +5,17 @@
 - intro [x]
 - agenda [x]
 - one: what is nim
-  - slide(s) metaprogramming one strformat
+  - slide(s) metaprogramming one strformat [x]
   - slide metaprogramming two karax
 - two: better pythonista [x]
 - three: open source
   - new slide on nimble publish
-  - reuse previous slides
-- thankyou (nim, python, fosdem)
+  - add plant app and remove advent?
+  - reuse previous slides [x]
+- thanks [x]
+- animate stuff
+  - strformat
+  - nimoji
 
 - stories about Nim and Open Source? NO
   - Status (p2p, crypto)

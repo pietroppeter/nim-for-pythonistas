@@ -129,8 +129,36 @@ mySlide(effectsTracking):
   nbRawHtml "</div>"
   nbRawHtml "</div>"
 
+template effectsTrackingBug* {.dirty.} =
+  nbText "### Functional Powers 🧠 Effects tracking"
+  columns:
+    column:
+      nbCode:
+        let aGlobal = 42
+
+        proc withSideEffects(x: int): int =
+          echo "writing ", x, " in a file"
+          "IcanDo.IO".writeFile($x)
+          x + aGlobal
+        
+        echo withSideEffects(624)
+        echo "IcanDo.IO".readFile
+
+    column:
+      nbText "⠀"
+
+    column:
+      nbCode:
+        func noSideEffects(x: int): int =
+          # in a func compiler will error
+          # if you try to do I/O or access global ...
+          x + 42
+
+        echo noSideEffects(-42)
+
+
 template okazzu* =
-  slide(slideOptions(iframeBackground="https://pietroppeter.github.io/nim-ib-lightning-tcp/okazzu.html")):
+  slide(slideOptions(iframeBackground="okazzu.html")):
     discard
 
 mySlide(backends):
@@ -158,12 +186,40 @@ mySlide(metaFormat):
     let minutes = 10*60+15
     echo fmt"from {here} to {there} the train takes {time.float / 60:.2f} hours"
 
+template metaprogrammingBug* {. dirty .} = # dirty fixes it!
+  import std / strformat # move outside of nbCode
+  nbCode:
+    let
+      home = "Milan"
+      h = (10*60+15).float / 60
+
+    echo fmt"from Brussels to {home} the train takes {h:.1f} hours"
+
+template metaprogramming* {. dirty .} =
+  slide:
+    nbText "## Metaprogramming 🦸"
+    import std / strformat # move outside of nbCode
+    nbCodeInBlock: # to counter dirty
+      let
+        home = "Milan"
+        h = (10*60+15).float / 60
+
+      echo fmt"from Brussels to {home} the train takes {h:.1f} hours"
+    nbText "the `echo fmt\"...\"` statement is transformed at **compile time** into something like"
+    nbCodeSkip:
+      var temp = ""
+      temp.add "from Brussels to "
+      temp.formatValue(home, "")
+      temp.add " the train takes "
+      temp.formatValue(h, ".2f")
+      temp.add " hours"
+
 template all* =
   slidePerformant # change compiles to C to native compilation!
   slideSyntaxFlexible
   procedureOverloading
   effectsTracking
-  # metaprogramming one strformat
+  metaprogramming
   slideInterop
   # metaprogramming two karax js backend
   backends
@@ -171,11 +227,5 @@ template all* =
 
 when isMainModule:
   myInit("one")
-  import std / strformat # move outside of nbCode
-  nbCode:
-    let
-      (a, b) = ("Brussels", "Milan")
-      h = (10*60+15).float / 60
-
-    echo fmt"from {a} to {b} the train takes {h} hours"
+  effectsTrackingBug
   nbSave

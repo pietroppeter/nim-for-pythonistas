@@ -20,12 +20,12 @@
 <span class="hljs-keyword">var</span> counter = <span class="hljs-type">Counter</span>(val: <span class="hljs-number">0</span>)
 
 <span class="hljs-keyword">echo</span> counter
-
+<span class="hljs-comment"># all the following are equivalent:</span>
 inc counter  <span class="hljs-comment"># command syntax</span>
 inc(counter) <span class="hljs-comment"># function syntax</span>
 counter.inc  <span class="hljs-comment"># method syntax</span>
 
-<span class="hljs-keyword">echo</span>(counter)</code></pre><pre style="width: 100%;"><samp class="hljs">(val: 0)
+<span class="hljs-keyword">echo</span>(counter) <span class="hljs-comment"># remember Python 2.0 -&gt; 3.?</span></code></pre><pre style="width: 100%;"><samp class="hljs">(val: 0)
 (val: 3)</samp></pre>
       <small><p>&quot;Concise code is not in conflict with readability, it enables readability&quot;, <a href="https://nim-lang.org/blog/2021/11/15/zen-of-nim.html">Zen of Nim</a></p></small>
       </section>

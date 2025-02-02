@@ -10,12 +10,35 @@
   <body>
   <div class="reveal">
     <div class="slides">
-      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">import</span> std / strformat <span class="hljs-comment"># move outside of nbCode</span>
-<span class="hljs-keyword">let</span>
-  (a, b) = (<span class="hljs-string">&quot;Brussels&quot;</span>, <span class="hljs-string">&quot;Milan&quot;</span>)
-  h = (<span class="hljs-number">10</span>*<span class="hljs-number">60</span>+<span class="hljs-number">15</span>).<span class="hljs-built_in">float</span> / <span class="hljs-number">60</span>
+      <section data-nimib-slide-number="1" >
+      <h3>Functional Powers 🧠 Effects tracking</h3>
+      <div style="display: grid; grid-auto-flow: column; overflow-wrap: break-word; column-gap: 2.0 em;">
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">let</span> aGlobal = <span class="hljs-number">42</span>
 
-<span class="hljs-keyword">echo</span> <span class="hljs-string">fmt&quot;from {a} to {b} the train takes {h} hours&quot;</span></code></pre><pre style="width: 100%;"><samp class="hljs">from Brussels to Milan the train takes 10.25 hours</samp></pre>
+<span class="hljs-keyword">proc</span> withSideEffects(x: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;writing &quot;</span>, x, <span class="hljs-string">&quot; in a file&quot;</span>
+  <span class="hljs-string">&quot;IcanDo.IO&quot;</span>.writeFile($x)
+  x + aGlobal
+
+<span class="hljs-keyword">echo</span> withSideEffects(<span class="hljs-number">624</span>)
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;IcanDo.IO&quot;</span>.readFile</code></pre><pre style="width: 100%;"><samp class="hljs">writing 624 in a file
+666
+624</samp></pre>
+      </div>
+      <div>
+      <p>⠀</p>
+      </div>
+      <div>
+      <pre style="width: 100%"><code class="nim hljs" data-noescape data-line-numbers><span class="hljs-keyword">func</span> noSideEffects(x: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+  <span class="hljs-comment"># in a func compiler will error</span>
+  <span class="hljs-comment"># if you try to do I/O or access global ...</span>
+  x + <span class="hljs-number">42</span>
+
+<span class="hljs-keyword">echo</span> noSideEffects(-<span class="hljs-number">42</span>)</code></pre><pre style="width: 100%;"><samp class="hljs">0</samp></pre>
+      </div>
+      </div>
+      </section>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

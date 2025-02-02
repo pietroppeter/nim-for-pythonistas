@@ -10,7 +10,7 @@ Nim has also a powerful type system, functional features and can compile to Java
   twoLong = """
 how I got attracted to Nim coming from Python, the benefits of a niche community,
 and how I came out with a deeper appreciation for the Python project and community."""
-  threeShort = "How Nim can help you getting more involved in Open Source"
+  threeShort = "How Nim helped me get into Open Source"
   threeLong = """
 how easy it is to create your own open source project with Nim
 
