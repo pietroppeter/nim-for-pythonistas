@@ -22,28 +22,64 @@ template slidePerformant* =
 
     reference "[HPC from Python to Nim (Fosdem 2022)](https://archive.fosdem.org/2022/schedule/event/nim_hpcfrompythontonim/)"
 
-template slideSyntaxFlexible* =
+
+template slideSyntax* =
   slide:
-    nbText: "### Pythonic Syntax with Extra Flexibility"
-    nbCode:
-      type Counter = object
-        val: int
+    nbText: "### Pythonic Syntax with 🦸 Superpowers"
+    adaptivecolumns:
+      column:
+        nbCode:
+          type
+            Grid = array[3, array[3, Cell]]
+            Cell = enum X, O
 
-      proc inc(c: var Counter) = inc c.val
+          func initGrid: Grid =
+            [[X,O,X],[O,X,O],[X,O,X]]
 
-      var counter = Counter(val: 0)
+          proc show(g: Grid) =
+            for row in g:
+              echo row
+          
+          proc update(g: var Grid) =
+            for i in g.low .. g.high:
+              for j in g[i].low .. g[i].high:
+                g[i][j] = if g[i][j] == X: O else: X
+        nbTextSmall: "- 🦸 syntax fits well with **metaprogramming**\n" &
+        "- 💡 UFCS (Uniform Function Call Syntax)"
 
-      echo counter
-      # all the following are equivalent:
-      inc counter  # command syntax
-      inc(counter) # function syntax
-      counter.inc  # method syntax
+      column:
+        nbText: "⠀" # https://www.compart.com/en/unicode/U+2800
+      column:
+        #nbText: "Indentation based syntax that fits Nim's macro system"
+        nbCode:
+          var g = initGrid()
+          show g # command
+        nbCode:          
+          g.update # method
+          g.show
+        nbCode:
+          update(g) # function
+          show(g)
+  
 
-      echo(counter) # remember Python 2.0 -> 3.?  
+minSlide(metaprogramming):
+  nbText """## 🦸 Metaprogramming
 
-    nbTextSmall "\"Concise code is not in conflict with readability, it enables readability\", [Zen of Nim](https://nim-lang.org/blog/2021/11/15/zen-of-nim.html)"
+1. Generics
+2. Templates
+3. Macros (AST)
 
-template slideInterop* =
+AST: Abstract Syntax Tree
+
+DSL: Domain Specific Language
+
+> with power comes responsibility
+"""
+# should I not mention it here?
+# we will have example of usage of this feature later  
+
+
+template slidePragmatic* =
 
   slide:
     nbText: "### 🤝 Interop with Python"
@@ -78,12 +114,15 @@ python3 main.py
     reference "[nimporter](https://github.com/Pebaz/nimporter)"
     reference "[nimpy](https://github.com/yglukhov/nimpy)"
 
-template allFosdem* =
+template all* =
   slidePerformant # change compiles to C to native compilation!
-  slideSyntaxFlexible
-  slideInterop
+  slideSyntax
+  # overload (or skip here?)
+  metaprogramming
+  slidePragmatic
 
 when isMainModule:
   myInit("one")
-  slideSyntaxFlexible
+  all
+  #slidePerformant
   nbSave
