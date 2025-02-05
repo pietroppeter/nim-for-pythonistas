@@ -4,6 +4,14 @@ me introducing [Nim](https://nim-lang.org/) to pythonistas. a talk on the Nim pr
 
 A lot of thoughts and work for this presentation prepared during a batch at [Recurse Center](https://www.recurse.com/) 🐙
 
+Delivered:
+- Nov 10th, 2023 as a lightning (5') talk at PyCon Sweden, Stockholm
+  [slides](https://pietroppeter.github.io/nim-for-pythonistas/lightning.html)
+- May 24th, 2024 as a 30' talk at PyCon Italy, Florence.
+  [slides](https://pietroppeter.github.io/nim-for-pythonistas/), [video](https://www.youtube.com/watch?v=yPMudqyKtLQ)
+- Feb 2nd, 2025 as a 25' talk at FOSDEM, Brussels
+  [slides](https://pietroppeter.github.io/nim-for-pythonistas/fosdem/)
+
 ## FOSDEM 2025
 
 https://fosdem.org/2025/schedule/event/fosdem-2025-6414-nim-for-pythonistas-and-open-source-lovers-/
