@@ -1,3 +1,39 @@
+## fosdem version
+
+- new fosdem folder [x]
+- title [x]
+- intro [x]
+- agenda [x]
+- one: what is nim [x]
+- two: better pythonista [x]
+- three: open source [x]
+  - added pyscript slide [x]
+- thanks [x]
+- animate stuff
+  - strformat [x]
+  - nimoji
+
+- stories about Nim and Open Source? NO
+  - Status (p2p, crypto)
+  - Exercism
+  - Reddit (pixie?)
+  - Crashoverride
+  - Nitter
+  - Unreal?
+  - fasterthanrequests
+
+## towards fosdem version - old
+
+- update title [x]
+- update intro [x]
+- agenda (change)
+- one (same?)
+- combine two and three
+- four is new three
+
+
+----
+
 issue nimislides:
 - had to use import conversions instead of import ./[conversions]
   (assume this is due to the fact I am using Nim 1.6)

@@ -4,10 +4,40 @@ me introducing [Nim](https://nim-lang.org/) to pythonistas. a talk on the Nim pr
 
 A lot of thoughts and work for this presentation prepared during a batch at [Recurse Center](https://www.recurse.com/) 🐙
 
+Delivered:
+- Nov 10th, 2023 as a lightning (5') talk at PyCon Sweden, Stockholm
+  [slides](https://pietroppeter.github.io/nim-for-pythonistas/lightning.html)
+- May 24th, 2024 as a 30' talk at PyCon Italy, Florence.
+  [slides](https://pietroppeter.github.io/nim-for-pythonistas/), [video](https://www.youtube.com/watch?v=yPMudqyKtLQ)
+- Feb 2nd, 2025 as a 25' talk at FOSDEM, Brussels
+  [slides](https://pietroppeter.github.io/nim-for-pythonistas/fosdem/)
+
+## FOSDEM 2025
+
+https://fosdem.org/2025/schedule/event/fosdem-2025-6414-nim-for-pythonistas-and-open-source-lovers-/
+
+**Description**:
+
+You might have heard of Nim as a fast and statically typed language with a Python-like syntax that compiles to compact executables and you are curious to hear more about it. Or you might have never heard of Nim and you might be curious what a talk about another programming language (that is not Rust) has anything to do with a Python devroom. Or maybe you are someone who loves Open Source (possibly even contributed to some open source projects) but does not feel like you will ever be able to contribute a project of your own that might interest others. If you connect with one of these three descriptions, I have prepared this talk for you. Even if you do not see yourself in any of those, please keep reading to see if you should consider joining the Python devroom for this talk.
+
+This talk is divided in three parts:
+
+1. What is Nim?
+2. Why Nim made me a better Pythonista
+3. How Nim can help you getting more involved in Open Source
+
+In the first part I will give a quick introduction to Nim emphasizing similarity and differences with Python. I will explain that Nim can be used as a fast and easy to learn complement to Python with a great interoperability and metaprogramming superpowers. Nim has also a powerful type system, functional features and can compile to Javascript.
+
+In the second part I will tell you a bit about my story on how I got attracted to Nim coming from Python, the benefits of a niche community, and how I came out with a deeper appreciation for the Python project and community.
+
+In the third part, I will show you how easy it is to create your own open source project with Nim and share it with the world (maybe even a Python version of it), and I will tell you a little bit about my own open source project, called Nimib, a literate programming tool for interactive explanations.
+
+The talk is kept approachable for beginners while trying to be interesting also for experts. It does not have any specific pre-requisites on Nim, Python or Open Source but a familiarity and interest with at least one of those will help you take the most out of it.
+
 ## PyCon Italy 2024
 
 Click thumbnail to see the video:
-[![pycon 2024 nim for pythonista video thumbnail](https://github.com/user-attachments/assets/7bb4621c-6518-4e2e-9450-766cf55cf279)](https://www.youtube.com/watch?v=yPMudqyKtLQ)
+[![pycon 2024 nim for pythonista video thumbnail](pyconit.png)](https://www.youtube.com/watch?v=yPMudqyKtLQ)
 
 https://2024.pycon.it/it/event/nim-for-pythonistas
 
